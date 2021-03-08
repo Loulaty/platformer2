@@ -1,37 +1,198 @@
 class Niveau1 extends Tableau{
-
+    /**
+     * Ce tableau démontre comment se servir de Tiled, un petit logiciel qui permet de designer des levels et de les importer dans Phaser (entre autre).
+     *
+     * Ce qui suit est très fortement inspiré de ce tuto :
+     * https://stackabuse.com/phaser-3-and-tiled-building-a-platformer/
+     *
+     * Je vous conseille aussi ce tuto qui propose quelques alternatives (la manière dont son découpées certaines maisons notamment) :
+     * https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
+     */
     preload() {
         super.preload();
-        this.load.image('star', 'assets/star.png');
-        this.load.image('monster-violet', 'assets/monster-violet.png');
-        this.load.image('monstre2', 'assets/monstre2.png');
-        this.load.image('monstre3', 'assets/monstre3.png');
-        this.load.image('monstre4', 'assets/monstre4.png');
-        this.load.image('monstre5', 'assets/monstre5.png');
+        // ------pour TILED-------------
+        // nos images
+        this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
+        //les données du tableau qu'on a créé dans TILED
+        this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
+
+        // -----et puis aussi-------------
         this.load.image('monster-fly', 'assets/monster-fly.png');
-        this.load.image('ground', 'assets/platform.png');
-        this.load.image('sky-2', 'assets/sky-2.png');
-
-        this.load.audio('fond', 'assets/sounds/fond.mp3');
-
-
-
+        this.load.image('night', 'assets/night.jpg');
+        //atlas de texture généré avec https://free-tex-packer.com/app/
+        //on y trouve notre étoiles et une tête de mort
+        this.load.atlas('particles', 'assets/particles/particles.png', 'assets/particles/particles.json');
     }
     create() {
         super.create();
 
-        /////////////////////////////////////////////// La BASE DU NIVEAU /////////////////////////////////////
+        //on en aura besoin...
+        let ici=this;
 
-        //on définit la taille du tableau
-        let largeurDuTableau=2000;
-        let hauteurDuTableau=450; //la hauteur est identique au cadre du jeu
-        this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
+        //--------chargement de la tile map & configuration de la scène-----------------------
+
+        //notre map
+        this.map = this.make.tilemap({ key: 'map' });
+        //nos images qui vont avec la map
+        this.tileset = this.map.addTilesetImage('tableauTiledTileset', 'tiles');
+
+        //on agrandit le champ de la caméra du coup
+        let largeurDuTableau=this.map.widthInPixels;
+        let hauteurDuTableau=this.map.heightInPixels;
         this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
+        this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
+        this.cameras.main.startFollow(this.player, true, 1, 1);
 
-        this.cameras.main.startFollow(this.player, false, 0.05, 0.05);
+        //---- ajoute les plateformes simples ----------------------------
 
-        this.physics.add.collider(this.player,this.platforms);
+        this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
+        this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
+        this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
+        this.devant = this.map.createLayer('devant', this.tileset, 0, 0);
 
+        //on définit les collisions, plusieurs méthodes existent:
+
+        // 1 La méthode que je préconise (il faut définir une propriété dans tiled pour que ça marche)
+        //permet de travailler sur un seul layer dans tiled et des définir les collisions en fonction des graphiques
+        //exemple ici https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
+        this.solides.setCollisionByProperty({ collides: true });
+        this.lave.setCollisionByProperty({ collides: true });
+
+        // 2 manière la plus simple (là où il y a des tiles ça collide et sinon non)
+        //this.solides.setCollisionByExclusion(-1, true);
+        //this.lave.setCollisionByExclusion(-1, true);
+
+        // 3 Permet d'utiliser l'éditeur de collision de Tiled...mais ne semble pas marcher pas avec le moteur de physique ARCADE, donc oubliez cette option :(
+        //this.map.setCollisionFromCollisionGroup(true,true,this.plateformesSimples);
+
+        //----------les étoiles (objets) ---------------------
+
+        // c'est un peu plus compliqué, mais ça permet de maîtriser plus de choses...
+        this.stars = this.physics.add.group({
+            allowGravity: true,
+            immovable: false,
+            bounceY:1
+        });
+        this.starsObjects = this.map.getObjectLayer('stars')['objects'];
+        // On crée des étoiles pour chaque objet rencontré
+        this.starsObjects.forEach(starObject => {
+            // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
+            let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
+        });
+
+
+        //----------les monstres volants (objets tiled) ---------------------
+
+        let monstersContainer=this.add.container();
+        this.flyingMonstersObjects = this.map.getObjectLayer('flyingMonsters')['objects'];
+        // On crée des montres volants pour chaque objet rencontré
+        this.flyingMonstersObjects.forEach(monsterObject => {
+            let monster=new MonsterFly(this,monsterObject.x,monsterObject.y);
+            monstersContainer.add(monster);
+        });
+
+        //--------effet sur la lave------------------------
+
+
+        let laveFxContainer=this.add.container();
+        if(!this.isMobile){
+            this.lave.forEachTile(function(tile){ //on boucle sur TOUTES les tiles de lave pour générer des particules
+                if(tile.index !== -1){ //uniquement pour les tiles remplies
+
+                    /*
+                    //dé-commenter pour mieux comprendre ce qui se passe
+                    console.log("lave tile",tile.index,tile);
+                    let g=ici.add.graphics();
+                    laveFxContainer.add(g);
+                    g.setPosition(tile.pixelX,tile.pixelY)
+                    g.lineStyle(1,0xFF0000);
+                    g.strokeRect(0, 0, 64, 64);
+                    */
+
+                    let props={
+                        frame: [
+                            //'star', //pour afficher aussi des étoiles
+                            'death-white'
+                        ],
+                        frequency:200,
+                        lifespan: 2000,
+                        quantity:2,
+                        x:{min:-32,max:32},
+                        y:{min:-12,max:52},
+                        tint:[  0xC11A05,0x883333,0xBB5500,0xFF7F27 ],
+                        rotate: {min:-10,max:10},
+                        speedX: { min: -10, max: 10 },
+                        speedY: { min: -20, max: -30 },
+                        scale: {start: 0, end: 1},
+                        alpha: { start: 1, end: 0 },
+                        blendMode: Phaser.BlendModes.MULTIPLY,
+                    };
+                    let props2={...props}; //copie props sans props 2
+                    props2.blendMode=Phaser.BlendModes.ADD; // un autre blend mode plus lumineux
+
+                    //ok tout est prêt...ajoute nos particules
+                    let laveParticles = ici.add.particles('particles');
+                    laveParticles.createEmitter(props); //ajoute le premier lot
+                    laveParticles.createEmitter(props2); // ajoute le second
+                    // positionne le tout au niveau de la tile
+                    laveParticles.x=tile.pixelX+32;
+                    laveParticles.y=tile.pixelY+32;
+                    laveFxContainer.add(laveParticles);
+
+                }
+
+
+
+
+            })
+        }
+
+
+        //--------allez on se fait un peu la même mais avec les étoiles----------
+
+        let starsFxContainer=ici.add.container();
+        this.stars.children.iterate(function(etoile) {
+            let particles=ici.add.particles("particles","star");
+            let emmiter=particles.createEmitter({
+                tint:[  0xFF8800,0xFFFF00,0x88FF00,0x8800FF ],
+                rotate: {min:0,max:360},
+                scale: {start: 0.8, end: 0.5},
+                alpha: { start: 1, end: 0 },
+                blendMode: Phaser.BlendModes.ADD,
+                speed:40
+            });
+            etoile.on("disabled",function(){
+                emmiter.on=false;
+            })
+            emmiter.startFollow(etoile);
+            starsFxContainer.add(particles);
+        });
+
+
+
+
+        //----------débug---------------------
+        
+        //pour débugger les collisions sur chaque layer
+        let debug=this.add.graphics().setAlpha(this.game.config.physics.arcade.debug?0.75:0);
+        if(this.game.config.physics.arcade.debug === false){
+            debug.visible=false;
+        }
+        //débug solides en vers
+        this.solides.renderDebug(debug,{
+            tileColor: null, // Couleur des tiles qui ne collident pas
+            collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255), //Couleur des tiles qui collident
+            faceColor: null // Color of colliding face edges
+        });
+        //debug lave en rouge
+        this.lave.renderDebug(debug,{
+            tileColor: null, // Couleur des tiles qui ne collident pas
+            collidingTileColor: new Phaser.Display.Color(255, 0, 0, 255), //Couleur des tiles qui collident
+            faceColor: null // Color of colliding face edges
+        });
+
+
+        //---------- parallax ciel (rien de nouveau) -------------
 
         //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
         this.sky=this.add.tileSprite(
@@ -39,123 +200,60 @@ class Niveau1 extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            'sky-2'
+            'night'
         );
-        this.sky.setOrigin(0,0);
-        this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        //on ajoute une deuxième couche de ciel
         this.sky2=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            'sky'
+            'night'
         );
-        this.sky2.setScrollFactor(0);
+        this.sky.setOrigin(0,0);
         this.sky2.setOrigin(0,0);
-        this.sky2.alpha=0;
+        this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
+        this.sky2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
+        this.sky2.blendMode=Phaser.BlendModes.ADD;
 
-        this.player.setDepth(10);
-        this.blood.setDepth(10);
+        //----------collisions---------------------
 
-        this.music = this.sound.add('fond');
+        //quoi collide avec quoi?
+        this.physics.add.collider(this.player, this.solides);
+        this.physics.add.collider(this.stars, this.solides);
+        //si le joueur touche une étoile dans le groupe...
+        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+        //quand on touche la lave, on meurt
+        this.physics.add.collider(this.player, this.lave,this.playerDie,null,this);
 
-        var musicConfig = {
-            mute: false,
-            volume: 0.3,
-            rate : 1,
-            detune: 0,
-            seek: 0,
-            loop: false,
-            delay:0,
-        }
-        this.music.play(musicConfig);
+        //--------- Z order -----------------------
 
-                /////////////////////////////////////////////// Les AJOUTS /////////////////////////////////////
-
-        //des étoiles
-        this.star1=this.physics.add.sprite(300,100,"star");
-        this.star1.setCollideWorldBounds(true);
-        this.star1.setBounce(1);
-
-        this.star2=this.physics.add.sprite(600,0,"star");
-        this.star2.setCollideWorldBounds(true);
-        this.star2.setBounce(0);
-
-        this.star3=this.physics.add.sprite(1400,0,"star");
-        this.star3.setCollideWorldBounds(true);
-        this.star3.setBounce(1);
-
-        this.star4=this.physics.add.sprite(1080,0,"star");
-        this.star4.setCollideWorldBounds(true);
-        this.star4.setBounce(0.7);
-
-        this.star5=this.physics.add.sprite(1980,60,"star");
-        this.star5.setCollideWorldBounds(true);
-        this.star5.setBounce(1);
-
-        this.star6=this.physics.add.sprite(1900,20,"star");
-        this.star6.setCollideWorldBounds(true);
-        this.star6.setBounce(1);
-
-        this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star2, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star4, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star5, this.ramasserEtoile, null, this);
-        this.physics.add.overlap(this.player, this.star6, this.ramasserEtoile, null, this);
-
-        this.physics.add.collider(this.player,this.platforms);
-
-
-        //plateformes
-        let groupeVert = this.physics.add.staticGroup();
-        groupeVert.create(0, 250, 'ground');
-        groupeVert.create(140, 300, 'ground');
-        groupeVert.create(350, 200, 'ground');
-        groupeVert.create(550, 70, 'ground');
-        groupeVert.create(670, 400, 'ground');
-        groupeVert.create(820, 350, 'ground');
-        groupeVert.create(1000, 250, 'ground');
-        groupeVert.create(1250, 250, 'ground');
-        groupeVert.create(1500, 180, 'ground');
-        groupeVert.create(1750, 210, 'ground');
-        groupeVert.create(1820, 100, 'ground');
-        groupeVert.children.iterate(function (child) {
-            child.setDisplaySize(100,50);
-            child.setOrigin(0,0);
-            child.refreshBody();});
-        this.physics.add.collider(this.player, groupeVert);
-        this.physics.add.collider(this.star1, groupeVert);
-        this.physics.add.collider(this.star2, groupeVert);
-        this.physics.add.collider(this.star3, groupeVert);
-        this.physics.add.collider(this.star4, groupeVert);
-        this.physics.add.collider(this.star5, groupeVert);
-        this.physics.add.collider(this.star6, groupeVert);
-
-        //Monstres
-        new monstre2(this,800,100);;
-        new monstre2(this,1930,100);
-        new MonsterFly(this,400,150);
-        new MonsterFly(this,1800,100);
-        new monstre3(this,1000,150);
-        new monstreviolet(this,450,300);
-        new monstreviolet(this,1800,300);
-
-
-
-
+        //on définit les z à la fin
+        let z=1000; //niveau Z qui a chaque fois est décrémenté.
+        debug.setDepth(z--);
+        this.blood.setDepth(z--);
+        monstersContainer.setDepth(z--);
+        this.stars.setDepth(z--);
+        starsFxContainer.setDepth(z--);
+        this.devant.setDepth(z--);
+        this.solides.setDepth(z--);
+        laveFxContainer.setDepth(z--);
+        this.lave.setDepth(z--);
+        this.player.setDepth(z--);
+        this.derriere.setDepth(z--);
+        this.sky2.setDepth(z--);
+        this.sky.setDepth(z--);
     }
+
 
     update(){
         super.update();
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.6;
-        this.sky.tilePositionY=this.cameras.main.scrollY*0.2;
-        //le deuxième ciel se déplace moins vite pour accentuer l'effet
-        this.sky2.tilePositionX=this.cameras.main.scrollX*0.3+500;
-        this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
+        this.sky.tilePositionY=this.cameras.main.scrollY*0.6;
+        this.sky2.tilePositionX=this.cameras.main.scrollX*0.7+100;
+        this.sky2.tilePositionY=this.cameras.main.scrollY*0.7+100;
     }
+
 
 
 

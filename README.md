@@ -1,4 +1,4 @@
-# platformer
+# platformer S2
 
 https://loulaty.github.io/platformer2/platformer-main/
 

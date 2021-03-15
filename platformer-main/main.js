@@ -15,7 +15,8 @@ let config = {
     },
     scene: [
         new Ui(),
-
+        
+        new Tiled("Test"),
         new TableauTiled("Test"),
         new Niveau1("Lavander forest?"),
         new Tableau08("Un plateau qui sort du cadre"),

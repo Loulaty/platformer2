@@ -11,11 +11,15 @@ class TableauTiled extends Tableau{
     preload() {
         super.preload();
         // ------pour TILED-------------
-        // nos images
+        // important a charger
         this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
         //les données du tableau qu'on a créé dans TILED
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
 
+
+
+
+    
         // -----et puis aussi-------------
         this.load.image('monster-fly', 'assets/monster-fly.png');
         this.load.image('night', 'assets/night.jpg');
@@ -31,10 +35,12 @@ class TableauTiled extends Tableau{
 
         //--------chargement de la tile map & configuration de la scène-----------------------
 
-        //notre map
+        //important correspondaces 
         this.map = this.make.tilemap({ key: 'map' });
         //nos images qui vont avec la map
         this.tileset = this.map.addTilesetImage('tableauTiledTileset', 'tiles');
+
+
 
         //on agrandit le champ de la caméra du coup
         let largeurDuTableau=this.map.widthInPixels;
@@ -44,6 +50,8 @@ class TableauTiled extends Tableau{
         this.cameras.main.startFollow(this.player, true, 1, 1);
 
         //---- ajoute les plateformes simples ----------------------------
+        //les thermes du tiled 
+
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
@@ -55,6 +63,8 @@ class TableauTiled extends Tableau{
         // 1 La méthode que je préconise (il faut définir une propriété dans tiled pour que ça marche)
         //permet de travailler sur un seul layer dans tiled et des définir les collisions en fonction des graphiques
         //exemple ici https://medium.com/@michaelwesthadley/modular-game-worlds-in-phaser-3-tilemaps-1-958fc7e6bbd6
+
+        //la ou ya des tiles collisions
         this.solides.setCollisionByProperty({ collides: true });
         this.lave.setCollisionByProperty({ collides: true });
 

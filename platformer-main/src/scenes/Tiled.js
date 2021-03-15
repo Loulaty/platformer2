@@ -21,6 +21,12 @@ class Tiled extends Tableau{
 
         this.tuiles.setCollisionByExclusion(-1,true);
         this.physics.add.collider(this.player, this.tuiles);
+
+        let largeurDuTableau=this.map.widthInPixels;
+        let hauteurDuTableau=this.map.heightInPixels;
+        this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
+        this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
+        this.cameras.main.startFollow(this.player, true, 1, 1);
         
     }
 

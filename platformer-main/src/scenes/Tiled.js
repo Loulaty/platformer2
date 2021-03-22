@@ -19,6 +19,8 @@ class Tiled extends Tableau{
 
         this.tuiles.setDepth(100000);
 
+        this.barrieres.setCollisionByProperty({ collide: true});
+
         this.tuiles.setCollisionByExclusion(-1,true);
         this.physics.add.collider(this.player, this.tuiles);
 

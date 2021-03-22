@@ -19,7 +19,7 @@ class Tiled extends Tableau{
         this.tuiles.setDepth(100000);
 
         this.tuiles.setCollisionByExclusion(-1,true);
-        this.barrieres.setCollisionByProperty({ collide: true});
+        //this.barrieres.setCollisionByProperty({ collide: true});
         this.physics.add.collider(this.player, this.tuiles);
 
         let largeurDuTableau=this.map.widthInPixels;
@@ -27,6 +27,20 @@ class Tiled extends Tableau{
         this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
         this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.cameras.main.startFollow(this.player, true, 1, 1);
+
+
+        this.stars = this.physics.add.group({
+            allowGravity: true,
+            immovable: false,
+            bounceY:1
+        });
+        this.starsObjects = this.map.getObjectLayer('stars')['objects'];
+        // On crée des étoiles pour chaque objet rencontré
+        this.starsObjects.forEach(starObject => {
+            // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
+            let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
+        });
+
         
     }
 

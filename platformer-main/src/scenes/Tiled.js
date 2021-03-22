@@ -40,6 +40,17 @@ class Tiled extends Tableau{
             // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
             let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
         });
+          //----------collisions---------------------
+
+        //quoi collide avec quoi?
+        this.physics.add.collider(this.player, this.solides);
+        this.physics.add.collider(this.stars, this.solides);
+        //si le joueur touche une étoile dans le groupe...
+        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
+        //quand on touche la lave, on meurt
+        this.physics.add.collider(this.player, this.lave,this.playerDie,null,this);
+
+        this.stars.setDepth(z--);
 
         
     }

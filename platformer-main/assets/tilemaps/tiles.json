@@ -36,8 +36,8 @@
         }, 
         {
          "draworder":"topdown",
-         "id":3,
-         "name":"etoiles",
+         "id":4,
+         "name":"stars",
          "objects":[],
          "opacity":1,
          "type":"objectgroup",
@@ -45,7 +45,7 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":4,
+ "nextlayerid":5,
  "nextobjectid":3,
  "orientation":"orthogonal",
  "renderorder":"right-down",

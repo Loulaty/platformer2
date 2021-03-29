@@ -29,30 +29,10 @@ class Tiled extends Tableau{
         this.cameras.main.startFollow(this.player, true, 1, 1);
 
 
-        this.stars = this.physics.add.group({
-            allowGravity: true,
-            immovable: false,
-            bounceY:1
-        });
-        this.starsObjects = this.map.getObjectLayer('stars')['objects'];
-        // On crée des étoiles pour chaque objet rencontré
-        this.starsObjects.forEach(starObject => {
-            // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
-            let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
-        });
           //----------collisions---------------------
 
         //quoi collide avec quoi?
-        this.physics.add.collider(this.player, this.solides);
-        this.physics.add.collider(this.stars, this.solides);
-        //si le joueur touche une étoile dans le groupe...
-        this.physics.add.overlap(this.player, this.stars, this.ramasserEtoile, null, this);
-        //quand on touche la lave, on meurt
-        this.physics.add.collider(this.player, this.lave,this.playerDie,null,this);
-
-        this.stars.setDepth(z--);
-
-        
+        this.physics.add.collider(this.player, this.tuiles);
     }
 
 }

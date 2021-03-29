@@ -34,20 +34,7 @@ class Tiled extends Tableau{
         //quoi collide avec quoi?
         this.physics.add.collider(this.player, this.tuiles);
 
-          this.stars = this.physics.add.group({
-            allowGravity: true,
-            immovable: false,
-            bounceY:1
-        });
-        this.starsObjects = this.map.getObjectLayer('stars')['objects'];
-        // On crée des étoiles pour chaque objet rencontré
-        this.starsObjects.forEach(starObject => {
-            // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
-            let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
-        });
-
         
     }
-    
 
 }

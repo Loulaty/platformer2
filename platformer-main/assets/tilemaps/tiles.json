@@ -28,40 +28,40 @@
          "name":"star",
          "objects":[
                 {
-                 "gid":37,
+                 "gid":33,
                  "height":64,
-                 "id":6,
+                 "id":12,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":480.121212121212,
-                 "y":816.848484848485
+                 "x":419.515151515152,
+                 "y":825.939393939394
                 }, 
                 {
-                 "gid":37,
+                 "gid":33,
                  "height":64,
-                 "id":7,
+                 "id":13,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":752.848484848485,
-                 "y":828.969696969697
+                 "x":771.030303030303,
+                 "y":807.757575757576
                 }, 
                 {
-                 "gid":37,
+                 "gid":33,
                  "height":64,
-                 "id":8,
+                 "id":14,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":64,
-                 "x":840.727272727273,
-                 "y":474.424242424242
+                 "x":498.30303030303,
+                 "y":604.727272727273
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -70,7 +70,7 @@
          "y":0
         }],
  "nextlayerid":6,
- "nextobjectid":9,
+ "nextobjectid":15,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

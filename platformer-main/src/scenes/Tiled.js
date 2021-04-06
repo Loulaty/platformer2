@@ -4,10 +4,13 @@ class Tiled extends Tableau{
         super.preload();
         this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tiles.json');
+        this.load.image('star', 'assets/star.png');
     }
 
     create() {
         super.create();
+
+        let ici=this;
 
         this.map = this.make.tilemap({ key: 'map' });
         this.tileset = this.map.addTilesetImage('tuiles', 'tiles');
@@ -39,12 +42,14 @@ class Tiled extends Tableau{
             immovable: false,
             bounceY:0
         });
-        this.starsObjects = this.map.getObjectLayer('stars')['objects'];
-        // On crée des étoiles pour chaque objet rencontré
-        this.starsObjects.forEach(starObject => {
-            // Pour chaque étoile on la positionne pour que ça colle bien car les étoiles ne font pas 64x64
-            let star = this.stars.create(starObject.x+32, starObject.y+32 , 'particles','star');
+        this.star = this.physics.add.group({
+            allowGravity: true,
+            immovable: false,
+            bounceY:1
         });
+        this.physics.add.overlap(this.star, this.platforms);
+        this.physics.add.overlap(this.player, this.star, this.ramasserEtoile, null, this);
+
     }
 
 }

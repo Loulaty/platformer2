@@ -146,6 +146,17 @@ class Niveau1 extends Tableau{
         }
         this.music.play(musicConfig);
 
+        shoot = game.add.group();
+
+        shoot.enableBody = true;
+        shoot.physicalBodyType = Phaser.Physics.ARCADE;
+        shoot.createMultiple(5,'shoot');
+
+        shoot.setAll('anchor.x',0.5);
+        shoot.setAll('anchor.y',0.5);
+
+
+
        
 
 

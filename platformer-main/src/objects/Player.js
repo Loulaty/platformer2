@@ -31,6 +31,8 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             frameRate: 20
         });
 
+        this.shootkey = scene.input.keyboard.addKey('e'); 
+
         this._directionX=0;
         this._directionY=0;
 
@@ -83,6 +85,20 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     }
 
+
+    shoot(){
+    if (this.shootkey.isDown){
+        console.log("appui sur e")
+ /*       if(this.isAlive){
+          if (this.world.player.x > this.x - 600 && this.world.player.x < this.x + 600){
+            if (this.world.player.y > this.y - 200 && this.world.player.y < this.y + 25){
+              this.shotSound.play({volume:.5});
+              var shoot = new Gproj(this.world,this.x, this.y-15,'shoot').setVelocityX(250*this.dir);
+            }
+          }
+        }*/
+    }
+    }
 
 
 }

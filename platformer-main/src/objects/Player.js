@@ -32,9 +32,11 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             frameRate: 20
         });
         
+        /*
         var keyObj = scene.input.keyboard.addKey('E');
         var isDown = keyObj.isDown;
         scene.input.keyboard.on('keydown-' + 'E', shoot());
+    */
 
         
         this._directionX=0;
@@ -89,7 +91,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
     }
     
-
+/*
  shoot(){
         console.log("appui sur e")
         if(this.isAlive){
@@ -100,7 +102,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             }
           }
         }
- }
+ }*/
     
     
 

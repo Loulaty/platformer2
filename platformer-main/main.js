@@ -2,6 +2,8 @@
 let width=14*64; //896;
 let height=7*64; //448;
 
+
+
 let config = {
     type: Phaser.AUTO,
 
@@ -16,18 +18,10 @@ let config = {
     scene: [
         new Ui(),
 
+        //new TitleScene(),
         new Tiled("Test"),
-       // new TableauTiled("Test"),
         new Niveau1("Lavander forest?"),
-        new Tableau08("Un plateau qui sort du cadre"),
-        new Tableau00("Des étoiles"),
-        new Tableau01("Des plateformes"),
-        new Tableau02("Plein d'étoiles"),
-        new Tableau03("Des plateformes qui bougent"),
-        new Tableau04("Jouer avec les groupes"),
-        new Tableau05("Extend un tableau"),
-        new Tableau06("Un monstre!"),
-        new Tableau07("Un monstre volant!"),
+
         
 
     ],
@@ -54,30 +48,8 @@ let config = {
     
 };
 let game;
-function resize() {
-    /*
-    var canvas = document.querySelector("canvas");
-    var windowWidth = window.innerWidth;
-    var windowHeight = window.innerHeight;
-    var windowRatio = windowWidth / windowHeight;
-    var gameRatio = game.config.width / game.config.height;
-    if(windowWidth<width || windowHeight<height){
-        if(windowRatio < gameRatio){
-            canvas.style.width = windowWidth + "px";
-            canvas.style.height = (windowWidth / gameRatio) + "px";
-        }
-        else {
-            canvas.style.width = (windowHeight * gameRatio) + "px";
-            canvas.style.height = windowHeight + "px";
-        }
-    }else{
-        canvas.style.width = width + "px";
-        canvas.style.height = height + "px";
-    }
 
-     */
 
-}
 window.onload = function() {
     game=new Phaser.Game(config);
     window.addEventListener("resize", resize, false);

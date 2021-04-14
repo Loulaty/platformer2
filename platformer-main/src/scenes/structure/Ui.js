@@ -21,6 +21,17 @@ class Ui extends Phaser.Scene{
             fill: '#fff'
         });
 
+        this.peur=0;
+        /**
+         * Le champ texte du score
+         * @type {Phaser.GameObjects.Text}
+         * @private
+         */
+        this._peurText = this.add.text(16, 16, '...', {
+            font:'32px "Hanalei Fill"',
+            fill: '#fff'
+        });
+
         /**
          * Le champ texte avec la clé du tableau
          * @type {Phaser.GameObjects.Text}
@@ -87,6 +98,13 @@ class Ui extends Phaser.Scene{
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height;
 
+    }
+
+
+    perdu(points=10)
+    {
+        this.peur+=points;
+        this._peurText.setText('Peur: ' + this.peur);
     }
 
     gagne(points=10)

@@ -100,19 +100,7 @@ class Tableau extends Phaser.Scene{
         }
     }
 
-    /**
-     * Aïeee ça fait mal
-     * @param player
-     * @param spike
-     */
-    hitSpike (player, spike)
-    {
-        this.physics.pause();
-        player.setTint(0xff0000);
-        player.anims.play('turn');
-        this.scene.restart();
 
-    }
 
     /**
      * Quand on touche un monstre

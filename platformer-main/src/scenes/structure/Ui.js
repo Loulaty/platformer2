@@ -27,7 +27,7 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._peurText = this.add.text(16, 60, '...', {
+        this._peurText = this.add.text(16, 60, 'Peur: 0', {
             font:'32px "Hanalei Fill"',
             fill: '#fff'
         });
@@ -101,7 +101,7 @@ class Ui extends Phaser.Scene{
     }
 
 
-    perdu(points=10)
+    perdu(points=5)
     {
         this.peur+=points;
         this._peurText.setText('Peur: ' + this.peur);

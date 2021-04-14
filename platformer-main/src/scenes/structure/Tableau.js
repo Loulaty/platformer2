@@ -139,6 +139,9 @@ class Tableau extends Phaser.Scene{
                         me.player.anims.play('turn');
                         me.player.isDead=false;
                         me.scene.restart();
+                        if (ui.perdu() == 100){
+                            console.log("GAME OVER") 
+                        }
                     })
 
                 }

@@ -134,6 +134,7 @@ class Tableau extends Phaser.Scene{
                     //ça saigne...
                     me.saigne(me.player,function(){
                         //à la fin de la petite anim, on relance le jeu
+                        ui.perdu();
                         me.blood.visible=false;
                         me.player.anims.play('turn');
                         me.player.isDead=false;

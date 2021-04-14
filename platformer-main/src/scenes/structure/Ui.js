@@ -27,7 +27,7 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._peurText = this.add.text(16, 16, '...', {
+        this._peurText = this.add.text(16, 60, '...', {
             font:'32px "Hanalei Fill"',
             fill: '#fff'
         });

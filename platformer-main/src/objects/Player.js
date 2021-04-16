@@ -32,14 +32,10 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             frameRate: 20
         });
 
+
         this.cursors = scene.input.keyboard.createCursorKeys();
         this.shootKey = scene.input.keyboard.addKey('SHIFT');
         
-        /*
-        var keyObj = scene.input.keyboard.addKey('E');
-        var isDown = keyObj.isDown;
-        scene.input.keyboard.on('keydown-' + 'E', shoot());
-    */
 
         
         this._directionX=0;
@@ -95,7 +91,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
     }
     
 
- shoot(){
+    shoot(){
         console.log("appui sur shift")
         if(this.isAlive){
           if (this.world.player.x > this.x - 600 && this.world.player.x < this.x + 600){
@@ -106,6 +102,9 @@ class Player extends Phaser.Physics.Arcade.Sprite{
           }
         }
  }
+    
+
+ 
     
     
 

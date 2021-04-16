@@ -46,6 +46,12 @@ class Tableau extends Phaser.Scene{
         this.blood.displayHeight=64;
         this.blood.visible=false;
 
+        this.input.keyboard.on('keydown-SHIFT', function () {
+            console.log("shoot");
+            this.player.shoot();
+          })
+        
+
     }
     update(){
         super.update();
@@ -156,7 +162,7 @@ class Tableau extends Phaser.Scene{
         }
 
     }
-
+    
     /**
      * Pour reset cette scène proprement
      * @private

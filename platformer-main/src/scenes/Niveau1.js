@@ -146,8 +146,6 @@ class Niveau1 extends Tableau{
         }
         this.music.play(musicConfig);
 
-       
-
 
 
 

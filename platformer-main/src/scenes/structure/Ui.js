@@ -105,7 +105,9 @@ class Ui extends Phaser.Scene{
     {
         this.peur+=points;
         this._peurText.setText('Peur: ' + this.peur);
+        
     }
+    
 
     gagne(points=10)
     {

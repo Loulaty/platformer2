@@ -1,24 +1,24 @@
-
-
-var StateTitle = {
-    
-    create: function() {
-        model.state = "title";
-        
+class TitleScene extends Phaser.Scene {
+    constructor(){
+      super("Mother");
     }
-}
-
-preload()
-{
-    super.preload();
-    game.load.image("sky", "assets/sky.png");}
-    
-    
-
-this.btnStart=new TextButton("Start",4,1,G.START_GAME);
- 
- //place it in the center of the screen horizontally
- this.btnStart.x=game.width/2;
   
- //place the button vertically 70% from the top
- this.btnStart.y=game.height*.75;
+    preload ()
+    {
+      this.load.image('sky', 'assets/sky.png');
+    }
+  
+    create(){
+
+      this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');
+      let mytext = this.add.text(375,560,"Press [SPACEBAR] to continue.");
+      this.input.keyboard.on('keydown-SPACE', function () {
+          console.log("lancer");
+          Niveau1.goTableau();
+        
+        })
+
+      }
+  
+    
+  }

@@ -10,27 +10,28 @@ class Ui extends Phaser.Scene{
     create (){
         console.log("create Ui")
 
-        this.score=0;
+        this.ourson=0;
         /**
          * Le champ texte du score
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._scoreText = this.add.text(16, 16, '...', {
+        this._oursonText = this.add.text(16, 16, '...', {
             font:'32px "Hanalei Fill"',
             fill: '#fff'
         });
 
-        this.peur=0;
+        this.peur=300;
         /**
          * Le champ texte du score
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._peurText = this.add.text(16, 60, 'Peur: 0', {
+        this._peurText = this.add.text(16, 50, 'Peur: 300', {
             font:'32px "Hanalei Fill"',
             fill: '#fff'
         });
+
 
         /**
          * Le champ texte avec la clé du tableau
@@ -101,18 +102,20 @@ class Ui extends Phaser.Scene{
     }
 
 
-    perdu(points=5)
+    perdu(points=1)
     {
-        this.peur+=points;
+        this.peur-=points;
         this._peurText.setText('Peur: ' + this.peur);
+        if (this.peur <= 0){
+            console.log("game over")
+        }
         
     }
     
-
-    gagne(points=10)
+    shield(points=100)
     {
-        this.score+=points;
-        this._scoreText.setText('Score: ' + this.score);
+        this.ourson+=points;
+        this._oursonText.setText('Ourson: ' + this.ourson);
     }
     update(){
         if(Tableau.current){

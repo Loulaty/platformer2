@@ -48,7 +48,8 @@ class Tableau extends Phaser.Scene{
 
         this.input.keyboard.on('keydown-SHIFT', function () {
             console.log("shoot");
-            this.player.shoot();
+            console.log("appui sur shift")
+            
           })
         
 
@@ -90,7 +91,7 @@ class Tableau extends Phaser.Scene{
     ramasserEtoile (player, star)
     {
         star.disableBody(true, true);
-        ui.gagne();
+        ui.shield();
 
         //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
         let totalActive=0;
@@ -106,11 +107,7 @@ class Tableau extends Phaser.Scene{
         }
     }
 
-    loose(){
-    if (perdu() === 20){
-        console.log("GAME OVER") ;
-    }
-}
+
 
 
 
@@ -130,7 +127,6 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
-                ui.gagne();
                 monster.isDead=true; //ok le monstre est mort
                 monster.disableBody(true,true);//plus de collisions
                 this.saigne(monster,function(){
@@ -141,19 +137,21 @@ class Tableau extends Phaser.Scene{
             }else{
                 //le joueur est mort
                 if(!me.player.isDead){
-                    me.player.isDead=true;
-                    me.player.visible=false;
-                    //ça saigne...
+                    //me.player.isDead=true;
+                    //me.player.visible=false;
+                    ui.perdu();
+                    if (ui.perdu()<=0){
+                        console.log("game over")
+                    }
+
+                    /*ça saigne...
                     me.saigne(me.player,function(){
                         //à la fin de la petite anim, on relance le jeu
-                        ui.perdu();
                         me.blood.visible=false;
                         me.player.anims.play('turn');
                         me.player.isDead=false;
-                        me.scene.restart();
                         
-                        
-                    })
+                    })*/
 
                 }
 

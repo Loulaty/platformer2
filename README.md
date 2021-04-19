@@ -15,6 +15,8 @@ Avancement alpha :
 
 -tentative de tir (avec shift, la touche fonctionne mais pas le tir en lui meme)
 
+-la barre de peur, qui reduit quand on est touché
+
 -condition de défaite (lorsqu'on a plus de point de peur) > je dois le transformer en jauge 
 
 -quand on récupére le nounours on a les point (je dois encore les utiliser comme shield)

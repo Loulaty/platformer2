@@ -47,7 +47,7 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false;
 
         this.input.keyboard.on('keydown-SHIFT', function () {
-            console.log("appui sur shift");
+            console.log("shift");
             shoot();
             
           })
@@ -95,6 +95,8 @@ class Tableau extends Phaser.Scene{
         
     }
 
+
+    
     /**
      * Quand on touche un monstre
      * si on le touche par en haut on le tue, sinon c'est lui qui nous tue
@@ -152,6 +154,8 @@ class Tableau extends Phaser.Scene{
         }
 
     }
+
+    
 
     
     /**
@@ -212,14 +216,3 @@ class Tableau extends Phaser.Scene{
  */
 Tableau.current=null;
 
-function shoot(player) {
-    console.log("shoot")
-    var coefDir;
-    if (player.direction == 'left') { coefDir = -1; } else { coefDir = 1 }
-    // on crée la balle a coté du joueur
-    var balle = groupeBullets.create(player.x + (25 * coefDir), player.y - 4, 'balle');
-    // parametres physiques de la balle.
-    balle.setCollideWorldBounds(true);
-    balle.body.allowGravity =false;
-    balle.setVelocity(1000 * coefDir, 0); // vitesse en x et en y
-}

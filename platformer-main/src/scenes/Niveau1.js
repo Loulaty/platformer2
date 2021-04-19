@@ -65,6 +65,8 @@ class Niveau1 extends Tableau{
 
                 /////////////////////////////////////////////// Les AJOUTS /////////////////////////////////////
 
+            
+
         //des étoiles
         this.star1=this.physics.add.sprite(300,100,"star");
         this.star1.setCollideWorldBounds(true);
@@ -145,6 +147,8 @@ class Niveau1 extends Tableau{
             delay:0,
         }
         this.music.play(musicConfig);
+
+        
 
 
 

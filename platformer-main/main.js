@@ -18,7 +18,7 @@ let config = {
     scene: [
         new Ui(),
 
-        //new TitleScene(),
+        new TitleScene(),
         new Niveau1("Lavander forest?"),
         new Tiled("Test"),
 

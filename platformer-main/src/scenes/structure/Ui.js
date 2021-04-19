@@ -108,6 +108,7 @@ class Ui extends Phaser.Scene{
         this._peurText.setText('Peur: ' + this.peur);
         if (this.peur <= 0){
             console.log("game over")
+            
         }
         
     }

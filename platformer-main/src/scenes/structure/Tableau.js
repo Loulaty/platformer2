@@ -92,19 +92,7 @@ class Tableau extends Phaser.Scene{
     {
         star.disableBody(true, true);
         ui.shield();
-
-        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
-        let totalActive=0;
-        for(let child of this.children.getChildren()){
-            if(child.texture && child.texture.key==="star"){
-                if(child.active){
-                    totalActive++;
-                }
-            }
-        }
-        if(totalActive===0){
-            this.win();
-        }
+        
     }
 
 
@@ -134,16 +122,24 @@ class Tableau extends Phaser.Scene{
                 })
                 //notre joueur rebondit sur le monstre
                 player.directionY=500;
+                //si tout les monstres sont mort c'est win
+                let totalActive=0;
+        for(let child of this.children.getChildren()){
+            if(child.texture && child.texture.key==="monstre2"){
+                if(child.active){
+                    totalActive++;
+                }
+            }
+        }
+        if(totalActive===0){
+            this.win();
+        }
             }else{
                 //le joueur est mort
                 if(!me.player.isDead){
                     //me.player.isDead=true;
                     //me.player.visible=false;
                     ui.perdu();
-                    if (ui.perdu()<=0){
-                        console.log("game over")
-                    }
-
                     /*ça saigne...
                     me.saigne(me.player,function(){
                         //à la fin de la petite anim, on relance le jeu

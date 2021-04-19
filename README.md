@@ -21,4 +21,4 @@ Avancement alpha :
 
 -quand on récupére le nounours on a les point (je dois encore les utiliser comme shield)
 
--les ennemis doivent etre mis a jour 
+-les ennemis doivent etre mis a jour (un qui slow le joueur, un qui autour du joueur lui fait des "dégats", un qui se mutlipli, et un qui suit le joueur et lui fait des "dégats"

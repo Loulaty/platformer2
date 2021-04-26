@@ -46,17 +46,20 @@ class Tableau extends Phaser.Scene{
         this.blood.displayHeight=64;
         this.blood.visible=false;
 
-        this.input.keyboard.on('keydown-SHIFT', function () {
-            console.log("shift");
-            shoot();
-            
-          })
+        this.bubble=false;
+        
         
 
     }
     update(){
         super.update();
         this.player.move();
+
+        if (this.bubble){
+        let bubble=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"balle")
+
+            console.log("creer une bulle");
+        }
     }
 
     /**

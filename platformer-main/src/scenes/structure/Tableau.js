@@ -55,8 +55,14 @@ class Tableau extends Phaser.Scene{
         super.update();
         this.player.move();
 
+        
+
         if (this.bubble){
-        let bubble=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"balle")
+            
+             let me = this;
+
+            me.bubble=new BullesTir(this,this.player.x,this.player.y,"balle");
+            let bubble=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"balle").setDepth(996);
 
             console.log("creer une bulle");
         }

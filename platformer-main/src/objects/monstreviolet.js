@@ -9,7 +9,7 @@ class monstreviolet extends ObjetEnnemi{
         super(scene, x, y, "monster-violet");
         this.body.allowGravity=true;
 
-        this.setDisplaySize(64,64);
+        this.setDisplaySize(184,128);
         this.setVelocityX(50);
         this.setCollideWorldBounds(true);
         this.setBounce(1);

@@ -57,14 +57,13 @@ class Tableau extends Phaser.Scene{
 
         
 
-        if (this.bubble){
-            
-             let me = this;
+        if (this.bubble)
+        {
+            let me = this;
 
-            me.bubble=new BullesTir(this,this.player.x,this.player.y,"balle");
-            let bubble=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"balle").setDepth(996);
-
-            console.log("creer une bulle");
+            me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(996);
+            console.log("bulle créé")
+            me.bubble=false;
         }
     }
 
@@ -96,6 +95,7 @@ class Tableau extends Phaser.Scene{
             }
         })
     }
+
 
     ramasserEtoile (player, star)
     {

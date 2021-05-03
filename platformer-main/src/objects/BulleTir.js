@@ -1,4 +1,4 @@
-class BullesTir extends Phaser.Physics.Arcade.Sprite 
+class BulleTir extends Phaser.Physics.Arcade.Sprite 
 {
 
   constructor(scene, x, y,) 

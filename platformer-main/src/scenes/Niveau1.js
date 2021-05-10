@@ -142,6 +142,8 @@ class Niveau1 extends Tableau{
 
         
 
+        
+
         //Monstres
         new monstre2(this,800,100);;
         new monstre2(this,1930,100);

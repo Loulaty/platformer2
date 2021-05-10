@@ -17,10 +17,12 @@ http://localhost/platformer2/platformer-main/
 
 -coder le shoot (en cours)
 
+-shoot 2 fonction : tuer/creer une platforme
+
 -jauge de bulle
 
 -utiler les point de l'ourson en shield
 
 -ne pas tuer les ennemis en sautant dessus
 
--condition de victoire/defaite
+-condition de victoire(arriver a la fin, recuperer un objet)/defaitetomber,jauge de peur remplie)

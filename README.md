@@ -21,8 +21,6 @@ http://localhost/platformer2/platformer-main/
 
 -jauge de bulle
 
--utiler les point de l'ourson en shield
-
 -condition de victoire(arriver a la fin, recuperer un objet)/defaitetomber,jauge de peur remplie)
 
 -ecran de lancement

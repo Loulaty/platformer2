@@ -152,6 +152,9 @@ class Tableau extends Phaser.Scene{
                         ui.shielduse();
                     }else{
                         ui.perdu();
+                        if(ui.peur < 0){
+                            me.gameover();
+                        }
                     }
                     
                     /*ça saigne...
@@ -171,8 +174,23 @@ class Tableau extends Phaser.Scene{
 
     }
 
-    
 
+    gameover(){
+        let me=this;
+        if(!me.player.isDead) {
+            me.player.isDead = true;
+            me.player.visible = false;
+            //ça saigne...
+            me.saigne(me.player, function () {
+                //à la fin de la petite anim, on relance le jeu
+                me.blood.visible = false;
+                me.player.anims.play('turn');
+                me.player.isDead = false;
+                me.scene.restart();
+                ui.peur = 301;
+            })
+        }
+    }
     
     /**
      * Pour reset cette scène proprement

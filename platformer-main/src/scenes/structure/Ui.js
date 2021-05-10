@@ -16,8 +16,8 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._oursonText = this.add.text(16, 16, '...', {
-            font:'32px "Hanalei Fill"',
+        this._oursonText = this.add.text(5, 5, '...', {
+            font:'10px "Hanalei Fill"',
             fill: '#fff'
         });
 
@@ -27,11 +27,10 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._peurText = this.add.text(16, 50, 'Peur: 300', {
-            font:'32px "Hanalei Fill"',
+        this._peurText = this.add.text(5, 15, 'Peur: 300', {
+            font:'10 "Hanalei Fill"',
             fill: '#fff'
         });
-
 
         /**
          * Le champ texte avec la clé du tableau
@@ -43,6 +42,7 @@ class Ui extends Phaser.Scene{
             align: 'right',
             fill: '#fff'
         })
+
 
         /**
          * Le champ texte avec la classe du tableau

@@ -15,12 +15,10 @@ http://localhost/platformer2/platformer-main/
 
 -mob clown (suit le joueur)
 
--coder le shoot (en cours)
-
 -shoot 2 fonction : tuer/creer une platforme
 
 -jauge de bulle
 
--condition de victoire(arriver a la fin, recuperer un objet)/defaitetomber,jauge de peur remplie)
+-condition de victoire(arriver a la fin, recuperer un objet)
 
 -ecran de lancement

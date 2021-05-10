@@ -20,16 +20,20 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.world = scene;
     this.isAlive = true;
 
-
+  }
 
 
   update() 
   {
-    if (this.body.touching && this.isAlive) 
+   
+    if (this.body.touching/*.up*/ && this.isAlive) 
     {
+      this.killEffect();
       this.disableBody(true, true);
       this.isAlive = false;
     }
-  }
+
   }
 }
+
+

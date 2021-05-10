@@ -55,16 +55,18 @@ class Tableau extends Phaser.Scene{
         super.update();
         this.player.move();
 
-        
-
-        if (this.bubble)
+        if (this.shiftPressed)
         {
             let me = this;
 
-            me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(996);
-            console.log("bulle créé")
-            me.bubble=false;
+            me.aPressed=new ElementProjectils(this,this.player.x,this.player.y,"balle").setDepth(996);
+
+            me.aPressed.rotation = Phaser.Math.Between(0,6);
         }
+
+        
+
+        
     }
 
     /**

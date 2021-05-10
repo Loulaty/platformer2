@@ -134,6 +134,7 @@ class Niveau1 extends Tableau{
         rebond.children.iterate(function (child) {
             child.setDisplaySize(100,50);
             child.setOrigin(0,0);
+
             child.setImmovable(true);
             child.refreshBody();
         });

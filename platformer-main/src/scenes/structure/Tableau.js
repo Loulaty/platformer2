@@ -61,6 +61,8 @@ class Tableau extends Phaser.Scene{
             let me = this;
 
             me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(100000);
+
+            
             me.bubble.visible=true;
 
             me.bubble=false;
@@ -85,7 +87,7 @@ class Tableau extends Phaser.Scene{
         me.blood.y=object.y;
         me.tweens.add({
             targets:me.blood,
-            duration:500,
+            duration:700,
             displayHeight:{
                 from:40,
                 to:70,
@@ -197,6 +199,29 @@ class Tableau extends Phaser.Scene{
         }
     }
     
+
+    victory (player, win)
+    {
+        win.disableBody(true, true);
+        win.emit("disabled");
+        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
+    
+        let totalActive=0;
+        for(let child of this.children.getChildren()){
+            if(child.texture && child.texture.key==="win"){
+                if(child.active){
+                    totalActive++;
+                }
+            }
+        }
+        if(totalActive===0){
+            this.win();
+        }
+        
+    }
+
+
+
     /**
      * Pour reset cette scène proprement
      * @private

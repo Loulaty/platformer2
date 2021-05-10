@@ -20,7 +20,7 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.world = scene;
     this.isAlive = true;
 
-    this.duration = 500;
+
 
     
   }

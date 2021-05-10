@@ -11,6 +11,7 @@ class Niveau1 extends Tableau{
         this.load.image('monstre5', 'assets/monstre5.png');
         this.load.image('monster-fly', 'assets/monster-fly.png');
         this.load.image('ground', 'assets/platform.png');
+        this.load.image('jump', 'assets/platformJump.png');
         this.load.image('sky-2', 'assets/sky-2.png');
 
         this.load.audio('fond', 'assets/sounds/fond.mp3');
@@ -105,7 +106,6 @@ class Niveau1 extends Tableau{
         //plateformes
         let groupeVert = this.physics.add.staticGroup();
         groupeVert.create(0, 250, 'ground');
-        groupeVert.create(140, 300, 'ground');
         groupeVert.create(350, 200, 'ground');
         groupeVert.create(550, 70, 'ground');
         groupeVert.create(670, 400, 'ground');
@@ -126,6 +126,21 @@ class Niveau1 extends Tableau{
         this.physics.add.collider(this.star4, groupeVert);
         this.physics.add.collider(this.star5, groupeVert);
         this.physics.add.collider(this.star6, groupeVert);
+
+
+        let rebond = this.physics.add.staticGroup();
+        rebond.create(140, 300, 'jump');
+      
+        rebond.children.iterate(function (child) {
+            child.setDisplaySize(100,50);
+            child.setOrigin(0,0);
+            child.body.allowGravity=0; 
+            child.setImmovable(true);
+            child.refreshBody();});
+        this.physics.add.collider(this.player, rebond);
+
+
+        
 
         //Monstres
         new monstre2(this,800,100);;

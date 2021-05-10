@@ -122,11 +122,11 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
-                monster.isDead=true; //ok le monstre est mort
+               /* monster.isDead=true; //ok le monstre est mort
                 monster.disableBody(true,true);//plus de collisions
                 this.saigne(monster,function(){
                     //à la fin de la petite anim...ben il se passe rien :)
-                })
+                })*/
                 //notre joueur rebondit sur le monstre
                 player.directionY=500;
                 //si tout les monstres sont mort c'est win

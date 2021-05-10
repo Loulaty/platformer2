@@ -112,12 +112,22 @@ class Ui extends Phaser.Scene{
         }
         
     }
-    
+
+    shielduse(points=1)
+    {
+        this.ourson-=points;
+        this._oursonText.setText('Ourson: ' + this.ourson);
+    }
+
+
     shield(points=100)
     {
         this.ourson+=points;
         this._oursonText.setText('Ourson: ' + this.ourson);
     }
+
+
+
     update(){
         if(Tableau.current){
             this._tableauText.setText(Tableau.current.scene.key);

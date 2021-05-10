@@ -134,10 +134,11 @@ class Niveau1 extends Tableau{
         rebond.children.iterate(function (child) {
             child.setDisplaySize(100,50);
             child.setOrigin(0,0);
-            child.body.allowGravity=0; 
             child.setImmovable(true);
-            child.refreshBody();});
+            child.refreshBody();
+        });
         this.physics.add.collider(this.player, rebond);
+        this.player.directionY=500;
 
 
         

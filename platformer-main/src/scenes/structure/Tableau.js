@@ -105,6 +105,8 @@ class Tableau extends Phaser.Scene{
     }
 
 
+
+
     
     /**
      * Quand on touche un monstre
@@ -146,7 +148,12 @@ class Tableau extends Phaser.Scene{
                 if(!me.player.isDead){
                     //me.player.isDead=true;
                     //me.player.visible=false;
-                    ui.perdu();
+                    if(ui.ourson > 0){
+                        ui.shielduse();
+                    }else{
+                        ui.perdu();
+                    }
+                    
                     /*ça saigne...
                     me.saigne(me.player,function(){
                         //à la fin de la petite anim, on relance le jeu

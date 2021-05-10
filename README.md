@@ -24,3 +24,5 @@ http://localhost/platformer2/platformer-main/
 -utiler les point de l'ourson en shield
 
 -condition de victoire(arriver a la fin, recuperer un objet)/defaitetomber,jauge de peur remplie)
+
+-ecran de lancement

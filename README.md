@@ -22,3 +22,5 @@ http://localhost/platformer2/platformer-main/
 -condition de victoire(arriver a la fin, recuperer un objet)
 
 -ecran de lancement
+
+-ecran de defaite

@@ -111,6 +111,13 @@ class Tableau extends Phaser.Scene{
         
     }
 
+    Boing (player, rebond)
+    {
+        player.body.velocity.y > 0
+        && player.getBounds().bottom < rebond.getBounds().top+30
+        player.setVelocityY(-600);
+    }
+
 
 
 

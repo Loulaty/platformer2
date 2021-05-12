@@ -25,6 +25,8 @@ class Tiled extends Tableau{
         this.map = this.make.tilemap({ key: 'map' });
         this.tileset = this.map.addTilesetImage('tuiles', 'tiles');
 
+        this.player.setMaxVelocity(600,600);
+
 
 
         this.tuiles = this.map.createLayer('tuiles', this.tileset, 0, 0);

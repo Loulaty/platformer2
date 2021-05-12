@@ -68,6 +68,19 @@ class Tableau extends Phaser.Scene{
 
         }
 
+        if (this.bubblejump)
+        {
+            let me = this;
+
+            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,"platformJump").setDepth(100000);
+
+            
+            me.bubblejump.visible=true;
+
+            me.bubblejump=false;
+
+        }
+
         
 
         

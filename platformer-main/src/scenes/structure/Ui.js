@@ -72,7 +72,7 @@ class Ui extends Phaser.Scene{
         let me=this;
         setTimeout(function(){
             me.tableau="Hello World";
-            me.gagne(0)
+            //me.gagne(0)
         },100)
 
 

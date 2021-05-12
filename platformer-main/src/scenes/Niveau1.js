@@ -136,9 +136,10 @@ class Niveau1 extends Tableau{
             child.setImmovable(true);
             child.refreshBody();
         });
-        this.physics.add.collider(this.player, rebond);
+        this.physics.add.collider(this.player, rebond,this.Boing,null,this);
         this.player.directionY=500;
 
+        //this.physics.add.collider(this.player, this.rebond,this.Bo,null,this);
 
         
 

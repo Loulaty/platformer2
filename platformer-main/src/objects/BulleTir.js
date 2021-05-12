@@ -7,7 +7,7 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
-    scene.physics.add.collider(scene.player, this);
+    scene.physics.add.collider(scene.player, scene.monstre2, this);
 
     this.setImmovable(false);
     this.setDisplaySize(16, 16);
@@ -34,6 +34,8 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
       this.killEffect();
       this.disableBody(true, true);
       this.isAlive = false;
+
+      this.physics.add.overlap(this.monstre2, this.bubblejump, null, this);
     }
 
   }

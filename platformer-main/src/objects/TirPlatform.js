@@ -3,16 +3,17 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
 
   constructor(scene, x, y,) 
   {
-    super(scene, x, y, 'platformJump');
+    super(scene, x, y, 'jump');
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
     scene.physics.add.collider(scene.player, this);
 
-    this.setImmovable(false);
+    this.setImmovable(true);
     this.setBounceX(0);
+    this.setBounceY(0);
     this.setCollideWorldBounds(true);
-    // this.setGravityY(-250)
+    this.setGravityY(0);
     // this.setVelocity(100, -50);
     this.setBodySize(this.body.width, this.body.height);
 
@@ -20,14 +21,16 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
     this.isAlive = true;
 
 
-
+    
     
   }
 
 
   update() 
   {
-
+    player.body.velocity.y > 0
+        && player.getBounds().bottom < bubblejump.getBounds().top
+        player.setVelocityY(-600);
   }
 }
 

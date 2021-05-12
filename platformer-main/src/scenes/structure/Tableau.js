@@ -17,6 +17,7 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
+        this.load.image('jump, assets/platformJump.png')
         this.load.image('blood', 'assets/blood.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
@@ -72,7 +73,7 @@ class Tableau extends Phaser.Scene{
         {
             let me = this;
 
-            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,"platformJump").setDepth(100000);
+            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "jump").setDepth(100000);
 
             
             me.bubblejump.visible=true;
@@ -126,7 +127,7 @@ class Tableau extends Phaser.Scene{
     Boing (player, rebond)
     {
         player.body.velocity.y > 0
-        && player.getBounds().bottom < rebond.getBounds().top+30
+        && player.getBounds().bottom < rebond.getBounds().top
         player.setVelocityY(-600);
     }
 
@@ -200,6 +201,34 @@ class Tableau extends Phaser.Scene{
 
     }
 
+    
+    /**
+     * Quand on touche un monstre
+     * si on le touche par en haut on le tue, sinon c'est lui qui nous tue
+     * @param {Player} player
+     * @param {Phaser.Physics.Arcade.Sprite} monstre2
+     */
+     /*Bullekill(player, monstre2){
+        let me=this;
+        if(monstre2.isDead !== true){
+            if(
+                this.bubble.posY == monstre2.posY
+            ){
+               
+        for(let child of this.children.getChildren()){
+            if(child.texture && child.texture.key==="monstre2"){
+                if(child.active){
+                    totalActive++;
+                }
+            }
+        }
+
+        
+        }
+
+    }
+}
+*/
 
     gameover(){
         let me=this;

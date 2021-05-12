@@ -31,11 +31,12 @@ class Tiled extends Tableau{
 
         this.tuiles = this.map.createLayer('tuiles', this.tileset, 0, 0);
 
-        this.tuiles.setDepth(100000);
+     
 
         this.tuiles.setCollisionByExclusion(-1,true);
-        //this.barrieres.setCollisionByProperty({ collide: true});
+        this.tuiles.setCollisionByProperty({ collide: true});
         this.physics.add.collider(this.player, this.tuiles);
+
 
         let largeurDuTableau=this.map.widthInPixels;
         let hauteurDuTableau=this.map.heightInPixels;
@@ -67,26 +68,12 @@ class Tiled extends Tableau{
 
           //----------collisions---------------------
 
-        //quoi collide avec quoi?
-        this.physics.add.collider(this.player, this.tuiles);
-
-          this.star = this.physics.add.group({
-            allowGravity: true,
-            immovable: false,
-            bounceY:0
-        });
-        this.star = this.physics.add.group({
-            allowGravity: true,
-            immovable: false,
-            bounceY:1
-        });
-        this.physics.add.overlap(this.star, this.platforms);
-        this.physics.add.overlap(this.player, this.star, this.ramasserEtoile, null, this);
-
         let z=1000; //niveau Z qui a chaque fois est décrémenté.
+        this.tuiles.setDepth(z--);
         this.player.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);
+        
 
         
 

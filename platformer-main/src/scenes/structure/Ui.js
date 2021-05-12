@@ -4,11 +4,20 @@ class Ui extends Phaser.Scene{
         super({ key: 'ui', active: true });
         window.ui=this;
     }
+    
     preload(){
         this.load.image('ui/full-screen-icon', 'assets/ui/full-screen.png');
+        this.load.image('green', 'assets/green.png');
+        this.load.image('red', 'assets/red.png');
     }
     create (){
         console.log("create Ui")
+
+        let backgroundBar=this.add.image(300,20,'red');
+        backgroundBar.fixedToCamera = true;
+        let healthBar=this.add.image(300, 20, 'green');
+        healthBar.fixedToCamera = true;
+        //healthBar.scale.setTo(this.peur / this.peurmax, 1);
 
         this.ourson=0;
         /**
@@ -21,6 +30,7 @@ class Ui extends Phaser.Scene{
             fill: '#fff'
         });
 
+        this.maxpeur=300;
         this.peur=300;
         /**
          * Le champ texte du score

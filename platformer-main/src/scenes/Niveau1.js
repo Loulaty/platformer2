@@ -11,6 +11,7 @@ class Niveau1 extends Tableau{
         this.load.image('ground', 'assets/platform.png');
         this.load.image('jump', 'assets/platformJump.png');
         this.load.image('sky-2', 'assets/sky-2.png');
+        this.load.image('win', 'assets/win.png');
 
         this.load.audio('fond', 'assets/sounds/fond.mp3');
 
@@ -141,6 +142,8 @@ class Niveau1 extends Tableau{
 
         //this.physics.add.collider(this.player, this.rebond,this.Bo,null,this);
 
+       
+        
         
 
         

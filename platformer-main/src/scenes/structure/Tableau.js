@@ -124,6 +124,13 @@ class Tableau extends Phaser.Scene{
         
     }
 
+    ramasserVic (player, vic)
+    {
+        vic.disableBody(true, true);
+        console.log("win");
+        
+    }
+
     Boing (player, rebond)
     {
         player.body.velocity.y > 0
@@ -252,8 +259,6 @@ class Tableau extends Phaser.Scene{
     {
         win.disableBody(true, true);
         win.emit("disabled");
-        //va lister tous les objets de la scène pour trouver les étoies et vérifier si elles sont actives
-    
         let totalActive=0;
         for(let child of this.children.getChildren()){
             if(child.texture && child.texture.key==="win"){

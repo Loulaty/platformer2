@@ -69,8 +69,9 @@ class Tiled extends Tableau{
           //----------collisions---------------------
 
         let z=1000; //niveau Z qui a chaque fois est décrémenté.
-        this.tuiles.setDepth(z--);
+        
         this.player.setDepth(z--);
+        this.tuiles.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);
         

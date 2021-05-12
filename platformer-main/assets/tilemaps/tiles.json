@@ -4,7 +4,7 @@
      "export":
         {
          "format":"json",
-         "target":"..\/..\/..\/..\/..\/..\/T\u00e9l\u00e9chargements\/tiles.json"
+         "target":"tiles.json"
         }
     },
  "height":56,
@@ -3650,7 +3650,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3659,7 +3659,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3668,7 +3668,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3677,7 +3677,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3686,7 +3686,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3695,7 +3695,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3704,7 +3704,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3713,7 +3713,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3722,7 +3722,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3731,7 +3731,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3740,7 +3740,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3749,7 +3749,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3758,7 +3758,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3767,7 +3767,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3776,7 +3776,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3785,7 +3785,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3794,7 +3794,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3803,7 +3803,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3812,7 +3812,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3821,7 +3821,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3830,7 +3830,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3839,7 +3839,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3848,7 +3848,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3857,7 +3857,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3866,7 +3866,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3875,7 +3875,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3902,7 +3902,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3911,7 +3911,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3920,7 +3920,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3929,7 +3929,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3938,7 +3938,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3947,7 +3947,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3956,7 +3956,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3965,7 +3965,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3974,7 +3974,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3983,7 +3983,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -3992,7 +3992,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4001,7 +4001,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4010,7 +4010,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4019,7 +4019,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4028,7 +4028,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4037,7 +4037,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4046,7 +4046,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4055,7 +4055,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4064,7 +4064,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4073,7 +4073,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4082,7 +4082,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4091,7 +4091,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4100,7 +4100,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4109,7 +4109,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4118,7 +4118,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4127,7 +4127,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4136,7 +4136,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4145,7 +4145,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4154,7 +4154,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4163,7 +4163,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4172,7 +4172,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4181,7 +4181,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4190,7 +4190,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4199,7 +4199,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4208,7 +4208,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4217,7 +4217,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4226,7 +4226,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4235,7 +4235,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4244,7 +4244,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4253,7 +4253,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4262,7 +4262,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4271,7 +4271,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4280,7 +4280,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4289,7 +4289,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4298,7 +4298,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4307,7 +4307,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4316,7 +4316,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4325,7 +4325,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4334,7 +4334,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4343,7 +4343,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4352,7 +4352,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4361,7 +4361,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4370,7 +4370,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4379,7 +4379,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4388,7 +4388,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4397,7 +4397,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4406,7 +4406,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4415,7 +4415,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4424,7 +4424,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4433,7 +4433,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4442,7 +4442,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4451,7 +4451,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4460,7 +4460,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4469,7 +4469,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4478,7 +4478,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4487,7 +4487,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4496,7 +4496,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4505,7 +4505,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4514,7 +4514,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4523,7 +4523,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4532,7 +4532,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4541,7 +4541,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4550,7 +4550,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4559,7 +4559,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4568,7 +4568,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4577,7 +4577,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4586,7 +4586,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4595,7 +4595,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4604,7 +4604,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4613,7 +4613,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4622,7 +4622,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4631,7 +4631,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4640,7 +4640,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4649,7 +4649,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4658,7 +4658,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4667,7 +4667,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4676,7 +4676,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4685,7 +4685,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4694,7 +4694,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4703,7 +4703,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4712,7 +4712,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4721,7 +4721,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4730,7 +4730,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4739,7 +4739,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4748,7 +4748,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4757,7 +4757,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4766,7 +4766,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4775,7 +4775,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4784,7 +4784,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4793,7 +4793,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4802,7 +4802,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4811,7 +4811,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4820,7 +4820,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4829,7 +4829,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4838,7 +4838,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4847,7 +4847,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4856,7 +4856,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4865,7 +4865,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4874,7 +4874,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4883,7 +4883,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4892,7 +4892,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4901,7 +4901,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4910,7 +4910,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4919,7 +4919,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4928,7 +4928,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4937,7 +4937,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4946,7 +4946,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4955,7 +4955,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4964,7 +4964,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4973,7 +4973,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4982,7 +4982,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -4991,7 +4991,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5000,7 +5000,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5009,7 +5009,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5018,7 +5018,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5027,7 +5027,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5036,7 +5036,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5045,7 +5045,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5054,7 +5054,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5063,7 +5063,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5072,7 +5072,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5081,7 +5081,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5090,7 +5090,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5099,7 +5099,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5108,7 +5108,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5117,7 +5117,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5126,7 +5126,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5135,7 +5135,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5144,7 +5144,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5153,7 +5153,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5162,7 +5162,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5171,7 +5171,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5180,7 +5180,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5189,7 +5189,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5198,7 +5198,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5207,7 +5207,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5216,7 +5216,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5225,7 +5225,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5234,7 +5234,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5243,7 +5243,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5252,7 +5252,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5261,7 +5261,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5270,7 +5270,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5279,7 +5279,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5288,7 +5288,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5297,7 +5297,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5306,7 +5306,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5315,7 +5315,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5324,7 +5324,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5333,7 +5333,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5342,7 +5342,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5351,7 +5351,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5360,7 +5360,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5369,7 +5369,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5378,7 +5378,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5387,7 +5387,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5396,7 +5396,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5405,7 +5405,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5414,7 +5414,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5423,7 +5423,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5432,7 +5432,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5441,7 +5441,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5450,7 +5450,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5459,7 +5459,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5468,7 +5468,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5477,7 +5477,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5486,7 +5486,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5495,7 +5495,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5504,7 +5504,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5513,7 +5513,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5522,7 +5522,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5531,7 +5531,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5540,7 +5540,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5549,7 +5549,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5558,7 +5558,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5567,7 +5567,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5576,7 +5576,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5585,7 +5585,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5594,7 +5594,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5603,7 +5603,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5612,7 +5612,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5621,7 +5621,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5630,7 +5630,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5639,7 +5639,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5648,7 +5648,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5657,7 +5657,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5666,7 +5666,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5675,7 +5675,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5684,7 +5684,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5693,7 +5693,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5702,7 +5702,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5711,7 +5711,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5720,7 +5720,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5729,7 +5729,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5738,7 +5738,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5747,7 +5747,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5756,7 +5756,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5765,7 +5765,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5774,7 +5774,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5783,7 +5783,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5792,7 +5792,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5801,7 +5801,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5810,7 +5810,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5819,7 +5819,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5828,7 +5828,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5837,7 +5837,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5846,7 +5846,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5855,7 +5855,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5864,7 +5864,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5873,7 +5873,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5882,7 +5882,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5891,7 +5891,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5900,7 +5900,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5909,7 +5909,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5918,7 +5918,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5927,7 +5927,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5936,7 +5936,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5945,7 +5945,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5954,7 +5954,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5963,7 +5963,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5972,7 +5972,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5981,7 +5981,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5990,7 +5990,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -5999,7 +5999,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6008,7 +6008,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6017,7 +6017,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6026,7 +6026,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6035,7 +6035,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6044,7 +6044,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6053,7 +6053,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6062,7 +6062,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6071,7 +6071,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6080,7 +6080,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6089,7 +6089,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6098,7 +6098,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6107,7 +6107,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6116,7 +6116,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6125,7 +6125,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6134,7 +6134,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6143,7 +6143,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6152,7 +6152,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6161,7 +6161,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6170,7 +6170,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6179,7 +6179,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6188,7 +6188,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6197,7 +6197,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6206,7 +6206,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6215,7 +6215,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6224,7 +6224,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6233,7 +6233,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6242,7 +6242,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6251,7 +6251,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6260,7 +6260,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6269,7 +6269,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6278,7 +6278,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6287,7 +6287,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6296,7 +6296,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6305,7 +6305,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6314,7 +6314,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6323,7 +6323,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6332,7 +6332,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6341,7 +6341,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6350,7 +6350,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6359,7 +6359,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6368,7 +6368,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6377,7 +6377,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6386,7 +6386,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6395,7 +6395,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6404,7 +6404,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6413,7 +6413,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6422,7 +6422,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6431,7 +6431,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6440,7 +6440,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6449,7 +6449,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6458,7 +6458,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6467,7 +6467,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6476,7 +6476,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6485,7 +6485,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6494,7 +6494,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6503,7 +6503,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6512,7 +6512,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6521,7 +6521,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6530,7 +6530,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6539,7 +6539,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6548,7 +6548,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6557,7 +6557,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6566,7 +6566,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6575,7 +6575,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6584,7 +6584,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6593,7 +6593,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6602,7 +6602,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6611,7 +6611,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6620,7 +6620,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6629,7 +6629,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6638,7 +6638,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6647,7 +6647,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6656,7 +6656,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6665,7 +6665,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6674,7 +6674,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6683,7 +6683,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6692,7 +6692,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6701,7 +6701,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6710,7 +6710,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6719,7 +6719,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6728,7 +6728,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6737,7 +6737,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6746,7 +6746,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6755,7 +6755,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6764,7 +6764,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6773,7 +6773,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6782,7 +6782,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6791,7 +6791,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6800,7 +6800,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6809,7 +6809,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6818,7 +6818,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6827,7 +6827,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6836,7 +6836,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6845,7 +6845,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6854,7 +6854,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6863,7 +6863,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6872,7 +6872,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6881,7 +6881,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6890,7 +6890,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6899,7 +6899,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6908,7 +6908,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6917,7 +6917,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6926,7 +6926,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6935,7 +6935,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6944,7 +6944,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6953,7 +6953,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6962,7 +6962,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6971,7 +6971,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6980,7 +6980,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6989,7 +6989,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -6998,7 +6998,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7007,7 +7007,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7016,7 +7016,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7025,7 +7025,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7034,7 +7034,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7043,7 +7043,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7052,7 +7052,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7061,7 +7061,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7070,7 +7070,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7079,7 +7079,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7088,7 +7088,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7097,7 +7097,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7106,7 +7106,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7115,7 +7115,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7124,7 +7124,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }, 
                 {
@@ -7133,7 +7133,7 @@
                         {
                          "name":"collide",
                          "type":"bool",
-                         "value":false
+                         "value":true
                         }]
                 }],
          "tilewidth":32

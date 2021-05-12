@@ -13,9 +13,9 @@ http://localhost/platformer2/platformer-main/
 
 -mob arraignée (slow le player) (se transofrme en platforme a la mort)
 
--mob clown (suit le joueur)
+-collide bulle monstre2
 
--shoot 2 fonction : tuer/creer une platforme
+-mob clown (suit le joueur)
 
 -jauge de bulle
 

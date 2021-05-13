@@ -25,7 +25,7 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._oursonText = this.add.text(5, 5, '...', {
+        this._oursonText = this.add.text(5, 5, 'Ourson: 0', {
             font:'10px "Hanalei Fill"',
             fill: '#fff'
         });

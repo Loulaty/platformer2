@@ -2,14 +2,8 @@ class Tiled extends Tableau{
 
     preload() {
         super.preload();
-        this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
-        this.load.tilemapTiledJSON('map', 'assets/tilemaps/tiles.json');
-        this.load.image('star', 'assets/star.png');
-        this.load.image('star2', 'assets/star2.png');
-        this.load.image('monster-violet', 'assets/monster-violet.png');
-        this.load.image('monstre2', 'assets/monstre2.png');
-        this.load.image('monstre3', 'assets/monstre3.png');
-        this.load.image('monster-fly', 'assets/monster-fly.png');
+        this.load.image('tiles', 'assets/tileset.png');
+        this.load.tilemapTiledJSON('map', 'assets/tilemaps/Level1.json');
         this.load.image('ground', 'assets/platform.png');
         this.load.image('jump', 'assets/platformJump.png');
         this.load.image('sky-2', 'assets/sky-2.png');
@@ -23,19 +17,19 @@ class Tiled extends Tableau{
         let ici=this;
 
         this.map = this.make.tilemap({ key: 'map' });
-        this.tileset = this.map.addTilesetImage('tuiles', 'tiles');
+        this.tileset = this.map.addTilesetImage('solide', 'tiles');
 
         this.player.setMaxVelocity(600,600);
 
 
 
-        this.tuiles = this.map.createLayer('tuiles', this.tileset, 0, 0);
+        this.solide = this.map.createLayer('solide', this.tileset, 0, 0);
 
      
 
-        this.tuiles.setCollisionByExclusion(-1,true);
+        this.solide.setCollisionByExclusion(-1,true);
         this.tuiles.setCollisionByProperty({ collide: true});
-        this.physics.add.collider(this.player, this.tuiles);
+        this.physics.add.collider(this.player, this.solide);
 
 
         let largeurDuTableau=this.map.widthInPixels;
@@ -71,7 +65,7 @@ class Tiled extends Tableau{
         let z=1000; //niveau Z qui a chaque fois est décrémenté.
         
         this.player.setDepth(z--);
-        this.tuiles.setDepth(z--);
+        this.solide.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);
         

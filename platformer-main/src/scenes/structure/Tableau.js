@@ -66,6 +66,7 @@ class Tableau extends Phaser.Scene{
             me.bubble.visible=true;
 
             me.bubble=false;
+            ui.usebulle();
 
         }
 
@@ -131,11 +132,23 @@ class Tableau extends Phaser.Scene{
         
     }
 
+    
+    
+
     Boing (player, rebond)
     {
         player.body.velocity.y > 0
         && player.getBounds().bottom < rebond.getBounds().top
         player.setVelocityY(-600);
+    }
+
+    Bullesvides (bubble)
+    {
+        if(ui.jaugebulle < 0 ){
+            
+        }
+
+        
     }
 
 
@@ -209,33 +222,20 @@ class Tableau extends Phaser.Scene{
     }
 
     
-    /**
-     * Quand on touche un monstre
-     * si on le touche par en haut on le tue, sinon c'est lui qui nous tue
-     * @param {Player} player
-     * @param {Phaser.Physics.Arcade.Sprite} monstre2
-     */
-     /*Bullekill(player, monstre2){
+     Bullekill(bubble, monstre2){
         let me=this;
         if(monstre2.isDead !== true){
             if(
-                this.bubble.posY == monstre2.posY
-            ){
-               
-        for(let child of this.children.getChildren()){
-            if(child.texture && child.texture.key==="monstre2"){
-                if(child.active){
-                    totalActive++;
-                }
-            }
-        }
+                this.bubble.posX == monstre2.posX
 
-        
+            ){
+                console.log("touché");
+            
         }
 
     }
 }
-*/
+
 
     gameover(){
         let me=this;

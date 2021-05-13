@@ -38,7 +38,19 @@ class Ui extends Phaser.Scene{
          * @private
          */
         this._peurText = this.add.text(5, 15, 'Peur: 300', {
-            font:'10 "Hanalei Fill"',
+            font:'10px "Hanalei Fill"',
+            fill: '#fff'
+        });
+
+
+        this.jaugebulle=10;
+        /**
+         * Le champ texte du score
+         * @type {Phaser.GameObjects.Text}
+         * @private
+         */
+        this._bulleText = this.add.text(5, 30, 'Bulles: 10', {
+            font:'10px "Hanalei Fill"',
             fill: '#fff'
         });
 
@@ -110,6 +122,19 @@ class Ui extends Phaser.Scene{
         btFs.y=this.sys.canvas.height;
 
     }
+
+
+    usebulle(points=1)
+    {
+        this.jaugebulle-=points;
+        this._bulleText.setText('Bulle: ' + this.jaugebulle);
+        if (this.jaugebulle <= 0){
+            console.log("plus de bulles")
+            
+        }
+        
+    }
+
 
 
     perdu(points=1)

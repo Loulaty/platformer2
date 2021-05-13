@@ -140,8 +140,6 @@ class Niveau1 extends Tableau{
         this.physics.add.collider(this.player, rebond,this.Boing,null,this);
         this.player.directionY=500;
 
-        //this.physics.add.collider(this.player, this.rebond,this.Bo,null,this);
-
        
         
         
@@ -149,13 +147,13 @@ class Niveau1 extends Tableau{
         
 
         //Monstres
-        new monstre2(this,800,100);;
-        new monstre2(this,1930,100);
+        new monstre2(this,10,10);;
+       /* new monstre2(this,1930,100);
         new MonsterFly(this,400,150);
         new MonsterFly(this,1800,100);
         new monstre3(this,1000,150);
         new monstreviolet(this,450,300);
-        new monstreviolet(this,1800,300);
+        new monstreviolet(this,1800,300);*/
 
         this.music = this.sound.add('fond');
         var musicConfig = {

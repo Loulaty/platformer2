@@ -68,6 +68,13 @@ class Tableau extends Phaser.Scene{
             me.bubble=false;
             ui.usebulle();
 
+            
+
+        }
+
+        if(ui.jaugebulle < 0 ){
+            console.log("AAAAAAAAAAAAAAAAAAAAH")
+            
         }
 
         if (this.bubblejump)
@@ -142,14 +149,7 @@ class Tableau extends Phaser.Scene{
         player.setVelocityY(-600);
     }
 
-    Bullesvides (bubble)
-    {
-        if(ui.jaugebulle < 0 ){
-            
-        }
 
-        
-    }
 
 
 

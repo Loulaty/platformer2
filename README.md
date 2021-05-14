@@ -8,6 +8,12 @@ http://localhost/platformer2/platformer-main/
 
 
 
+Shift = tir bulle
+E = tir platforme
+
+
+A faire :
+
 
 -integrer une jauge pour la peur 
 

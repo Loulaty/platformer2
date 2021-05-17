@@ -17,7 +17,8 @@ class Ui extends Phaser.Scene{
         backgroundBar.fixedToCamera = true;
         let healthBar=this.add.image(300, 20, 'green');
         healthBar.fixedToCamera = true;
-        //healthBar.scale.setTo(this.peur / this.peurmax, 1);
+        healthBar.bodyWidth = this.peur / this.maxpeur;
+
 
         this.ourson=0;
         /**
@@ -30,8 +31,13 @@ class Ui extends Phaser.Scene{
             fill: '#fff'
         });
 
+
+
         this.maxpeur=300;
         this.peur=300;
+
+
+
         /**
          * Le champ texte du score
          * @type {Phaser.GameObjects.Text}

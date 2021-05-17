@@ -17,12 +17,12 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        this.load.image('jump, assets/platformJump.png')
+        this.load.image('platformjump, assets/platformJump.png')
         this.load.image('blood', 'assets/blood.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
             'assets/player.png',
-            { frameWidth: 429, frameHeight: 615  }
+            { frameWidth: 216, frameHeight: 307  }
         );
     }
     create(){
@@ -68,20 +68,23 @@ class Tableau extends Phaser.Scene{
             me.bubble=false;
             ui.usebulle();
 
+           
             
 
         }
 
         if(ui.jaugebulle < 0 ){
-            console.log("AAAAAAAAAAAAAAAAAAAAH")
+            console.log("AAAAAAAAAAAAAAAAAAAAH");
             
         }
+
+       
 
         if (this.bubblejump)
         {
             let me = this;
 
-            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "jump").setDepth(100000);
+            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "platformJump").setDepth(100000);
 
             
             me.bubblejump.visible=true;
@@ -224,10 +227,9 @@ class Tableau extends Phaser.Scene{
 
     
      Bullekill(bubble, monstre2){
-        let me=this;
-        if(monstre2.isDead !== true){
+        if(monster.isDead !== true){
             if(
-                this.bubble.posX == monstre2.posX
+                bubble.posX == monstre2.posX
 
             ){
                 console.log("touché");

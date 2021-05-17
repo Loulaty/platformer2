@@ -25,7 +25,7 @@ class GamePad extends Phaser.GameObjects.Container{
         this.cursors = scene.input.keyboard.createCursorKeys();
 
         scene.input.keyboard.on('keydown', function(kevent){
-            console.log(kevent.key);
+            //console.log(kevent.key);
             switch (kevent.key){
                 case "ArrowRight":
                     Tableau.current.player.directionX=1;

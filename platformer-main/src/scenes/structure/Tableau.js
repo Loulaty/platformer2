@@ -17,7 +17,7 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        this.load.image('platformjump, assets/platformJump.png')
+        this.load.image('platformjump, assets/platformjump.png')
         this.load.image('blood', 'assets/blood.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
@@ -84,7 +84,7 @@ class Tableau extends Phaser.Scene{
         {
             let me = this;
 
-            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "platformJump").setDepth(100000);
+            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "platformjump").setDepth(100000);
 
             
             me.bubblejump.visible=true;
@@ -136,10 +136,11 @@ class Tableau extends Phaser.Scene{
         
     }
 
-    ramasserVic (player, vic)
+    ramasserVic (win)
     {
-        vic.disableBody(true, true);
-        console.log("win");
+        console.log("win"); 
+        win.disableBody(true, true);
+        
         
     }
 
@@ -258,7 +259,7 @@ class Tableau extends Phaser.Scene{
     }
     
 
-    victory (player, win)
+    victory (win)
     {
         win.disableBody(true, true);
         win.emit("disabled");
@@ -271,7 +272,7 @@ class Tableau extends Phaser.Scene{
             }
         }
         if(totalActive===0){
-            this.win();
+            this.gg();
         }
         
     }
@@ -290,7 +291,8 @@ class Tableau extends Phaser.Scene{
     /**
      * Quand on a gagné
      */
-    win(){
+    gg(){
+        console.log("gg")
         Tableau.suivant();
     }
 

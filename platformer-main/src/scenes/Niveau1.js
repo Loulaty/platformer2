@@ -9,7 +9,7 @@ class Niveau1 extends Tableau{
         this.load.image('monstre3', 'assets/monstre3.png');
         this.load.image('monster-fly', 'assets/monster-fly.png');
         this.load.image('ground', 'assets/platform.png');
-        this.load.image('jump', 'assets/platformJump.png');
+        this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('sky-2', 'assets/sky-2.png');
         this.load.image('win', 'assets/win.png');
 
@@ -92,12 +92,20 @@ class Niveau1 extends Tableau{
         this.star6.setCollideWorldBounds(true);
         this.star6.setBounce(0);
 
+        this.win=this.physics.add.sprite(300,300,"win");
+        this.win.setCollideWorldBounds(true);
+        this.win.setBounce(0);
+
+
+
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
         this.physics.add.overlap(this.player, this.star2, this.ramasserEtoile, null, this);
         this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
         this.physics.add.overlap(this.player, this.star4, this.ramasserEtoile, null, this);
         this.physics.add.overlap(this.player, this.star5, this.ramasserEtoile, null, this);
         this.physics.add.overlap(this.player, this.star6, this.ramasserEtoile, null, this);
+
+        this.physics.add.overlap(this.player, this.win, this.victory, null, this);
 
         this.physics.add.collider(this.player,this.platforms);
 
@@ -128,7 +136,7 @@ class Niveau1 extends Tableau{
 
 
         let rebond = this.physics.add.staticGroup();
-        rebond.create(140, 300, 'jump');
+        rebond.create(140, 300, 'platformjump');
       
         rebond.children.iterate(function (child) {
             child.setDisplaySize(100,50);

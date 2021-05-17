@@ -88,9 +88,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
                 this.anims.play('right', true);
                 break;
 
-            case this._directionY<0:
-
-                this.setVelocityY(0);
+            case "ArrowUp":
                 this.anims.play('up', true);
                 break;
 

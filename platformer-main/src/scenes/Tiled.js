@@ -4,6 +4,8 @@ class Tiled extends Tableau{
         super.preload();
         this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
+        this.load.image('sky-2', 'assets/sky-2.png');
+        this.load.image('platformjump', 'assets/platformjump.png');
     }
     create() {
         super.create();
@@ -28,9 +30,13 @@ class Tiled extends Tableau{
         //---- ajoute les plateformes simples ----------------------------
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
+        
         this.physics.add.collider(this.player,this.solides);
-        //this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.solides.setCollisionByProperty({ collides: true });
+        this.physics.add.collider(this.player, this.solides);
+
+        this.physics.add.collider(this.solides ,this.bubblejump);
+
 
 
        
@@ -42,12 +48,12 @@ class Tiled extends Tableau{
         if(this.game.config.physics.arcade.debug === false){
             debug.visible=false;
         }
-        //débug solides en vers
+        /*débug solides en vers
         this.solides.renderDebug(debug,{
             tileColor: null, // Couleur des tiles qui ne collident pas
             collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255), //Couleur des tiles qui collident
             faceColor: null // Color of colliding face edges
-        });
+        });*/
         //---------- parallax ciel (rien de nouveau) -------------
 
         //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
@@ -71,11 +77,6 @@ class Tiled extends Tableau{
         this.sky2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
         this.sky2.blendMode=Phaser.BlendModes.ADD;
 
-        //----------collisions---------------------
-
-        //quoi collide avec quoi?
-        this.physics.add.collider(this.player, this.solides);
-        //--------- Z order -----------------------
 
         //on définit les z à la fin
         let z=1000; //niveau Z qui a chaque fois est décrémenté.

@@ -5,6 +5,7 @@ class Tiled extends Tableau{
         this.load.image('tiles', 'assets/tilemaps/tableauTiledTileset.png');
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
         this.load.image('sky-2', 'assets/sky-2.png');
+        this.load.image('sky3', 'assets/sky3.png');
         this.load.image('platformjump', 'assets/platformjump.png');
     }
     create() {
@@ -73,16 +74,26 @@ class Tiled extends Tableau{
             this.sys.canvas.height,
             'sky-2'
         );
+        this.sky3=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'sky3'
+        );
         this.sky.setOrigin(0,0);
         this.sky2.setOrigin(0,0);
         this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
         this.sky2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        this.sky2.blendMode=Phaser.BlendModes.ADD;
+        //this.sky2.blendMode=Phaser.BlendModes.ADD;
+        this.sky3.setOrigin(0,0);
+        this.sky3.setScrollFactor(0);
 
 
         //on définit les z à la fin
         let z=1000; //niveau Z qui a chaque fois est décrémenté.
         debug.setDepth(z--);
+        this.sky3.setDepth(z--);
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.player.setDepth(z--);
@@ -105,10 +116,12 @@ class Tiled extends Tableau{
      */
     moveParallax(){
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
-        this.sky.tilePositionX=this.cameras.main.scrollX*0.6;
-        this.sky.tilePositionY=this.cameras.main.scrollY*0.6;
-        this.sky2.tilePositionX=this.cameras.main.scrollX*0.7+100;
-        this.sky2.tilePositionY=this.cameras.main.scrollY*0.7+100;
+        this.sky.tilePositionX=this.cameras.main.scrollX*0.5;
+        this.sky.tilePositionY=this.cameras.main.scrollY*0.5;
+        this.sky2.tilePositionX=this.cameras.main.scrollX*0.8+100;
+        this.sky2.tilePositionY=this.cameras.main.scrollY*0.6;
+        this.sky3.tilePositionX=this.cameras.main.scrollX*0.8;
+        this.sky3.tilePositionY=this.cameras.main.scrollY*0.9;
     }
 
 

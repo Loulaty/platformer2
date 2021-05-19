@@ -84,7 +84,7 @@ class Tableau extends Phaser.Scene{
         {
             let me = this;
 
-            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y,this.rebond, this.Boing, "platformjump").setDepth(100000);
+            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y, this.Boing, "platformjump").setDepth(100000);
 
             
             me.bubblejump.visible=true;
@@ -147,11 +147,13 @@ class Tableau extends Phaser.Scene{
     
     
 
-    Boing (player, rebond)
+    Boing (player, rebond, bubblejump)
     {
         player.body.velocity.y > 0
         && player.getBounds().bottom < rebond.getBounds().top
+        && player.getBounds().bottom < bubblejump.getBounds().top
         player.setVelocityY(-600);
+
     }
 
 

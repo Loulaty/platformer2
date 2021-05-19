@@ -27,7 +27,7 @@ class Niveau1 extends Tableau{
 
         //on définit la taille du tableau
         let largeurDuTableau=2000;
-        let hauteurDuTableau=450; //la hauteur est identique au cadre du jeu
+        let hauteurDuTableau=448; //la hauteur est identique au cadre du jeu
         this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
 
@@ -92,10 +92,10 @@ class Niveau1 extends Tableau{
         this.star6.setCollideWorldBounds(true);
         this.star6.setBounce(0);
 
-        this.win=this.physics.add.sprite(300,300,"win");
+       /* this.win=this.physics.add.sprite(300,300,"win");
         this.win.setCollideWorldBounds(true);
         this.win.setBounce(0);
-
+*/
 
 
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
@@ -106,6 +106,9 @@ class Niveau1 extends Tableau{
         this.physics.add.overlap(this.player, this.star6, this.ramasserEtoile, null, this);
 
         this.physics.add.overlap(this.player, this.win, this.victory, null, this);
+
+        this.physics.add.overlap(this.player, this.platforms, this.rebond, null, this);
+
 
         this.physics.add.collider(this.player,this.platforms);
 

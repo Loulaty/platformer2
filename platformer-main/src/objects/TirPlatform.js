@@ -7,7 +7,7 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
-    scene.physics.add.collider(scene.player, this,);
+    scene.physics.add.collider(scene.player, this);
 
     this.setImmovable(true);
     this.setBounceX(0);

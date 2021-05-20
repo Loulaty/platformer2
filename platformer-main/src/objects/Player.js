@@ -33,7 +33,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         this.anims.create({
             key: 'up',
             frames: [ { key: 'player', frame: 23 } ],
-            frameRate: 13
+            frameRate: 20
         });
 
 

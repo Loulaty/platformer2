@@ -10,7 +10,7 @@ class monstre2 extends ObjetEnnemi{
         scene.physics.add.collider(scene.bubble, this.bubble);
         this.body.allowGravity=true;
 
-        this.setDisplaySize(64,64);
+        this.setDisplaySize(80,80);
         this.setCollideWorldBounds(true);
         this.setBounce(0);
     }

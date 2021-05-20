@@ -1,23 +1,16 @@
-/**
- * Toutes les fonctions propres à un tableau dans notre jeu.
- * Cette classe n'est pas à utiliser directement, elle doit être extend !
- */
 class Tableau extends Phaser.Scene{
     /**
      *
-     * @param {String} key identifiant de la scène à jouer
+     * @param {String} key 
      */
     constructor(key) {
         super(key);
     }
 
-    /**
-     * Par défaut on charge un fond et le player
-     */
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        //this.load.image('platformjump, assets/platformjump.png')
+        this.load.image('platformjump, assets/platformjump.png')
         this.load.image('blood', 'assets/blood.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
@@ -80,16 +73,17 @@ class Tableau extends Phaser.Scene{
 
        
 
-        if (this.bubblejump)
+        if (this.rebond)
         {
             let me = this;
 
-            me.bubblejump=new TirPlatform(this,this.player.x,this.player.y, this.Boing, "platformjump").setDepth(100000);
+            me.rebond=new TirPlatform(this,this.player.x+70,this.player.y+80, this.Boing, "platformjump").setDepth(100000);
+            
 
             
-            me.bubblejump.visible=true;
+            me.rebond.visible=true;
 
-            me.bubblejump=false;
+            me.rebond=false;
             ui.usebulle();
 
         }
@@ -107,7 +101,6 @@ class Tableau extends Phaser.Scene{
     saigne(object,onComplete){
         let me=this;
         me.blood.visible=true;
-       // me.blood.rotation = Phaser.Math.Between(0,6);
         me.blood.x=object.x;
         me.blood.y=object.y;
         me.tweens.add({
@@ -129,7 +122,7 @@ class Tableau extends Phaser.Scene{
     }
 
 
-    ramasserEtoile (player, star)
+    ramasserEtoile (star)
     {
         star.disableBody(true, true);
         ui.shield();
@@ -144,14 +137,10 @@ class Tableau extends Phaser.Scene{
         
     }
 
-    
-    
-
-    Boing (player, rebond, bubblejump)
+    Boing (player, rebond)
     {
         player.body.velocity.y > 0
         && player.getBounds().bottom < rebond.getBounds().top
-        && player.getBounds().bottom < bubblejump.getBounds().top
         player.setVelocityY(-600);
 
     }

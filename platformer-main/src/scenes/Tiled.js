@@ -7,42 +7,47 @@ class Tiled extends Tableau{
         this.load.image('sky-2', 'assets/sky-2.png');
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('platformjump', 'assets/platformjump.png');
+        this.load.image('monstre2', 'assets/monstre2.png');
     }
     create() {
         super.create();
          let ici=this;
 
-         this.player.setMaxVelocity(300,300);
+         this.player.setMaxVelocity(600,600);
 
-        //--------chargement de la tile map & configuration de la scène-----------------------
+        //--------------------Tiled-----------------------
 
-        //notre map
         this.map = this.make.tilemap({ key: 'map' });
-        //nos images qui vont avec la map
         this.tileset = this.map.addTilesetImage('tableauTiledTileset', 'tiles');
 
-        //on agrandit le champ de la caméra du coup
         let largeurDuTableau=this.map.widthInPixels;
         let hauteurDuTableau=this.map.heightInPixels;
         this.physics.world.setBounds(0, 0, largeurDuTableau,  hauteurDuTableau);
         this.cameras.main.setBounds(0, 0, largeurDuTableau, hauteurDuTableau);
         this.cameras.main.startFollow(this.player, true, 1, 1);
 
-        //---- ajoute les plateformes simples ----------------------------
+        //---------------- Platformes/collides ----------------------------
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
 
         this.physics.add.collider(this.player,this.solides);
         this.solides.setCollisionByProperty({ collides: true });
-        this.derriere.setCollisionByProperty({ collides: false });
-        this.physics.add.collider(this.player, this.solides);
+        this.derriere.setCollisionByProperty({ collides: false });  
 
         this.physics.add.collider(this.solides ,this.bubblejump);
 
+        this.physics.add.overlap(this.player, this.solides, this.rebond, null, this);
+
+        this.physics.add.collider(this.player, this.rebond,this.Boing);
 
 
-       
+        //---------------- Monstres/collides ----------------------------
+
+
+        this.monstre2 =  new monstre2(this,300,200);
+        this.physics.add.collider(this.monstre2,this.solides);
+
 
         //----------débug---------------------
         
@@ -58,6 +63,10 @@ class Tiled extends Tableau{
             faceColor: null // Color of colliding face edges
         });*/
         //---------- parallax ciel (rien de nouveau) -------------
+
+
+         //-----------------Ciel---------------------
+
 
         //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
         this.sky=this.add.tileSprite(
@@ -84,36 +93,30 @@ class Tiled extends Tableau{
         this.sky.setOrigin(0,0);
         this.sky2.setOrigin(0,0);
         this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        this.sky2.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        //this.sky2.blendMode=Phaser.BlendModes.ADD;
+        this.sky2.setScrollFactor(0);
         this.sky3.setOrigin(0,0);
         this.sky3.setScrollFactor(0);
 
 
         //on définit les z à la fin
-        let z=1000; //niveau Z qui a chaque fois est décrémenté.
+        let z=1000; 
         debug.setDepth(z--);
         this.sky3.setDepth(z--);
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.player.setDepth(z--);
+        this.monstre2.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);
 
     }
 
-    /**
-     * Permet d'activer, désactiver des éléments en fonction de leur visibilité dans l'écran ou non
-     */
     optimizeDisplay(){
         //return;
-        let world=this.cameras.main.worldView; // le rectagle de la caméra, (les coordonnées de la zone visible)
+        let world=this.cameras.main.worldView; 
     }
 
-    /**
-     * Fait se déplacer certains éléments en parallax
-     */
     moveParallax(){
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.5;
@@ -129,8 +132,6 @@ class Tiled extends Tableau{
         super.update();
         this.moveParallax();
 
-        //optimisation
-        //teste si la caméra a bougé
         let actualPosition=JSON.stringify(this.cameras.main.worldView);
         if(
             !this.previousPosition

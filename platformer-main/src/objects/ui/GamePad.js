@@ -53,7 +53,7 @@ class GamePad extends Phaser.GameObjects.Container{
                 case "e":
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
-                    Tableau.current.bubblejump = true;
+                    Tableau.current.rebond = true;
                     console.log("E");
                     break;
             }
@@ -85,7 +85,7 @@ class GamePad extends Phaser.GameObjects.Container{
                     break;
 
                 case "e":
-                    Tableau.current.bubblejump = false;
+                    Tableau.current.rebond = false;
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
                     console.log("plus E");

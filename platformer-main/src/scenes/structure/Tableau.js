@@ -159,22 +159,13 @@ class Tableau extends Phaser.Scene{
      */
     hitMonster(player, monster){
         let me=this;
-        if(monster.isDead !== true){ //si notre monstre n'est pas déjà mort
+        if(monster.isDead !== true){ 
             if(
-                // si le player descend
                 player.body.velocity.y > 0
-                // et si le bas du player est plus haut que le monstre
                 && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
-               /* monster.isDead=true; //ok le monstre est mort
-                monster.disableBody(true,true);//plus de collisions
-                this.saigne(monster,function(){
-                    //à la fin de la petite anim...ben il se passe rien :)
-                })*/
-                //notre joueur rebondit sur le monstre
                 player.directionY=500;
-                //si tout les monstres sont mort c'est win
                 let totalActive=0;
         for(let child of this.children.getChildren()){
             if(child.texture && child.texture.key==="monstre2"){
@@ -183,14 +174,8 @@ class Tableau extends Phaser.Scene{
                 }
             }
         }
-        if(totalActive===0){
-            this.win();
-        }
             }else{
-                //le joueur est mort
                 if(!me.player.isDead){
-                    //me.player.isDead=true;
-                    //me.player.visible=false;
                     if(ui.ourson > 0){
                         ui.shielduse();
                     }else{
@@ -200,14 +185,6 @@ class Tableau extends Phaser.Scene{
                         }
                     }
                     
-                    /*ça saigne...
-                    me.saigne(me.player,function(){
-                        //à la fin de la petite anim, on relance le jeu
-                        me.blood.visible=false;
-                        me.player.anims.play('turn');
-                        me.player.isDead=false;
-                        
-                    })*/
 
                 }
 
@@ -219,7 +196,7 @@ class Tableau extends Phaser.Scene{
 
     
      Bullekill(bubble, monstre2){
-        if(monster.isDead !== true){
+        if(monstre2.isDead !== true){
             if(
                 bubble.posX == monstre2.posX
 

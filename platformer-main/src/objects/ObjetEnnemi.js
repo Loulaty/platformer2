@@ -12,7 +12,6 @@ class ObjetEnnemi extends ObjetPhysique{
             scene.player,
             this,
             scene.hitMonster,
-            //scene.Bullekill,
             null,
             scene
         );

@@ -30,6 +30,7 @@ class Tiled extends Tableau{
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
+        
 
         this.physics.add.collider(this.player,this.solides);
         this.solides.setCollisionByProperty({ collides: true });
@@ -47,6 +48,7 @@ class Tiled extends Tableau{
 
         this.monstre2 =  new monstre2(this,300,200);
         this.physics.add.collider(this.monstre2,this.solides);
+        this.physics.add.overlap(this.monstre2, this.bubble);
 
 
         //----------débug---------------------
@@ -124,7 +126,7 @@ class Tiled extends Tableau{
         this.sky2.tilePositionX=this.cameras.main.scrollX*0.8+100;
         this.sky2.tilePositionY=this.cameras.main.scrollY*0.6;
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.8;
-        this.sky3.tilePositionY=this.cameras.main.scrollY*0.9;
+        this.sky3.tilePositionY=this.cameras.main.scrollY*0.6;
     }
 
 

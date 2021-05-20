@@ -68,7 +68,7 @@ class Tableau extends Phaser.Scene{
 
         if(ui.jaugebulle < 0 ){
             console.log("AAAAAAAAAAAAAAAAAAAAH");
-            
+            this.BulleTir.StopShoot();
         }
 
        

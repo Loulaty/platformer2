@@ -31,8 +31,13 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     }
 */
 
+
     
   }
+
+  
+
+
 
   
 
@@ -53,12 +58,27 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
 
   ){
       console.log("touché");
-  
-}
+
+      
+        
+    }
+
+    
 
   
 
   }
+
+  StopShoot()
+  {
+    console.log("Stop");
+    this.setVelocityX(0);
+    this.setVelocityY(0);
+    this.directionY=0;
+    this.directionX=0;
+  }
+  
+
 }
 
 

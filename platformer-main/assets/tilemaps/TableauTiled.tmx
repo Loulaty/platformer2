@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="94" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="7" nextobjectid="3">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="94" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="8" nextobjectid="17">
  <editorsettings>
   <export target="tableauTiled.json" format="json"/>
  </editorsettings>
@@ -3701,7 +3701,10 @@
 </data>
  </layer>
  <objectgroup id="6" name="monstre2">
-  <object id="1" gid="403" x="790.061" y="531.152" width="32" height="32"/>
-  <object id="2" gid="403" x="1732.48" y="388.727" width="32" height="32"/>
+  <object id="9" gid="409" x="2608" y="-884" width="32" height="32"/>
+  <object id="13" gid="403" x="799.5" y="512.5" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="7" name="monstre3">
+  <object id="16" gid="513" x="346" y="540" width="32" height="32"/>
  </objectgroup>
 </map>

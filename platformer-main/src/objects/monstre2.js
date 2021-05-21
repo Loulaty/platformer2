@@ -30,13 +30,11 @@ class monstre2 extends ObjetEnnemi{
         this.pos();
 
         if(this.isAlive) {
-            if (this.scene.player.x > this.x - 400) {
+            if (this.scene.player.x > this.x - 300) {
                     this.setVelocityX(100 * this.dir);
-                    console.log('suivre');
             }
-            if (this.scene.player.x < this.x + 400){
+            if (this.scene.player.x < this.x + 300){
                 this.setVelocityX(100 * this.dir);
-                    console.log('suivre');
             }
             else{
                 this.setVelocityX(0);

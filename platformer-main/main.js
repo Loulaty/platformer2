@@ -19,6 +19,7 @@ let config = {
         new Ui(),
 
         //new TitleScene(),
+       // new TitleScreen(),
         new Tiled("Test"),
         new Niveau1("Lavander forest?"),
         

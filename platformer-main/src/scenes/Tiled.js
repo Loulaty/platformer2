@@ -44,11 +44,13 @@ class Tiled extends Tableau{
 
         //---------------- Monstres/collides ----------------------------
 
-
-        this.monstre2 =  new monstre2(this,700,500);
-        this.physics.add.collider(this.monstre2,this.solides);
-        this.physics.add.overlap(this.monstre2, this.bubble);
-
+        this.monstersContainer=this.add.container();
+        ici.monstre2Objects = ici.map.getObjectLayer('monstre2')['objects'];
+        ici.monstre2Objects.forEach(monster2Object => {
+            let monster=new monstre2(this,monster2Object.x,monster2Object.y);
+            this.monstersContainer.add(monster);
+            this.physics.add.collider(monster, this.solides);
+        });
 
         //---------------- Peluches / items ----------------------------
 
@@ -102,12 +104,12 @@ class Tiled extends Tableau{
         //on définit les z à la fin
         let z=1000; 
         debug.setDepth(z--);
+        this.monstersContainer.setDepth(z--);
         this.sky3.setDepth(z--);
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
-        this.monstre2.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);

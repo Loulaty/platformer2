@@ -14,7 +14,7 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.setBounceX(0);
     this.setCollideWorldBounds(false);
     this.setGravityY(-250);
-    this.setVelocity(100, -50);
+    this.setVelocity(100*scene.player.sens, -50);
   
     //this.setVelocity(-100, -50);
     this.setBodySize(this.body.width, this.body.height);
@@ -31,7 +31,9 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     }
 */
 
-
+scene.monstersContainer.iterate(monster2=>{
+  scene.physics.add.overlap(this, monster2, function(){monster2.Tmortlol()}, null, scene);
+})
     
   }
 

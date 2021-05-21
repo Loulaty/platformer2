@@ -71,20 +71,20 @@
         }, 
         {
          "draworder":"topdown",
-         "id":7,
+         "id":8,
          "name":"monstre3",
          "objects":[
                 {
                  "gid":513,
                  "height":32,
-                 "id":16,
+                 "id":17,
                  "name":"",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":346,
-                 "y":540
+                 "x":320,
+                 "y":490
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -92,8 +92,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":8,
- "nextobjectid":17,
+ "nextlayerid":9,
+ "nextobjectid":18,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

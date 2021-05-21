@@ -8,7 +8,7 @@ class Tiled extends Tableau{
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('monstre2', 'assets/monstre2.png');
-        this.load.image('monstre3', 'assets/monstre2.png');
+        this.load.image('monstre3', 'assets/monstre3.png');
         this.load.image('star', 'assets/star.png');
     }
     create() {
@@ -46,6 +46,7 @@ class Tiled extends Tableau{
         //---------------- Monstres/collides ----------------------------
 
         this.monstersContainer=this.add.container();
+
         ici.monstre2Objects = ici.map.getObjectLayer('monstre2')['objects'];
         ici.monstre2Objects.forEach(monster2Object => {
             let monster=new monstre2(this,monster2Object.x,monster2Object.y);
@@ -53,14 +54,14 @@ class Tiled extends Tableau{
             this.physics.add.collider(monster, this.solides);
         });
 
-        this.monstersContainer2=this.add.container();
         ici.monstre3Objects = ici.map.getObjectLayer('monstre3')['objects'];
         ici.monstre3Objects.forEach(monster3Object => {
-            let monster=new monstre3(this,monster3Object.x,monster3Object.y);
-            this.monstersContainer2.add(monster);
-            this.physics.add.collider(monster, this.solides);
+            let spider=new monstre3(this,monster3Object.x,monster3Object.y);
+            this.monstersContainer.add(spider);
+            this.physics.add.collider(spider, this.solides);
         });
-        
+
+      
 
         //---------------- Peluches / items ----------------------------
 
@@ -118,7 +119,6 @@ class Tiled extends Tableau{
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.monstersContainer.setDepth(z--);
-        this.monstersContainer2.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
         this.derriere.setDepth(z--);

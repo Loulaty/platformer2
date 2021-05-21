@@ -122,10 +122,11 @@ class Tableau extends Phaser.Scene{
     }
 
 
-    ramasserEtoile (star)
+    ramasserEtoile (player, star)
     {
         star.disableBody(true, true);
         ui.shield();
+        console.log('trouvé')
         
     }
 

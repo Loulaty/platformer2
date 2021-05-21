@@ -8,6 +8,7 @@ class Tiled extends Tableau{
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('monstre2', 'assets/monstre2.png');
+        this.load.image('star', 'assets/star.png');
     }
     create() {
         super.create();
@@ -36,8 +37,6 @@ class Tiled extends Tableau{
         this.solides.setCollisionByProperty({ collides: true });
         this.derriere.setCollisionByProperty({ collides: false });  
 
-        this.physics.add.collider(this.solides ,this.bubblejump);
-
         this.physics.add.overlap(this.player, this.solides, this.rebond, null, this);
 
         this.physics.add.collider(this.player, this.rebond,this.Boing);
@@ -49,6 +48,15 @@ class Tiled extends Tableau{
         this.monstre2 =  new monstre2(this,700,500);
         this.physics.add.collider(this.monstre2,this.solides);
         this.physics.add.overlap(this.monstre2, this.bubble);
+
+
+        //---------------- Peluches / items ----------------------------
+
+        this.star1=this.physics.add.sprite(300,500,"star");
+        this.star1.setCollideWorldBounds(true);
+        this.star1.setBounce(0);
+        this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
+        this.physics.add.collider(this.star1,this.solides);
 
 
         //----------débug---------------------
@@ -98,6 +106,7 @@ class Tiled extends Tableau{
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.player.setDepth(z--);
+        this.star1.setDepth(z--);
         this.monstre2.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);

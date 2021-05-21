@@ -46,7 +46,7 @@ class Tiled extends Tableau{
         //---------------- Monstres/collides ----------------------------
 
 
-        this.monstre2 =  new monstre2(this,300,200);
+        this.monstre2 =  new monstre2(this,700,500);
         this.physics.add.collider(this.monstre2,this.solides);
         this.physics.add.overlap(this.monstre2, this.bubble);
 
@@ -58,15 +58,6 @@ class Tiled extends Tableau{
         if(this.game.config.physics.arcade.debug === false){
             debug.visible=false;
         }
-        /*débug solides en vers
-        this.solides.renderDebug(debug,{
-            tileColor: null, // Couleur des tiles qui ne collident pas
-            collidingTileColor: new Phaser.Display.Color(0, 255, 0, 255), //Couleur des tiles qui collident
-            faceColor: null // Color of colliding face edges
-        });*/
-        //---------- parallax ciel (rien de nouveau) -------------
-
-
          //-----------------Ciel---------------------
 
 

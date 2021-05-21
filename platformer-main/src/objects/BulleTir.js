@@ -3,7 +3,7 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
 
   constructor(scene, x, y,) 
   {
-    super(scene, x, y, 'balle');
+    super(scene, x+30, y-11, 'balle');
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
@@ -14,7 +14,8 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.setBounceX(0);
     this.setCollideWorldBounds(false);
     this.setGravityY(-250);
-    this.setVelocity(100*scene.player.sens, -50);
+    this.setVelocity(100*scene.player.sens, -20);
+
   
     //this.setVelocity(-100, -50);
     this.setBodySize(this.body.width, this.body.height);

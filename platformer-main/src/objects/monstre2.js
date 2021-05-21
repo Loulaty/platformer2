@@ -5,37 +5,69 @@ class monstre2 extends ObjetEnnemi{
      * @param x
      * @param y
      */
-    constructor(scene, x, y) {
+     constructor(scene, x, y) { 
         super(scene, x, y, "monstre2");
-        scene.physics.add.collider(scene.bubble, this.bubble);
-        this.body.allowGravity=true;
 
+
+        this.dir = 1;
+        this.isAlive = true;
+
+        this.body.allowGravity=true;
+        this.setOrigin(0,0);
         this.setDisplaySize(80,80);
         this.setCollideWorldBounds(true);
         this.setBounce(0);
+
+        scene.time.addEvent({ delay: 1000, callback: this.test, callbackScope: this, loop: true });
+       
     }
+  
 
-    update()
-    {
-        this.move();
 
-    }
+    test(){
+       
+        this.vivant();
+        this.pos();
 
-    move()
-    {
-            if(player.body.velocity.x > this.x)
-            {    
-                this.setVelocityX(70);
+        if(this.isAlive) {
+            if (this.scene.player.x > this.x - 400) {
+                    this.setVelocityX(100 * this.dir);
+                    console.log('suivre');
             }
-            else if(this.scene.player.x < this.x )
-            {
-                this.setVelocityX(-70);
+            if (this.scene.player.x < this.x + 400){
+                this.setVelocityX(100 * this.dir);
+                    console.log('suivre');
             }
-            else
-            {
+            else{
                 this.setVelocityX(0);
             }
+        }
+
+
     }
 
-}
+    vivant() {
+        if (this.body.touching.up && this.isAlive) {
+            this.isAlive = false;
 
+        }
+
+    }
+
+    mort(){
+        if(this.isAlive==false){
+            this.isAlive=true;
+        }
+    }
+
+    pos(){
+        if (this.x < this.scene.player.x)
+        {
+            this.dir = 1;
+        }
+        else if (this.x > this.scene.player.x)
+        {
+            this.dir = -1;
+        }
+    }
+}

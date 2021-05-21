@@ -86,11 +86,10 @@ class monstre2 extends ObjetEnnemi{
 
     }
 
-    mort(){
-        if(this.isAlive==false){
-            this.isAlive=true;
-        }
-    }
+    Tmortlol(){
+        this.disableBody(true, true);
+       
+    }   
 
     pos(){
         if (this.x < this.scene.player.x)

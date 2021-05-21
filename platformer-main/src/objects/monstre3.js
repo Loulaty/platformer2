@@ -16,9 +16,11 @@ class monstre3 extends ObjetEnnemi{
         this.setBounceX(1);
     }
 
-    Magie(){
+    Tmortlol(){
         this.disableBody(true, true);
-    }   
+    }  
+
+    
 
 }
 

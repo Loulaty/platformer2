@@ -32,15 +32,19 @@ class Tiled extends Tableau{
 
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
+        this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
         
 
         this.physics.add.collider(this.player,this.solides);
         this.solides.setCollisionByProperty({ collides: true });
-        this.derriere.setCollisionByProperty({ collides: false });  
+        this.derriere.setCollisionByProperty({ collides: false }); 
+        this.lave.setCollisionByProperty({ collides: true }); 
 
         this.physics.add.overlap(this.player, this.solides, this.rebond, null, this);
 
         this.physics.add.collider(this.player, this.rebond,this.Boing);
+
+        this.physics.add.collider(this.player, this.lave,this.gameover,null,this);
 
 
         //---------------- Monstres/collides ----------------------------
@@ -121,6 +125,7 @@ class Tiled extends Tableau{
         this.monstersContainer.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
+        this.lave.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);

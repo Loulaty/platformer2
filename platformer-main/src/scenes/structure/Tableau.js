@@ -64,7 +64,7 @@ class Tableau extends Phaser.Scene{
 
             me.bubble=false;
             ui.usebulle();
-
+            
            
             
 
@@ -81,21 +81,24 @@ class Tableau extends Phaser.Scene{
         {
             let me = this;
 
-            me.rebond=new TirPlatform(this,this.player.x+70,this.player.y+80, this.Boing, "platformjump").setDepth(100000);
-            
-
-            
+            me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+20, this.Boing, "platformjump").setDepth(100000);
             me.rebond.visible=true;
-
             me.rebond=false;
             ui.usebulle();
+            
+            
 
+           
         }
 
-        
+     
 
         
     }
+
+
+   
+
 
     /**
      *

@@ -23,18 +23,10 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.world = scene;
     this.isAlive = true;
 
-  /*  if(scene.player._directionX>0){
-      console.log("droit");
-      this.setVelocity(100, -50);
-    }else if (scene.player._directionX<0){
-      console.log("gauche");
-      this.setVelocity(-100, -50);
-    }
-*/
 
 
-scene.monstersContainer.iterate(monster2=>{
-  scene.physics.add.overlap(this, monster2, function(){monster2.Tmortlol()}, null, scene);
+scene.monstersContainer.iterate(monstre2=>{
+  scene.physics.add.overlap(this, monstre2, function(){monstre2.Tmortlol()}, null, scene);
 })
     
   }
@@ -48,7 +40,6 @@ scene.monstersContainer.iterate(monster2=>{
 
   update() 
   {
-   
     if (this.body.touching && this.isAlive) 
     {
       this.disableBody(true, true);

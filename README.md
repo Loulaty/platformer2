@@ -14,20 +14,20 @@ E = tir platforme
 
 A faire :
 
--LD a finir
+- LD a finir
 
--visuels des jauges
+- visuels des jauges
 
--jauge de bulle (quand on a plus de bulle on peux plus tirer)
+- jauge de bulle (quand on a plus de bulle on peux plus tirer)
 
--mob arraignée (slow le player) (se transofrme en platforme a la mort)
+- mob arraignée (slow le player) (se transofrme en platforme a la mort)
 
--jauge de bulle
+- jauge de bulle
 
--ecran de lancement
+- ecran de lancement
 
--ecran de defaite
+- ecran de defaite
 
--cinematique 
+- cinematique 
 
--sounds
+- sounds

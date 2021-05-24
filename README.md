@@ -14,19 +14,20 @@ E = tir platforme
 
 A faire :
 
+-LD a finir
 
--integrer une jauge pour la peur 
+- visuels des jauges
+
+-jauge de bulle (quand on a plus de bulle on peux plus tirer)
 
 -mob arraignée (slow le player) (se transofrme en platforme a la mort)
 
--collide bulle monstre2
-
--mob clown (suit le joueur)
-
 -jauge de bulle
-
--condition de victoire(arriver a la fin, recuperer un objet)
 
 -ecran de lancement
 
 -ecran de defaite
+
+-cinematique 
+
+-sounds

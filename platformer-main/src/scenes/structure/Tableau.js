@@ -72,7 +72,7 @@ class Tableau extends Phaser.Scene{
 
         if(ui.jaugebulle < 0 ){
             console.log("AAAAAAAAAAAAAAAAAAAAH");
-            this.BulleTir.StopShoot();
+            StopShoot();
         }
 
        
@@ -128,6 +128,10 @@ class Tableau extends Phaser.Scene{
         })
     }
 
+    StopShoot(){
+        bubble.disableBody(true, true);
+      }
+      
 
     ramasserEtoile (player, star)
     {

@@ -2,6 +2,8 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
 {
 
   constructor(scene, x, y,) 
+  
+  
   {
     super(scene, x, y-11, 'balle');
 
@@ -32,37 +34,6 @@ scene.monstersContainer.iterate(monstre2=>{
   }
 
   
-
-
-
-  
-
-
-  update() 
-  {
-    if (this.body.touching && this.isAlive) 
-    {
-      this.disableBody(true, true);
-      this.isAlive = false;
-
-      this.physics.add.overlap(this.bubble, null, this);
-    }
-
-    if(
-      bubble.posX == monstre2.posX
-
-  ){
-      console.log("touché");
-
-      
-        
-    }
-
-    
-
-  
-
-  }
   
 
 }

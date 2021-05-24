@@ -10,7 +10,7 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        this.load.image('platformjump, assets/platformjump.png');
+        this.load.image('platformJump, assets/platformJump.png');
         this.load.image('blood', 'assets/blood.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
@@ -137,10 +137,11 @@ class Tableau extends Phaser.Scene{
         
     }
 
-    ramasserVic (win)
+    ramasserVic (player, star)
     {
+        star.disableBody(true, true);
         console.log("win"); 
-        win.disableBody(true, true);
+        this.victory();
         
         
     }
@@ -237,8 +238,6 @@ class Tableau extends Phaser.Scene{
 
     victory (win)
     {
-        win.disableBody(true, true);
-        win.emit("disabled");
         let totalActive=0;
         for(let child of this.children.getChildren()){
             if(child.texture && child.texture.key==="win"){

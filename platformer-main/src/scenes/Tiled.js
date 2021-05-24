@@ -10,6 +10,7 @@ class Tiled extends Tableau{
         this.load.image('monstre2', 'assets/monstre2.png');
         this.load.image('monstre3', 'assets/monstre3.png');
         this.load.image('star', 'assets/star.png');
+        this.load.image('win', 'assets/win.png');
     }
     create() {
         super.create();
@@ -75,6 +76,12 @@ class Tiled extends Tableau{
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
         this.physics.add.collider(this.star1,this.solides);
 
+        this.star2=this.physics.add.sprite(500,500,"win");
+        this.star2.setCollideWorldBounds(true);
+        this.star2.setBounce(0);
+        this.physics.add.overlap(this.player, this.star2, this.ramasserVic, null, this);
+        this.physics.add.collider(this.star2,this.solides);
+
 
         //----------débug---------------------
         
@@ -125,6 +132,7 @@ class Tiled extends Tableau{
         this.monstersContainer.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
+        this.star2.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);

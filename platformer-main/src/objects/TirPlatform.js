@@ -3,7 +3,7 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
 
   constructor(scene, x, y,) 
   {
-    super(scene, x*scene.player.sens, y, 'platformjump');
+    super(scene, x*scene.player.sens, y, 'platformJump');
 
     scene.add.existing(this);
     scene.physics.add.existing(this);

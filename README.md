@@ -22,8 +22,6 @@ A faire :
 
 - mob arraignée (slow le player) (se transofrme en platforme a la mort)
 
-- jauge de bulle
-
 - ecran de lancement
 
 - ecran de defaite

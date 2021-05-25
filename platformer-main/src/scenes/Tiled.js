@@ -70,11 +70,19 @@ class Tiled extends Tableau{
 
         //---------------- Peluches / items ----------------------------
 
+
         this.star1=this.physics.add.sprite(300,500,"star");
         this.star1.setCollideWorldBounds(true);
         this.star1.setBounce(0);
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
         this.physics.add.collider(this.star1,this.solides);
+
+        this.star3=this.physics.add.sprite(4100,10,"star");
+        this.star3.setCollideWorldBounds(true);
+        this.star3.setBounce(0);
+        this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
+        this.physics.add.collider(this.star3,this.solides);
+
 
         /*this.star2=this.physics.add.sprite(500,500,"win");
         this.star2.setCollideWorldBounds(true);
@@ -132,6 +140,7 @@ class Tiled extends Tableau{
         this.monstersContainer.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
+        this.star3.setDepth(z--);
        // this.star2.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);

@@ -14,13 +14,19 @@ class monstre3 extends ObjetEnnemi{
         this.setCollideWorldBounds(true);
         this.setBounceX(0);
         this.setBounceX(1);
+              
     }
 
     Tmortlol(){
         this.disableBody(true, true);
     }  
-
     
-
+    slow(){
+       if (scene.physics.add.overlap(this, scene.player, null, scene)){
+           console.log('touched')
+       }
+    }
+   
 }
+
 

@@ -34,18 +34,25 @@ class Tiled extends Tableau{
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
         this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
+        this.securite = this.map.createLayer('securite', this.tileset, 0, 0);
         
 
         this.physics.add.collider(this.player,this.solides);
         this.solides.setCollisionByProperty({ collides: true });
         this.derriere.setCollisionByProperty({ collides: false }); 
         this.lave.setCollisionByProperty({ collides: true }); 
+        this.securite.setCollisionByProperty({ collides: true }); 
 
         this.physics.add.overlap(this.player, this.solides, this.rebond, null, this);
 
         this.physics.add.collider(this.player, this.rebond,this.Boing);
 
         this.physics.add.collider(this.player, this.lave,this.gameover,null,this);
+
+
+
+
+
 
 
         //---------------- Monstres/collides ----------------------------
@@ -56,14 +63,14 @@ class Tiled extends Tableau{
         ici.monstre2Objects.forEach(monster2Object => {
             let monster=new monstre2(this,monster2Object.x,monster2Object.y);
             this.monstersContainer.add(monster);
-            this.physics.add.collider(monster, this.solides);
+            this.physics.add.collider(monster, this.solides,);
         });
 
         ici.monstre3Objects = ici.map.getObjectLayer('monstre3')['objects'];
         ici.monstre3Objects.forEach(monster3Object => {
             let spider=new monstre3(this,monster3Object.x,monster3Object.y);
             this.monstersContainer.add(spider);
-            this.physics.add.collider(spider, this.solides);
+            this.physics.add.collider(spider, this.solides,);
         });
 
       

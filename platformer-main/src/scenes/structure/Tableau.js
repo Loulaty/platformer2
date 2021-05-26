@@ -64,6 +64,7 @@ class Tableau extends Phaser.Scene{
 
             me.bubble=false;
             ui.usebulle();
+           
           
            
             

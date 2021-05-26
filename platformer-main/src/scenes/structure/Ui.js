@@ -17,7 +17,9 @@ class Ui extends Phaser.Scene{
         backgroundBar.fixedToCamera = true;
         let healthBar=this.add.image(300, 20, 'green');
         healthBar.fixedToCamera = true;
-        healthBar.bodyWidth = this.peur / this.maxpeur;
+  //      this.healthBar = this.peur / this.maxpeur * 300;
+
+
 
 
         this.ourson=0;
@@ -147,6 +149,7 @@ class Ui extends Phaser.Scene{
     {
         this.peur-=points;
         this._peurText.setText('Peur: ' + this.peur);
+
         if (this.peur <= 0){
             console.log("game over")
             
@@ -168,6 +171,9 @@ class Ui extends Phaser.Scene{
     }
 
 
+    jauge(){
+        this.healthBar.scaleX = this.peur / this.maxpeur * 300;
+    }
 
     update(){
         if(Tableau.current){

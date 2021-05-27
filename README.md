@@ -12,7 +12,9 @@ Shift = tir bulle
 E = tir platforme
 
 
-A faire :
+A faire :shift et E meme touche (quand on appui moins lgt = bulle sinon platforme)
+
+- 
 
 - LD a finir
 

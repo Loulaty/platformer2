@@ -30,7 +30,15 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
   }
 
 
-    
+  stop()
+  {
+
+    console.log("ShootStop");
+    this.setVelocityX(0);
+    this.setVelocityY(0);
+    this.directionY=0;
+    this.directionX=0;
+  }
 
 
 

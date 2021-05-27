@@ -9,6 +9,7 @@ class Ui extends Phaser.Scene{
         this.load.image('ui/full-screen-icon', 'assets/ui/full-screen.png');
         this.load.image('green', 'assets/green.png');
         this.load.image('red', 'assets/red.png');
+        this.load.image('shield', 'assets/shield.png');
     }
     create (){
         console.log("create Ui")
@@ -18,6 +19,12 @@ class Ui extends Phaser.Scene{
         this.Bar=this.physics.add.sprite(10, 10, 'green');
         this.Bar.body.enable=false;
         this.Bar.setOrigin(0,0);
+
+        
+
+       
+
+
 
         //let healthBar=this.add.image(300, 20, 'green');
         //healthBar.fixedToCamera = true;
@@ -41,6 +48,9 @@ class Ui extends Phaser.Scene{
 
         this.maxpeur=300;
         this.peur=300;
+
+        this.maxdoudou = 100
+        this.ourson = 0
 
 
 
@@ -176,6 +186,17 @@ class Ui extends Phaser.Scene{
         this._oursonText.setText('Ourson: ' + this.ourson);
     }
 
+    doudou(){
+        this.doudoubar=this.physics.add.sprite(10, 10, 'shield');
+        this.doudoubar.body.enable=false;
+        this.doudoubar.setOrigin(0,0);
+        
+    }
+
+    doudouuse(){
+        console.log("doudou");
+        this.doudoubar.scaleX = (this.ourson / this.maxdoudou );
+    }
 
     jauge(){
         console.log("JAUNE");

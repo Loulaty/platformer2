@@ -74,16 +74,13 @@ class Tableau extends Phaser.Scene{
         }
         }
 
-        if(ui.jaugebulle <= 0 ){
-            console.log("AAAAAAAAAAAAAAAAAAAAH");
-            this.stop = true;
-            //this.stop();
-        }
+        
 
        
 
         if (this.rebond)
         {
+            if (this.stop==false){
             let me = this;
 
             me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+20, this.Boing, "platformjump").setDepth(100000);
@@ -92,8 +89,14 @@ class Tableau extends Phaser.Scene{
             ui.usebulle();
             
             
-
+            }
            
+        }
+
+        if(ui.jaugebulle <= 0 ){
+            console.log("AAAAAAAAAAAAAAAAAAAAH");
+            this.stop = true;
+            //this.stop();
         }
 
      
@@ -140,6 +143,7 @@ class Tableau extends Phaser.Scene{
     {
         star.disableBody(true, true);
         ui.shield();
+        ui.doudou();    
         console.log('trouvé')
         
     }
@@ -194,6 +198,7 @@ class Tableau extends Phaser.Scene{
                 if(!me.player.isDead){
                     if(ui.ourson > 0){
                         ui.shielduse();
+                        ui.doudouuse();
                     }else{
                         ui.perdu();
                         ui.jauge();

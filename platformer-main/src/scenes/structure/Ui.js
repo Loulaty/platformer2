@@ -13,8 +13,12 @@ class Ui extends Phaser.Scene{
     create (){
         console.log("create Ui")
 
-        let backgroundBar=this.add.image(300,20,'red');
+        let backgroundBar=this.add.image(110,20,'red');
         backgroundBar.fixedToCamera = true;
+        this.Bar=this.physics.add.sprite(10, 10, 'green');
+        this.Bar.body.enable=false;
+        this.Bar.setOrigin(0,0);
+
         //let healthBar=this.add.image(300, 20, 'green');
         //healthBar.fixedToCamera = true;
   //      this.healthBar = this.peur / this.maxpeur * 300;
@@ -130,10 +134,7 @@ class Ui extends Phaser.Scene{
         btFs.y=this.sys.canvas.height;
 
         
-        this.Bar=this.physics.add.sprite(200, 10, 'green');
-        this.Bar.body.enable=false;
-        this.Bar.setOrigin(0,0);
-
+       
     }
 
 

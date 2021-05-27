@@ -137,7 +137,7 @@ class Ui extends Phaser.Scene{
         this.jaugebulle-=points;
         this._bulleText.setText('Bulle: ' + this.jaugebulle);
         if (this.jaugebulle <= 0){
-            console.log("plus de bulles")
+            console.log("plus de bulles");
             
         }
         

@@ -45,7 +45,7 @@ class Tableau extends Phaser.Scene{
         this.blood.visible=false;
 
         this.bubble=false;
-        
+        this.stop = false;
         
 
     }
@@ -53,10 +53,11 @@ class Tableau extends Phaser.Scene{
         super.update();
         this.player.move();
 
-        if (this.bubble)
-        {
+        if (this.bubble){
+            
+        if (this.stop==false){
             let me = this;
-
+            console.log("nice");
             me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(100000);
 
             
@@ -68,12 +69,13 @@ class Tableau extends Phaser.Scene{
           
            
             
-
+        }
         }
 
-        if(ui.jaugebulle < 0 ){
+        if(ui.jaugebulle <= 0 ){
             console.log("AAAAAAAAAAAAAAAAAAAAH");
-            StopShoot();
+            this.stop = true;
+            //this.stop();
         }
 
        
@@ -129,9 +131,7 @@ class Tableau extends Phaser.Scene{
         })
     }
 
-    StopShoot(){
-        bubble.disableBody(true, true);
-      }
+  
       
 
     ramasserEtoile (player, star)

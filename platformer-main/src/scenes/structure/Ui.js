@@ -10,6 +10,8 @@ class Ui extends Phaser.Scene{
         this.load.image('green', 'assets/green.png');
         this.load.image('red', 'assets/red.png');
         this.load.image('shield', 'assets/shield.png');
+        this.load.image('fond', 'assets/bullefond.png');
+        this.load.image('jaugeB', 'assets/bullejauge.png');
     }
     create (){
         console.log("create Ui")
@@ -19,6 +21,12 @@ class Ui extends Phaser.Scene{
         this.Bar=this.physics.add.sprite(10, 10, 'green');
         this.Bar.body.enable=false;
         this.Bar.setOrigin(0,0);
+
+        let fond=this.add.image(30,120,'fond');
+        fond.fixedToCamera = true;
+        this.jaugeB=this.physics.add.sprite(-20, 165, 'jaugeB');
+        this.jaugeB.body.enable=false;
+        this.jaugeB.setOrigin(0,1);
 
         
 
@@ -49,8 +57,12 @@ class Ui extends Phaser.Scene{
         this.maxpeur=300;
         this.peur=300;
 
-        this.maxdoudou = 100
-        this.ourson = 0
+        this.maxdoudou = 100;
+        this.ourson = 0;
+
+        this.maxbulle = 10;
+        this.jaugebulle = 10;
+
 
 
 
@@ -201,6 +213,10 @@ class Ui extends Phaser.Scene{
     jauge(){
         console.log("JAUNE");
         this.Bar.scaleX = (this.peur / this.maxpeur );
+    }
+
+    jaugebubulle(){
+        this.jaugeB.scaleY = (this.jaugebulle / this.maxbulle );
     }
 
     update(){

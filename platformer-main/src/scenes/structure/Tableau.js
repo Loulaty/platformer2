@@ -65,6 +65,7 @@ class Tableau extends Phaser.Scene{
 
             me.bubble=false;
             ui.usebulle();
+            ui.jaugebubulle();
             
             
            
@@ -87,6 +88,7 @@ class Tableau extends Phaser.Scene{
             me.rebond.visible=true;
             me.rebond=false;
             ui.usebulle();
+            ui.jaugebubulle();
             
             
             }

@@ -15,8 +15,8 @@ class Ui extends Phaser.Scene{
 
         let backgroundBar=this.add.image(300,20,'red');
         backgroundBar.fixedToCamera = true;
-        let healthBar=this.add.image(300, 20, 'green');
-        healthBar.fixedToCamera = true;
+        //let healthBar=this.add.image(300, 20, 'green');
+        //healthBar.fixedToCamera = true;
   //      this.healthBar = this.peur / this.maxpeur * 300;
 
 
@@ -129,6 +129,11 @@ class Ui extends Phaser.Scene{
         btFs.x=this.sys.canvas.width;
         btFs.y=this.sys.canvas.height;
 
+        
+        this.Bar=this.physics.add.sprite(200, 10, 'green');
+        this.Bar.body.enable=false;
+        this.Bar.setOrigin(0,0);
+
     }
 
 
@@ -172,7 +177,8 @@ class Ui extends Phaser.Scene{
 
 
     jauge(){
-        this.healthBar.scaleX = this.peur / this.maxpeur * 300;
+        console.log("JAUNE");
+        this.Bar.scaleX = (this.peur / this.maxpeur );
     }
 
     update(){

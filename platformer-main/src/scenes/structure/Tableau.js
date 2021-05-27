@@ -65,6 +65,8 @@ class Tableau extends Phaser.Scene{
 
             me.bubble=false;
             ui.usebulle();
+            
+            
            
           
            
@@ -194,6 +196,8 @@ class Tableau extends Phaser.Scene{
                         ui.shielduse();
                     }else{
                         ui.perdu();
+                        ui.jauge();
+
                         if(ui.peur < 0){
                             me.gameover();
                         }

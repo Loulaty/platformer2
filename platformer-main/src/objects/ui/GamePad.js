@@ -47,7 +47,7 @@ class GamePad extends Phaser.GameObjects.Container{
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
                     Tableau.current.bubble = true;
-                    console.log("attackOn");
+                    console.log("attackOn");                
                     break;
 
                 case "e":

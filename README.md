@@ -16,10 +16,6 @@ A faire :
 
 - LD a finir
 
-- visuels des jauges
-
-- jauge de bulle (quand on a plus de bulle on peux plus tirer)
-
 - mob arraignée (slow le player) (se transofrme en platforme a la mort)
 
 - ecran de lancement

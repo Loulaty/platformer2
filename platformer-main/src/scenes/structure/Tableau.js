@@ -22,6 +22,10 @@ class Tableau extends Phaser.Scene{
             'assets/monstre2.png',
             { frameWidth: 400, frameHeight: 700  }
         );
+        this.load.spritesheet('monster-violet',
+        'assets/monster-violet.png',
+        { frameWidth: 800, frameHeight: 700  }
+    );
     }
     create(){
 

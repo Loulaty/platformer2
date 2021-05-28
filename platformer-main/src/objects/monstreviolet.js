@@ -9,7 +9,29 @@ class monstreviolet extends ObjetEnnemi{
         super(scene, x, y, "monster-violet");
         this.body.allowGravity=true;
 
+        this.anims.create({
+            key: 'moove',
+            frames: this.anims.generateFrameNumbers('monster-violet', { start: 0, end: 5}),
+            frameRate: 10,
+            repeat: -1
+        });
+        this.anims.play('moove', true);
+       
+
+        this.anims.create({
+            key: 'left',
+            frames: this.anims.generateFrameNumbers('monster-violet', { start: 0, end: 5 }),
+            frameRate: 10,
+            repeat: -1
+        });
+       
+
+    
+
+
+
         this.setDisplaySize(140,140);
+        this.setSize(500, 700);
         this.setVelocityX(50);
         this.setCollideWorldBounds(true);
         this.setBounce(0.3);
@@ -37,11 +59,14 @@ class monstreviolet extends ObjetEnnemi{
                 }
             })
 
+
+            
     }
 
     start(){
         this.scene.tweens.add({
             targets: this,
+            
             x: {
                 from: this.minX,
                 to:this.maxX,
@@ -49,6 +74,7 @@ class monstreviolet extends ObjetEnnemi{
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1,
+                
                 flipX:true,
             },
             

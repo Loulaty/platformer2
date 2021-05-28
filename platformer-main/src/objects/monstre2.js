@@ -33,7 +33,7 @@ class monstre2 extends ObjetEnnemi{
             frameRate: 10,
             repeat: -1
         });
-        this.anims.play('right');
+       
 
         this.anims.create({
             key: 'left',
@@ -41,7 +41,7 @@ class monstre2 extends ObjetEnnemi{
             frameRate: 10,
             repeat: -1
         });
-        this.anims.play('left');
+       
 
         this.anims.create({
             key: 'stand',
@@ -58,6 +58,7 @@ class monstre2 extends ObjetEnnemi{
     {
 
         this.anim();
+        
 
     }
 

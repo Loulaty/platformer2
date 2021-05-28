@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="200" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="50">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="200" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="51">
  <editorsettings>
   <export target="tableauTiled.json" format="json"/>
  </editorsettings>
@@ -3733,9 +3733,9 @@
 </data>
  </layer>
  <objectgroup id="6" name="monstre2">
-  <object id="28" gid="1" x="804" y="478" width="32" height="32"/>
   <object id="41" gid="1" x="4341.58" y="125.091" width="32" height="32"/>
   <object id="42" gid="1" x="3299.15" y="403.879" width="32" height="32"/>
+  <object id="50" gid="1" x="596.121" y="449.333" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="8" name="monstre3">
   <object id="26" gid="2" x="740" y="830" width="32" height="32"/>
@@ -3747,7 +3747,7 @@
   <object id="40" gid="2" x="4656.73" y="137.212" width="32" height="32"/>
  </objectgroup>
  <objectgroup id="12" name="monstreviolet">
-  <object id="48" gid="524" x="690.061" y="488.727" width="32" height="32"/>
+  <object id="48" gid="524" x="702.182" y="476.606" width="32" height="32"/>
  </objectgroup>
  <layer id="11" name="securite" width="200" height="28">
   <data encoding="csv">

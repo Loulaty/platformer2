@@ -11,6 +11,8 @@ class Ui extends Phaser.Scene{
         this.load.image('red', 'assets/red.png');
         this.load.image('shield', 'assets/shield.png');
         this.load.image('fond', 'assets/bullefond.png');
+        this.load.image('nuage', 'assets/nuage.png');
+        this.load.image('nuageours', 'assets/nuageours.png');
         this.load.image('jaugeB', 'assets/bullejauge.png');
     }
     create (){
@@ -22,13 +24,21 @@ class Ui extends Phaser.Scene{
         this.Bar.body.enable=false;
         this.Bar.setOrigin(0,0);
 
-        let fond=this.add.image(30,120,'fond');
-        fond.fixedToCamera = true;
+   
         this.jaugeB=this.physics.add.sprite(-20, 165, 'jaugeB');
         this.jaugeB.body.enable=false;
         this.jaugeB.setOrigin(0,1);
+        let fond=this.add.image(30,120,'fond');
+        fond.fixedToCamera = true;
 
-        
+        this.nuage=this.physics.add.sprite(450, 224, 'nuage');
+        this.nuage.body.enable=false;
+        this.nuage.visible=false;
+
+        this.nuageours=this.physics.add.sprite(450, 224, 'nuageours');
+        this.nuageours.body.enable=false;
+        this.nuageours.visible=false;
+
 
        
 
@@ -172,6 +182,7 @@ class Ui extends Phaser.Scene{
     shielduse(points=1)
     {
         this.ourson-=points;
+        
         //this._oursonText.setText('Ourson: ' + this.ourson);
     }
 
@@ -179,6 +190,7 @@ class Ui extends Phaser.Scene{
     shield(points=100)
     {
         this.ourson+=points;
+        
         //this._oursonText.setText('Ourson: ' + this.ourson);
     }
 
@@ -189,12 +201,39 @@ class Ui extends Phaser.Scene{
         
     }
 
+    Nuagepeur()
+    {
+          
+            this.nuage.visible=true;
+            console.log("g peur");
+            
+        
+    
+
+    }
+
+    Nuageshield()
+    {
+          
+            this.nuageours.visible=true;
+            console.log("g peur");
+            
+        
+    
+
+    }
+
+
+
     doudouuse(){
+        this.Nuageshield();
         console.log("doudou");
         this.doudoubar.scaleX = (this.ourson / this.maxdoudou );
+
     }
 
     jauge(){
+        this.Nuagepeur();
         console.log("JAUNE");
         this.Bar.scaleX = (this.peur / this.maxpeur );
     }
@@ -204,6 +243,9 @@ class Ui extends Phaser.Scene{
     }
 
     update(){
+
+        this.nuage.visible=false;
+        this.nuageours.visible=false;
       
         
     }

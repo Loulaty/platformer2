@@ -42,7 +42,7 @@ class Tiled extends Tableau{
         this.solides.setCollisionByProperty({ collides: true });
         this.derriere.setCollisionByProperty({ collides: false }); 
         this.lave.setCollisionByProperty({ collides: true }); 
-        this.securite.setCollisionByProperty({ collides: true }); 
+        //this.securite.setCollisionByProperty({ collides: true }); 
 
         this.physics.add.overlap(this.player, this.solides, this.rebond, null, this);
 

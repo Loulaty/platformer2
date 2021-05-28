@@ -12,6 +12,7 @@ class Tableau extends Phaser.Scene{
         this.load.image('balle', 'assets/balle.png');
         this.load.image('platformjump, assets/platformjump.png');
         this.load.image('blood', 'assets/blood.png');
+        this.load.image('nuage', 'assets/nuage.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.spritesheet('player',
             'assets/player.png',
@@ -23,6 +24,9 @@ class Tableau extends Phaser.Scene{
         );
     }
     create(){
+
+
+
         Tableau.current=this;
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("On est sur "+this.constructor.name+" / "+this.scene.key);
@@ -43,6 +47,8 @@ class Tableau extends Phaser.Scene{
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
         this.blood.visible=false;
+
+        
 
         this.bubble=false;
         this.stop = false;
@@ -139,6 +145,10 @@ class Tableau extends Phaser.Scene{
     }
 
   
+
+    
+
+  
       
 
     ramasserEtoile (player, star)
@@ -187,6 +197,7 @@ class Tableau extends Phaser.Scene{
                 && player.getBounds().bottom < monster.getBounds().top+30
 
             ){
+                
                 player.directionY=500;
                 let totalActive=0;
         for(let child of this.children.getChildren()){
@@ -201,12 +212,18 @@ class Tableau extends Phaser.Scene{
                     if(ui.ourson > 0){
                         ui.shielduse();
                         ui.doudouuse();
+                        
+                        
+                            
                     }else{
                         ui.perdu();
                         ui.jauge();
+                        
+
 
                         if(ui.peur < 0){
                             me.gameover();
+                        
                         }
                     }
                     
@@ -246,7 +263,7 @@ class Tableau extends Phaser.Scene{
                 me.player.anims.play('turn');
                 me.player.isDead = false;
                 me.scene.restart();
-                ui.peur = 301;
+                ui.peur = 300;
             })
         }
     }

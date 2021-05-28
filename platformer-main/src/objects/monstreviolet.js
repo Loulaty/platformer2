@@ -9,7 +9,7 @@ class monstreviolet extends ObjetEnnemi{
         super(scene, x, y, "monster-violet");
         this.body.allowGravity=true;
 
-        this.setDisplaySize(200,150);
+        this.setDisplaySize(140,140);
         this.setVelocityX(50);
         this.setCollideWorldBounds(true);
         this.setBounce(0.3);
@@ -17,7 +17,7 @@ class monstreviolet extends ObjetEnnemi{
 
        this.originalX=x;
         this.minX=x-300;
-        this.maxX=x+300;
+        this.maxX=x+200;
 
         this.x=this.minX;
 

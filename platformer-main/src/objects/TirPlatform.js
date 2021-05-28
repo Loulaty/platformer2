@@ -7,7 +7,7 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
-    scene.physics.add.collider(scene.player, this);
+    scene.physics.add.collider(scene.player, this,this.Bounce);
 
     this.setImmovable(true);
     this.setBounceX(0);
@@ -17,9 +17,11 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
     this.body.allowGravity=false;
     this.displayWidth = 40;
     this.displayHeight = 40;
+    this.setBounceY = 1;
 
     this.setBodySize(this.body.width, this.body.height);
 
+   
     this.world = scene;
     this.isAlive = true;
 
@@ -41,6 +43,7 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
   }
 
 
+  
 
   
    

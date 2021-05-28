@@ -35,10 +35,10 @@ class Tiled extends Tableau{
         this.solides = this.map.createLayer('solides', this.tileset, 0, 0);
         this.derriere = this.map.createLayer('derriere', this.tileset, 0, 0);
         this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
-        this.securite = this.map.createLayer('securite', this.tileset, 0, 0);
-        
+    
 
         this.physics.add.collider(this.player,this.solides);
+       
         this.solides.setCollisionByProperty({ collides: true });
         this.derriere.setCollisionByProperty({ collides: false }); 
         this.lave.setCollisionByProperty({ collides: true }); 
@@ -50,6 +50,8 @@ class Tiled extends Tableau{
 
         this.physics.add.collider(this.player, this.lave,this.gameover,null,this);
 
+     
+
 
 
 
@@ -59,7 +61,6 @@ class Tiled extends Tableau{
         //---------------- Monstres/collides ----------------------------
 
         this.monstersContainer=this.add.container();
-
         ici.monstre2Objects = ici.map.getObjectLayer('monstre2')['objects'];
         ici.monstre2Objects.forEach(monster2Object => {
             let monster=new monstre2(this,monster2Object.x,monster2Object.y);

@@ -161,7 +161,6 @@ class Ui extends Phaser.Scene{
         this.jaugebulle-=points;
         //this._bulleText.setText('Bulle: ' + this.jaugebulle);
         if (this.jaugebulle <= 0){
-            console.log("plus de bulles");
             
         }
         
@@ -211,7 +210,6 @@ class Ui extends Phaser.Scene{
     {
           
             this.nuage.visible=true;
-            console.log("g peur");
             
         
     
@@ -222,8 +220,6 @@ class Ui extends Phaser.Scene{
     {
           
             this.nuageours.visible=true;
-            console.log("g peur");
-            
         
     
 
@@ -233,14 +229,12 @@ class Ui extends Phaser.Scene{
 
     doudouuse(){
         this.Nuageshield();
-        console.log("doudou");
         this.doudoubar.scaleX = (this.ourson / this.maxdoudou );
 
     }
 
     jauge(){
         this.Nuagepeur();
-        console.log("JAUNE");
         this.Bar.scaleX = (this.peur / this.maxpeur );
     }
 

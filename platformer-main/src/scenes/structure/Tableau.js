@@ -67,7 +67,6 @@ class Tableau extends Phaser.Scene{
             
         if (this.stop==false){
             let me = this;
-            console.log("nice");
             me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(100000);
 
             
@@ -106,18 +105,36 @@ class Tableau extends Phaser.Scene{
         }
 
         if(ui.jaugebulle <= 0 ){
-            console.log("AAAAAAAAAAAAAAAAAAAAH");
             this.stop = true;
-            //this.stop();
         }
 
-     
+
+      
+
+
+        if (this.spidy)
+        {
+            
+              let spidy = this.physics.add.staticGroup();
+        spidy.create(this.monstre3.x + 70,this.monstre3.y+20, 'platformjump');
+      
+        spidy.children.iterate(function (child) {
+            child.setDisplaySize(40,40);
+          
+            child.setOrigin(0,0);
+
+            child.setImmovable(true);
+            child.refreshBody();
+            
+        });
+       this.physics.add.collider(this.player, spidy,this.Boing,null,this);
+       
 
         
     }
+        
+}
 
-
-   
 
 
     /**
@@ -160,14 +177,11 @@ class Tableau extends Phaser.Scene{
         star.disableBody(true, true);
         ui.shield();
         ui.doudou();    
-        console.log('trouvé')
-        
     }
 
     ramasserVic (player, star)
     {
         star.disableBody(true, true);
-        console.log("win"); 
         this.victory();
         
         
@@ -178,6 +192,7 @@ class Tableau extends Phaser.Scene{
         player.body.velocity.y > 0
         && player.getBounds().bottom < rebond.getBounds().top
         player.setVelocityY(-600);
+        console.log("bounceeee");
 
     }
 
@@ -202,8 +217,6 @@ class Tableau extends Phaser.Scene{
 
             ){
                 
-                player.directionY=500;
-                let totalActive=0;
         for(let child of this.children.getChildren()){
             if(child.texture && child.texture.key==="monstre2"){
                 if(child.active){
@@ -247,8 +260,6 @@ class Tableau extends Phaser.Scene{
                 bubble.posX == monstre2.posX
 
             ){
-                console.log("touché");
-            
         }
 
     }

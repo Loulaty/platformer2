@@ -38,8 +38,8 @@ class monstreviolet extends ObjetEnnemi{
 
 
        this.originalX=x;
-        this.minX=x-300;
-        this.maxX=x+200;
+        this.minX=x-100;
+        this.maxX=x+80;
 
         this.x=this.minX;
 

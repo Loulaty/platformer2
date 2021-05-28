@@ -9,7 +9,7 @@ class monstreviolet extends ObjetEnnemi{
         super(scene, x, y, "monster-violet");
         this.body.allowGravity=true;
 
-        this.setDisplaySize(96,64);
+        this.setDisplaySize(200,150);
         this.setVelocityX(50);
         this.setCollideWorldBounds(true);
         this.setBounce(0.3);
@@ -54,6 +54,12 @@ class monstreviolet extends ObjetEnnemi{
             
         });
     }
+
+    Tmortlol(){
+        this.disableBody(false, false);
+       
+    }   
+
 
 }
 

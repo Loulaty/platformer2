@@ -41,16 +41,16 @@ class Ui extends Phaser.Scene{
 
 
 
-        this.ourson=0;
+        // this.ourson=0;
         /**
          * Le champ texte du score
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._oursonText = this.add.text(5, 5, 'Ourson: 0', {
-            font:'10px "Hanalei Fill"',
-            fill: '#fff'
-        });
+        // this._oursonText = this.add.text(5, 5, 'Ourson: 0', {
+            // font:'10px "Hanalei Fill"',
+            // fill: '#fff'
+        // });
 
 
 
@@ -71,22 +71,23 @@ class Ui extends Phaser.Scene{
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._peurText = this.add.text(5, 15, 'Peur: 300', {
-            font:'10px "Hanalei Fill"',
-            fill: '#fff'
-        });
+        // this._peurText = this.add.text(5, 15, 'Peur: 300', {
+            // font:'10px "Hanalei Fill"',
+            // fill: '#fff'
+        // });
+        
 
 
-        this.jaugebulle=10;
+        // this.jaugebulle=10;
         /**
          * Le champ texte du score
          * @type {Phaser.GameObjects.Text}
          * @private
          */
-        this._bulleText = this.add.text(5, 30, 'Bulles: 10', {
-            font:'10px "Hanalei Fill"',
-            fill: '#fff'
-        });
+        // this._bulleText = this.add.text(5, 30, 'Bulles: 10', {
+            // font:'10px "Hanalei Fill"',
+            // fill: '#fff'
+        // });
 
         /**
          * Le champ texte avec la clé du tableau
@@ -100,24 +101,7 @@ class Ui extends Phaser.Scene{
         })
 
 
-        /**
-         * Le champ texte avec la classe du tableau
-         * @type {Phaser.GameObjects.Text}
-         * @private
-         */
-        this._tableauTextClass = this.add.text(this.sys.canvas.width-16, 16+32, '...', {
-            font:'24px "Hanalei Fill"',
-            align: 'right',
-            fill: '#fff',
-        }).setAlpha(0.5)
-
-        this._tableauText.originX=1;
-        this._tableauTextClass.originX=1;
-
-        this._tableauText.setInteractive();
-        this._tableauText.on('pointerdown', function () {
-            Tableau.suivant();
-        })
+       
 
         //met l'ui au dessus du tableau
         this.scene.bringToTop();
@@ -163,7 +147,7 @@ class Ui extends Phaser.Scene{
     usebulle(points=1)
     {
         this.jaugebulle-=points;
-        this._bulleText.setText('Bulle: ' + this.jaugebulle);
+        //this._bulleText.setText('Bulle: ' + this.jaugebulle);
         if (this.jaugebulle <= 0){
             console.log("plus de bulles");
             
@@ -176,7 +160,7 @@ class Ui extends Phaser.Scene{
     perdu(points=1)
     {
         this.peur-=points;
-        this._peurText.setText('Peur: ' + this.peur);
+        //this._peurText.setText('Peur: ' + this.peur);
 
         if (this.peur <= 0){
             console.log("game over")
@@ -188,14 +172,14 @@ class Ui extends Phaser.Scene{
     shielduse(points=1)
     {
         this.ourson-=points;
-        this._oursonText.setText('Ourson: ' + this.ourson);
+        //this._oursonText.setText('Ourson: ' + this.ourson);
     }
 
 
     shield(points=100)
     {
         this.ourson+=points;
-        this._oursonText.setText('Ourson: ' + this.ourson);
+        //this._oursonText.setText('Ourson: ' + this.ourson);
     }
 
     doudou(){
@@ -220,9 +204,7 @@ class Ui extends Phaser.Scene{
     }
 
     update(){
-        if(Tableau.current){
-            this._tableauText.setText(Tableau.current.scene.key);
-            this._tableauTextClass.setText(Tableau.current.constructor.name);
-        }
+      
+        
     }
 }

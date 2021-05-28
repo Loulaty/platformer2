@@ -9,6 +9,7 @@ class Tiled extends Tableau{
         this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('monstre2', 'assets/monstre2.png');
         this.load.image('monstre3', 'assets/monstre3.png');
+        this.load.image('monster-violet', 'assets/monster-violet.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('win', 'assets/win.png');
     }
@@ -71,6 +72,13 @@ class Tiled extends Tableau{
             let spider=new monstre3(this,monster3Object.x,monster3Object.y);
             this.monstersContainer.add(spider);
             this.physics.add.collider(spider, this.solides,);
+        });
+
+        ici.monstrevioletObjects = ici.map.getObjectLayer('monstreviolet')['objects'];
+        ici.monstrevioletObjects.forEach(monstervioletObjects => {
+            let dark=new monstreviolet(this,monstervioletObjects.x,monstervioletObjects.y);
+            this.monstersContainer.add(dark);
+            this.physics.add.collider(dark, this.solides,);
         });
 
       

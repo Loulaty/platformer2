@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="200" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="43">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="200" height="28" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="50">
  <editorsettings>
   <export target="tableauTiled.json" format="json"/>
  </editorsettings>
@@ -3745,6 +3745,9 @@
   <object id="31" gid="2" x="1160" y="836" width="32" height="32"/>
   <object id="39" gid="2" x="4222.67" y="677.333" width="32" height="32"/>
   <object id="40" gid="2" x="4656.73" y="137.212" width="32" height="32"/>
+ </objectgroup>
+ <objectgroup id="12" name="monstreviolet">
+  <object id="48" gid="524" x="690.061" y="488.727" width="32" height="32"/>
  </objectgroup>
  <layer id="11" name="securite" width="200" height="28">
   <data encoding="csv">

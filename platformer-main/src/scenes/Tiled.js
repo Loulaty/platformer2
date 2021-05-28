@@ -91,6 +91,7 @@ class Tiled extends Tableau{
         this.star1.setBounce(0);
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
         this.physics.add.collider(this.star1,this.solides);
+      
 
         this.star3=this.physics.add.sprite(4100,10,"star");
         this.star3.setCollideWorldBounds(true);

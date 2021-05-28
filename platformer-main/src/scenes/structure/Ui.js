@@ -14,6 +14,8 @@ class Ui extends Phaser.Scene{
         this.load.image('nuage', 'assets/nuage.png');
         this.load.image('nuageours', 'assets/nuageours.png');
         this.load.image('jaugeB', 'assets/bullejauge.png');
+        this.load.image('lapin', 'assets/lapin.png');
+        
     }
     create (){
         console.log("create Ui")
@@ -198,6 +200,10 @@ class Ui extends Phaser.Scene{
         this.doudoubar=this.physics.add.sprite(10, 10, 'shield');
         this.doudoubar.body.enable=false;
         this.doudoubar.setOrigin(0,0);
+
+        this.lapin=this.physics.add.sprite(110, 30, 'lapin');
+        this.lapin.body.enable=false;
+        this.lapin.setOrigin(0,0);
         
     }
 

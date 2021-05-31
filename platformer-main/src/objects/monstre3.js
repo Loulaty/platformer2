@@ -31,7 +31,7 @@ class monstre3 extends ObjetEnnemi{
 
 
         this.setDisplaySize(64,32);
-        this.setVelocityX(55);
+        
         this.setCollideWorldBounds(true);
         this.setBounce(0);
 
@@ -70,6 +70,7 @@ class monstre3 extends ObjetEnnemi{
                 from: this.minX,
                 to:this.maxX,
                 duration: 10*1000,
+                velocity :200,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1,
@@ -85,7 +86,7 @@ class monstre3 extends ObjetEnnemi{
         this.disableBody(true, true);
         Tableau.current.spidy = true;
         Tableau.current.spidyX = this.x-20;
-        Tableau.current.spidyY= this.y-25;
+        Tableau.current.spidyY= this.y-35;
 
     }  
     

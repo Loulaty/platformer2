@@ -10,10 +10,10 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        //this.load.image('platformjump, assets/platformjump.png');
         this.load.image('blood', 'assets/blood.png');
         this.load.image('nuage', 'assets/nuage.png');
         this.load.image('spike', 'assets/spike.png');
+        this.load.image('jump', 'assets/jump.png');
         this.load.spritesheet('player',
             'assets/player.png',
             { frameWidth: 215, frameHeight: 307  }
@@ -121,7 +121,7 @@ class Tableau extends Phaser.Scene{
         {
             
               let spidy = this.physics.add.staticGroup();
-        spidy.create( this.spidyX,this.spidyY, 'platformjump');
+        spidy.create( this.spidyX,this.spidyY, 'jump').setDepth(100000);
       
         spidy.children.iterate(function (child) {
             child.setDisplaySize(40,40);
@@ -196,7 +196,7 @@ class Tableau extends Phaser.Scene{
     {
         player.body.velocity.y > 0
         && player.getBounds().bottom < rebond.getBounds().top
-        player.setVelocityY(-600);
+        player.setVelocityY(-2000);
         console.log("bounceeee");
 
     }

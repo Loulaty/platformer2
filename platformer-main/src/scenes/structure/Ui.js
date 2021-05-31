@@ -27,7 +27,7 @@ class Ui extends Phaser.Scene{
         this.Bar.setOrigin(0,0);
 
    
-        this.jaugeB=this.physics.add.sprite(-20, 165, 'jaugeB');
+        this.jaugeB=this.physics.add.sprite(-20, 166, 'jaugeB');
         this.jaugeB.body.enable=false;
         this.jaugeB.setOrigin(0,1);
         let fond=this.add.image(30,120,'fond');

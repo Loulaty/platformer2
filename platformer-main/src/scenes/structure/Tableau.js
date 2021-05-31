@@ -25,7 +25,12 @@ class Tableau extends Phaser.Scene{
         this.load.spritesheet('monster-violet',
         'assets/monster-violet.png',
         { frameWidth: 800, frameHeight: 700  }
-    );
+         );
+         this.load.spritesheet('monstre3',
+         'assets/monstre3.png',
+         { frameWidth: 644, frameHeight: 327  }
+          );
+    
     }
     create(){
 
@@ -116,7 +121,7 @@ class Tableau extends Phaser.Scene{
         {
             
               let spidy = this.physics.add.staticGroup();
-        spidy.create(this.monstre3.x + 70,this.monstre3.y+20, 'platformjump');
+        spidy.create( this.spidyX,this.spidyY, 'platformjump');
       
         spidy.children.iterate(function (child) {
             child.setDisplaySize(40,40);

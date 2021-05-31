@@ -99,17 +99,17 @@ class monstre2 extends ObjetEnnemi{
         {
 
             this.anims.play('left', true);
-            this.setVelocityX(100*this.dir);
+            this.setVelocityX(130*this.dir);
         }
         else if (this.x > this.scene.player.x+30)
         {
 
             this.anims.play('right', true); 
-            this.setVelocityX(100*this.dir)
+            this.setVelocityX(130*this.dir)
         }
         
         //Tu changes la valeur pour la distance au bout de laquelle il suit plus
-        if(this.x < this.scene.player.x-600 || this.x > this.scene.player.x+600) {
+        if(this.x < this.scene.player.x-200 || this.x > this.scene.player.x+200) {
             this.setVelocityX(0);
             this.anims.play('stand', true); 
             }

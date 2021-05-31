@@ -37,8 +37,8 @@ class monstre3 extends ObjetEnnemi{
 
 
        this.originalX=x;
-        this.minX=x-100;
-        this.maxX=x+80;
+        this.minX=x-300;
+        this.maxX=x+200;
 
         this.x=this.minX;
 
@@ -69,8 +69,7 @@ class monstre3 extends ObjetEnnemi{
             x: {
                 from: this.minX,
                 to:this.maxX,
-                duration: 10*1000,
-                velocity :200,
+                duration: 10000,
                 ease: 'Sine.easeInOut',
                 yoyo: -1,
                 repeat:-1,

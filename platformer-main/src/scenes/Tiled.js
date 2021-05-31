@@ -91,6 +91,18 @@ class Tiled extends Tableau{
         this.star1.setBounce(0);
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
         this.physics.add.collider(this.star1,this.solides);
+        this.star1.body.setAllowGravity(false);
+        this.tweens.add({
+            targets: this.star1,
+            y: {
+                from: 530,
+                to:560, //on monte de 20 px
+                duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
+                ease: 'Sine.easeInOut', //courbe d'accélération/décélération
+                yoyo: -1, // de haut en bas, puis de bas en haut
+                repeat:-1 //se répète à l'infini
+            }
+        });
       
 
         /*this.star2=this.physics.add.sprite(500,500,"win");

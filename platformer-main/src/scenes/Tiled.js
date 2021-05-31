@@ -7,9 +7,9 @@ class Tiled extends Tableau{
         this.load.image('sky-2', 'assets/sky-2.png');
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('platformjump', 'assets/platformjump.png');
-        this.load.image('monstre2', 'assets/monstre2.png');
+        //this.load.image('monstre2', 'assets/monstre2.png');
         this.load.image('monstre3', 'assets/monstre3.png');
-        this.load.image('monster-violet', 'assets/monster-violet.png');
+        //this.load.image('monster-violet', 'assets/monster-violet.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('win', 'assets/win.png');
     }

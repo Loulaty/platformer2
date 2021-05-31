@@ -10,10 +10,10 @@ class Ui extends Phaser.Scene{
         this.load.image('green', 'assets/green.png');
         this.load.image('red', 'assets/red.png');
         this.load.image('shield', 'assets/shield.png');
-        this.load.image('fond', 'assets/bullefond.png');
         this.load.image('nuage', 'assets/nuage.png');
         this.load.image('nuageours', 'assets/nuageours.png');
         this.load.image('jaugeB', 'assets/bullejauge.png');
+        this.load.image('fond', 'assets/bullefond.png');    
         this.load.image('lapin', 'assets/lapin.png');
         
     }
@@ -22,7 +22,7 @@ class Ui extends Phaser.Scene{
 
         let backgroundBar=this.add.image(110,20,'red');
         backgroundBar.fixedToCamera = true;
-        this.Bar=this.physics.add.sprite(10, 10, 'green');
+        this.Bar=this.physics.add.sprite(43, 13, 'green');
         this.Bar.body.enable=false;
         this.Bar.setOrigin(0,0);
 
@@ -196,7 +196,7 @@ class Ui extends Phaser.Scene{
     }
 
     doudou(){
-        this.doudoubar=this.physics.add.sprite(10, 10, 'shield');
+        this.doudoubar=this.physics.add.sprite(42, 10, 'shield');
         this.doudoubar.body.enable=false;
         this.doudoubar.setOrigin(0,0);
 

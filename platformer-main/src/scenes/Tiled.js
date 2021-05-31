@@ -6,7 +6,6 @@ class Tiled extends Tableau{
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
         this.load.image('sky-2', 'assets/sky-2.png');
         this.load.image('sky3', 'assets/sky3.png');
-        
         //this.load.image('monstre2', 'assets/monstre2.png');
        // this.load.image('monstre3', 'assets/monstre3.png');
         //this.load.image('monster-violet', 'assets/monster-violet.png');

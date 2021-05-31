@@ -10,7 +10,7 @@ class Tableau extends Phaser.Scene{
     preload(){
         this.load.image('sky', 'assets/sky.png');
         this.load.image('balle', 'assets/balle.png');
-        this.load.image('platformjump', 'assets/platformjump.png');
+         this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('blood', 'assets/blood.png');
         this.load.image('nuage', 'assets/nuage.png');
         this.load.image('spike', 'assets/spike.png');
@@ -52,7 +52,7 @@ class Tableau extends Phaser.Scene{
          * Le joueur
          * @type {Player}
          */
-        this.player=new Player(this,140,550);
+        this.player=new Player(this,3000,200);
 
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
@@ -183,7 +183,8 @@ class Tableau extends Phaser.Scene{
     {
         star.disableBody(true, true);
         ui.shield();
-        ui.doudou();    
+        ui.doudou();   
+    
     }
 
     ramasserVic (player, star)

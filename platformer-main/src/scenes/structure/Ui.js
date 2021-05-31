@@ -191,6 +191,7 @@ class Ui extends Phaser.Scene{
     shield(points=100)
     {
         this.ourson+=points;
+      
         
         //this._oursonText.setText('Ourson: ' + this.ourson);
     }
@@ -231,6 +232,9 @@ class Ui extends Phaser.Scene{
         this.Nuageshield();
         this.doudoubar.scaleX = (this.ourson / this.maxdoudou );
 
+        
+       
+
     }
 
     jauge(){
@@ -246,6 +250,8 @@ class Ui extends Phaser.Scene{
 
         this.nuage.visible=false;
         this.nuageours.visible=false;
+
+        
       
         
     }

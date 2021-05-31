@@ -103,6 +103,42 @@ class Tiled extends Tableau{
                 repeat:-1 //se répète à l'infini
             }
         });
+/*
+        this.star4=this.physics.add.sprite(330,500,"star");
+        this.star4.setCollideWorldBounds(true);
+        this.star4.setBounce(0);
+        this.physics.add.overlap(this.player, this.star4, this.ramasserEtoile, null, this);
+        this.physics.add.collider(this.star4,this.solides);
+        this.star4.body.setAllowGravity(false);
+        this.tweens.add({
+            targets: this.star4,
+            y: {
+                from: 530,
+                to:560, //on monte de 20 px
+                duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
+                ease: 'Sine.easeInOut', //courbe d'accélération/décélération
+                yoyo: -1, // de haut en bas, puis de bas en haut
+                repeat:-1 //se répète à l'infini
+            }
+        });
+*/
+        this.star3=this.physics.add.sprite(3300,200,"star");
+        this.star3.setCollideWorldBounds(true);
+        this.star3.setBounce(0);
+        this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
+        this.physics.add.collider(this.star3,this.solides);
+        this.star3.body.setAllowGravity(false);
+        this.tweens.add({
+            targets: this.star3,
+            y: {
+                from: 250,
+                to:180, //on monte de 20 px
+                duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
+                ease: 'Sine.easeInOut', //courbe d'accélération/décélération
+                yoyo: -1, // de haut en bas, puis de bas en haut
+                repeat:-1 //se répète à l'infini
+            }
+        });
       
 
         /*this.star2=this.physics.add.sprite(500,500,"win");
@@ -161,7 +197,8 @@ class Tiled extends Tableau{
         this.monstersContainer.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
-        //this.star3.setDepth(z--);
+        this.star3.setDepth(z--);
+        //this.star4.setDepth(z--);
        // this.star2.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);

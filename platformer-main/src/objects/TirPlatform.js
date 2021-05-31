@@ -13,18 +13,26 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
     this.setBounceX(0);
     this.setBounceY(0);
     this.setCollideWorldBounds(true);
-    this.setGravity(0);
-    this.body.allowGravity=false;
+    this.setGravityY(-400);
+    this.setMaxVelocity(20)
+    this.body.allowGravity=true;
     this.displayWidth = 40;
     this.displayHeight = 40;
-    this.setBounceY = 1;
 
     this.setBodySize(this.body.width, this.body.height);
 
    
     this.world = scene;
     this.isAlive = true;
+    console.log("test");
 
+let ici = this;
+      setTimeout(
+        function()
+        {
+          ici.destroy()
+        },3000
+        );
 
 
     

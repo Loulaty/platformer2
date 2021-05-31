@@ -33,10 +33,10 @@ class Player extends Phaser.Physics.Arcade.Sprite{
 
         this.anims.create({
             key: 'up',
-            frames: [ { key: 'player', frame: 23 } ],
-            frameRate: 20
+            frames: this.anims.generateFrameNumbers('player', { start: 17, end: 19}),
+            frameRate: 7,
+            repeat: -1
         });
-
 
         this.anims.create({
             key: 'turn',
@@ -45,9 +45,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
         });
 
 
-        this.cursors = scene.input.keyboard.createCursorKeys();
-        this.shootKey = scene.input.keyboard.addKey('SHIFT');
-        
+     
 
         
         this._directionX=0;

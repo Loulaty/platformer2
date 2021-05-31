@@ -103,6 +103,7 @@ class Tiled extends Tableau{
                 repeat:-1 //se répète à l'infini
             }
         });
+       
 /*
         this.star4=this.physics.add.sprite(330,500,"star");
         this.star4.setCollideWorldBounds(true);

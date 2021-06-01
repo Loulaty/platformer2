@@ -81,8 +81,27 @@ class Tiled extends Tableau{
             this.physics.add.collider(dark, this.solides,);
         });
 
-      
 
+
+/*
+        this.checkpointsContainer = this.add.container();
+        ici.checkpointsObjects = ici.map.getObjectLayer('Checkpoint')['objects'];
+        ici.checkpointsObjects.forEach(checkpointsObject => {
+            let checkpoints = new CheckPoint(this,checkpointsObject.x,checkpointsObject.y - 32,'Checkpoint',checkpointsObject.properties[0].value);
+            this.physics.add.overlap(this.player, checkpoints, function()
+            {
+                checkpoints.savePos();
+            });
+
+            this.playerPos = checkpoints.loadPos();
+
+            if(this.playerPos)
+            {
+                ici.player.setPosition(this.playerPos.x, this.playerPos.y - 64);
+            }
+        })
+
+*/
         //---------------- Peluches / items ----------------------------
 
 
@@ -147,6 +166,9 @@ class Tiled extends Tableau{
         this.star2.setBounce(0);
         this.physics.add.overlap(this.player, this.star2, this.ramasserVic, null, this);
         this.physics.add.collider(this.star2,this.solides);*/
+
+
+     
 
 
         //----------débug---------------------

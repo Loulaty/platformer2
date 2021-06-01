@@ -105,7 +105,7 @@ class Tiled extends Tableau{
         //---------------- Peluches / items ----------------------------
 
 
-        this.star1=this.physics.add.sprite(300,500,"star");
+        this.star1=this.physics.add.sprite(330,1000,"star");
         this.star1.setCollideWorldBounds(true);
         this.star1.setBounce(0);
         this.physics.add.overlap(this.player, this.star1, this.ramasserEtoile, null, this);
@@ -114,8 +114,8 @@ class Tiled extends Tableau{
         this.tweens.add({
             targets: this.star1,
             y: {
-                from: 530,
-                to:560, //on monte de 20 px
+                from: 1200,
+                to:1230, //on monte de 20 px
                 duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
                 ease: 'Sine.easeInOut', //courbe d'accélération/décélération
                 yoyo: -1, // de haut en bas, puis de bas en haut

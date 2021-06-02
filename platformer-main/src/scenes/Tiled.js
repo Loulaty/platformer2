@@ -83,25 +83,28 @@ class Tiled extends Tableau{
 
 
 
-/*
+        //---------------- checkPoints ----------------------------
+    
+
+        this.checkPoints = this.physics.add.staticGroup();
         this.checkpointsContainer = this.add.container();
-        ici.checkpointsObjects = ici.map.getObjectLayer('Checkpoint')['objects'];
-        ici.checkpointsObjects.forEach(checkpointsObject => {
-            let checkpoints = new CheckPoint(this,checkpointsObject.x,checkpointsObject.y - 32,'Checkpoint',checkpointsObject.properties[0].value);
-            this.physics.add.overlap(this.player, checkpoints, function()
-            {
-                checkpoints.savePos();
-            });
+        ici.checkPointsObjects = ici.map.getObjectLayer('checkPoints')['objects'];
+        ici.checkPointsObjects.forEach(checkPointObject => 
+        {
+            let point=this.checkPoints.create(checkPointObject.x,checkPointObject.y,'checkPoint').setDisplaySize(16,16).setBodySize(64,64)
+            .setOrigin(14,12.4);
+            point.checkPointObject=checkPointObject;
+        });
+        this.physics.add.overlap(this.player, this.checkPoints, function(player, checkPoint)
+        {
+            ici.saveCheckPoint(checkPoint.checkPointObject.name);
+            
+        }, null, this);
 
-            this.playerPos = checkpoints.loadPos();
+       
+    
+    
 
-            if(this.playerPos)
-            {
-                ici.player.setPosition(this.playerPos.x, this.playerPos.y - 64);
-            }
-        })
-
-*/
         //---------------- Peluches / items ----------------------------
 
 
@@ -122,26 +125,7 @@ class Tiled extends Tableau{
                 repeat:-1 //se répète à l'infini
             }
         });
-       
-/*
-        this.star4=this.physics.add.sprite(330,500,"star");
-        this.star4.setCollideWorldBounds(true);
-        this.star4.setBounce(0);
-        this.physics.add.overlap(this.player, this.star4, this.ramasserEtoile, null, this);
-        this.physics.add.collider(this.star4,this.solides);
-        this.star4.body.setAllowGravity(false);
-        this.tweens.add({
-            targets: this.star4,
-            y: {
-                from: 530,
-                to:560, //on monte de 20 px
-                duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
-                ease: 'Sine.easeInOut', //courbe d'accélération/décélération
-                yoyo: -1, // de haut en bas, puis de bas en haut
-                repeat:-1 //se répète à l'infini
-            }
-        });
-*/
+ 
         this.star3=this.physics.add.sprite(3300,1000,"star");
         this.star3.setCollideWorldBounds(true);
         this.star3.setBounce(0);
@@ -233,6 +217,7 @@ class Tiled extends Tableau{
         let z=1000; 
         debug.setDepth(z--);
         this.sky3.setDepth(z--);
+        this.checkpointsContainer.setDepth(z--);
         this.blood.setDepth(z--);
         this.solides.setDepth(z--);
         this.monstersContainer.setDepth(z--);
@@ -246,6 +231,7 @@ class Tiled extends Tableau{
         this.sky2.setDepth(z--);
         this.sky.setDepth(z--);
 
+        this.restoreCheckPoint();
     }
 
     optimizeDisplay(){
@@ -261,6 +247,33 @@ class Tiled extends Tableau{
         this.sky2.tilePositionY=this.cameras.main.scrollY*0.6;
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.8;
         this.sky3.tilePositionY=this.cameras.main.scrollY*0.6;
+    }
+
+    saveCheckPoint(checkPointName)
+    {
+
+        if (localStorage.getItem("checkPoint") !== checkPointName)
+        {
+            localStorage.setItem("checkPoint", checkPointName);
+            console.log('saved');
+        }
+    } 
+
+
+    restoreCheckPoint()
+    {
+        let storedCheckPoint=localStorage.getItem("checkPoint")
+        if(storedCheckPoint)
+        {
+            this.checkPointsObjects.forEach(checkPointObject => 
+            {
+                if(checkPointObject.name === storedCheckPoint)
+                {
+                    this.player.setPosition(checkPointObject.x, checkPointObject.y);
+                   
+                }
+            });
+        }
     }
 
 

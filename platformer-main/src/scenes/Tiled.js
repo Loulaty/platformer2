@@ -50,6 +50,51 @@ class Tiled extends Tableau{
 
 
 
+        this.laveFxContainer=this.add.container();
+        this.lave.forEachTile(function(tile){ 
+            if(tile.index !== -1){
+
+               
+                let props={
+                    frame: [
+                        'death-white'
+                    ],
+                    frequency:200,
+                    lifespan: 2000,
+                    quantity:2,
+                    x:{min:-32,max:32},
+                    y:{min:-12,max:52},
+                    tint:[  0xC11A05,0x883333,0xBB5500,0xFF7F27 ],
+                    rotate: {min:-10,max:10},
+                    speedX: { min: -10, max: 10 },
+                    speedY: { min: -20, max: -30 },
+                    scale: {start: 0, end: 1},
+                    alpha: { start: 1, end: 0 },
+                    blendMode: Phaser.BlendModes.ADD,
+                };
+                let props2={...props}; 
+                props2.blendMode=Phaser.BlendModes.MULTIPLY; 
+                let laveParticles = ici.add.particles('particles');
+
+                laveParticles.createEmitter(props);
+                if(!ici.isMobile) {
+                    laveParticles.createEmitter(props2); 
+                }
+                laveParticles.x=tile.pixelX+32;
+                laveParticles.y=tile.pixelY+32;
+                ici.laveFxContainer.add(laveParticles);
+
+                
+                laveParticles.pause();
+                laveParticles.visible=false;
+        
+                laveParticles.rectangle=new Phaser.Geom.Rectangle(tile.pixelX,tile.pixelY,64,64);
+
+            }
+
+        })
+
+
 
 
 

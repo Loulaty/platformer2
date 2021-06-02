@@ -142,7 +142,7 @@ class Tiled extends Tableau{
             }
         });
 */
-        this.star3=this.physics.add.sprite(3300,200,"star");
+        this.star3=this.physics.add.sprite(3300,1000,"star");
         this.star3.setCollideWorldBounds(true);
         this.star3.setBounce(0);
         this.physics.add.overlap(this.player, this.star3, this.ramasserEtoile, null, this);
@@ -151,8 +151,26 @@ class Tiled extends Tableau{
         this.tweens.add({
             targets: this.star3,
             y: {
-                from: 250,
-                to:180, //on monte de 20 px
+                from: 1000,
+                to:1080, //on monte de 20 px
+                duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
+                ease: 'Sine.easeInOut', //courbe d'accélération/décélération
+                yoyo: -1, // de haut en bas, puis de bas en haut
+                repeat:-1 //se répète à l'infini
+            }
+        });
+
+        this.star10=this.physics.add.sprite(11350,10,"win");
+        this.star10.setCollideWorldBounds(true);
+        this.star10.setBounce(0);
+        this.physics.add.overlap(this.player, this.star10, this.ramasserVic, null, this);
+        this.physics.add.collider(this.star10,this.solides);
+        this.star10.body.setAllowGravity(false);
+        this.tweens.add({
+            targets: this.stastar10,
+            y: {
+                from: 10,
+                to:20, //on monte de 20 px
                 duration: 2000,// une demi seconde pour monter (et donc la même chose pour descendre)
                 ease: 'Sine.easeInOut', //courbe d'accélération/décélération
                 yoyo: -1, // de haut en bas, puis de bas en haut
@@ -222,7 +240,7 @@ class Tiled extends Tableau{
         this.star1.setDepth(z--);
         this.star3.setDepth(z--);
         //this.star4.setDepth(z--);
-       // this.star2.setDepth(z--);
+        this.star10.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);
         this.sky2.setDepth(z--);

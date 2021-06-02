@@ -56,6 +56,11 @@ class GamePad extends Phaser.GameObjects.Container{
                     Tableau.current.rebond = true;
                     console.log("E");
                     break;
+                    
+                case "r":
+                    Tableau.current.reset = true;
+                    console.log("R");
+                    break;
             }
         });
 
@@ -89,6 +94,10 @@ class GamePad extends Phaser.GameObjects.Container{
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
                     console.log("plus E");
+                    break;
+
+                case "r": 
+                    console.log("plus r");
                     break;
             }
         });

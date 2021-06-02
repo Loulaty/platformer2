@@ -273,8 +273,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":420,
-                 "y":1190
+                 "x":156,
+                 "y":1206
                 }, 
                 {
                  "gid":331,
@@ -285,8 +285,8 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":636,
-                 "y":1170
+                 "x":1690,
+                 "y":1122
                 }, 
                 {
                  "gid":331,
@@ -297,7 +297,54 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":1558,
+                 "x":3008,
+                 "y":898
+                }, 
+                {
+                 "gid":331,
+                 "height":32,
+                 "id":103,
+                 "name":"4",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":8866,
+                 "y":752
+                }, 
+                {
+                 "gid":331,
+                 "height":32,
+                 "id":104,
+                 "name":"5",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":11138,
+                 "y":752
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":14,
+         "name":"lumiere",
+         "objects":[
+                {
+                 "gid":331,
+                 "height":32,
+                 "id":105,
+                 "name":"",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":32,
+                 "x":300,
                  "y":1108
                 }],
          "opacity":1,
@@ -317,8 +364,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":14,
- "nextobjectid":103,
+ "nextlayerid":15,
+ "nextobjectid":106,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.4.3",

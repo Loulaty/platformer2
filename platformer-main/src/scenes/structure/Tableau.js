@@ -204,8 +204,7 @@ class Tableau extends Phaser.Scene{
 
     }
 
-
-
+  
 
 
 

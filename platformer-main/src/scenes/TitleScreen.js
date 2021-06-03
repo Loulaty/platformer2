@@ -5,7 +5,7 @@ class TitleScreen    extends Phaser.Scene {
   
     preload ()
     {
-        this.load.image('TitleScreen', 'assets/TitleScreen.png');
+        this.load.image('titlescreen', 'assets/titlescreen.png');
         this.load.image('button', 'assets/button.png');
     }
   
@@ -14,8 +14,8 @@ class TitleScreen    extends Phaser.Scene {
         this.touchePressed = false;
   
 
-        this.add.sprite(game.config.width/2, game.config.height/2, 'TitleScreen');
-        this.add.sprite(game.config.width/2, game.config.height/2, 'TitleScreen');
+        this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');
+        this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');
 
         let startB1 = this.add.sprite(game.config.width/2-8, game.config.height -150, 'button');
         this.tweens.add({

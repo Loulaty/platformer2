@@ -3,7 +3,7 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
 
   constructor(scene, x, y,) 
   {
-    super(scene, x*scene.player.sens, y, 'platformjump');
+    super(scene, x*scene.player.sens, y, 'platformbulle');
 
     scene.add.existing(this);
     scene.physics.add.existing(this);
@@ -24,7 +24,6 @@ class TirPlatform extends Phaser.Physics.Arcade.Sprite
    
     this.world = scene;
     this.isAlive = true;
-    console.log("test");
 
 let ici = this;
       setTimeout(

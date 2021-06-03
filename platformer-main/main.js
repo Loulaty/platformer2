@@ -12,10 +12,11 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 100*3 },
-            debug: true,
+            debug: false,
         }
     },
     scene: [
+        new TitleScreen(),
         new Ui(),
         new Tiled("Test"),
         new Niveau1("Lavander forest?"),

@@ -9,9 +9,20 @@ class Tiled extends Tableau{
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('win', 'assets/win.png');
+        this.load.audio('mother', 'assets/Mother.mp3');
     }
     create() {
         super.create();
+
+        this.music = this.sound.add('mother');
+        var musicConfig = {
+            mute: false,
+            volume: 0.5,
+            loop: true,
+        }
+        this.music.play(musicConfig);
+
+
          let ici=this;
          this.player.setMaxVelocity(600,600);
 
@@ -48,6 +59,9 @@ class Tiled extends Tableau{
 
      
 
+        let checkPoint = this.add.pointlight(this.x, this.y, 0, 50, 0.5);
+        checkPoint.attenuation = 0.05;
+        checkPoint.color.setTo(255, 200, 0);
 
 
         this.laveFxContainer=this.add.container();

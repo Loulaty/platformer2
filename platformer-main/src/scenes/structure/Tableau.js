@@ -15,6 +15,9 @@ class Tableau extends Phaser.Scene{
         this.load.image('nuage', 'assets/nuage.png');
         this.load.image('spike', 'assets/spike.png');
         this.load.image('jump', 'assets/jump.png');
+        this.load.audio('jump', 'assets/jump.mp3');
+        this.load.audio('bubble1', 'assets/bubble1.mp3');
+        this.load.audio('bubble2', 'assets/bubble2.mp3');
        
         this.load.spritesheet('player',
             'assets/player.png',
@@ -73,15 +76,18 @@ class Tableau extends Phaser.Scene{
         if (this.bubble){
             
         if (this.stop==false){
+            this.sound.play('bubble2');
             let me = this;
             me.bubble=new BulleTir(this,this.player.x,this.player.y,"balle").setDepth(100000);
 
             
             me.bubble.visible=true;
+           
 
             me.bubble=false;
             ui.usebulle();
             ui.jaugebubulle();
+            
             
             
            
@@ -98,6 +104,7 @@ class Tableau extends Phaser.Scene{
         if (this.rebond)
         {
             if (this.stop==false){
+                this.sound.play('bubble1');
             let me = this;
 
             me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+20, this.Boing, "platformjump").setDepth(100000);

@@ -95,6 +95,7 @@ class Player extends Phaser.Physics.Arcade.Sprite{
             if(this.body.blocked.down || this.body.touching.down){
                 this.setVelocityY(-420);
                 this.anims.play('up', true);
+                this.scene.sound.play('jump');
             }
         }
 

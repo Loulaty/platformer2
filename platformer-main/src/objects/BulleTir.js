@@ -18,6 +18,7 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
     this.setGravityY(-250);
     this.setVelocity(100*scene.player.sens, -20);
     
+    
   
     //this.setVelocity(-100, -50);
     this.setBodySize(this.body.width, this.body.height);

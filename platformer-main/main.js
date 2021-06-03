@@ -16,7 +16,7 @@ let config = {
         }
     },
     scene: [
-        new TitleScreen(),
+        new TitleScreen("boop"),
         new Ui(),
         new Tiled("Test"),
         new Niveau1("Lavander forest?"),

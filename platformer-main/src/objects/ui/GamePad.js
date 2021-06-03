@@ -27,15 +27,31 @@ class GamePad extends Phaser.GameObjects.Container{
         scene.input.keyboard.on('keydown', function(kevent){
             //console.log(kevent.key);
             switch (kevent.key){
-                case "ArrowRight":
+                case "d":
                     Tableau.current.player.directionX=1;
                     break;
 
-                case "ArrowLeft":
+                    case "ArrowRight":
+                        Tableau.current.player.directionX=1;
+                        break;
+
+                case "q":
                     Tableau.current.player.directionX=-1;
                     break;
 
-                case "ArrowUp":
+                    case "ArrowLeft":
+                        Tableau.current.player.directionX=-1;
+                        break;
+
+                case " ":
+                    Tableau.current.player.directionY=-1;
+                    break;
+
+                    case "z":
+                    Tableau.current.player.directionY=-1;
+                    break;
+
+                    case "ArrowUp":
                     Tableau.current.player.directionY=-1;
                     break;
 
@@ -43,61 +59,71 @@ class GamePad extends Phaser.GameObjects.Container{
                     Tableau.current.player.directionY=1;
                     break;
 
-                case "Shift":
+                case "a":
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
-                    Tableau.current.bubble = true;
-                    console.log("attackOn");                
+                    Tableau.current.bubble = true;               
                     break;
 
                 case "e":
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
                     Tableau.current.rebond = true;
-                    console.log("E");
                     break;
                     
                 case "r":
-                    Tableau.current.reset = true;
-                    console.log("R");
+                    Tableau.current.restoreCheckPoint();
                     break;
             }
         });
 
         scene.input.keyboard.on('keyup', function(kevent){
             switch (kevent.key){
-                case "ArrowRight":
+                case "d":
                     Tableau.current.player.directionX=0;
                     break;
 
-                case "ArrowLeft":
+                    case "ArrowRight":
+                        Tableau.current.player.directionX=0;
+                        break;
+
+                case "q":
                     Tableau.current.player.directionX=0;
                     break;
 
-                case "ArrowUp":
+                    case "ArrowLeft":
+                        Tableau.current.player.directionX=0;
+                        break;
+
+                case " ":
                     Tableau.current.player.directionY=0;
                     break;
+
+                    case "z":
+                    Tableau.current.player.directionY=0;
+                    break;
+
+                    case "ArrowUp":
+                        Tableau.current.player.directionY=0;
+                        break;
 
                 case "ArrowDown":
                     Tableau.current.player.directionY=0;
                     break;
                     
-                case "Shift":
+                case "a":
                     Tableau.current.bubble = false;
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
-                    console.log("shiftoff");
                     break;
 
                 case "e":
                     Tableau.current.rebond = false;
                     Tableau.current.player.directionX=0;
                     Tableau.current.player.directionY=0;
-                    console.log("plus E");
                     break;
 
                 case "r": 
-                    console.log("plus r");
                     break;
             }
         });

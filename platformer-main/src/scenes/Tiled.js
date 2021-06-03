@@ -12,17 +12,18 @@ class Tiled extends Tableau{
         this.load.audio('mother', 'assets/Mother.mp3');
     }
     create() {
+       
         super.create();
 
         this.music = this.sound.add('mother');
         var musicConfig = {
-            mute: false,
-            volume: 0.5,
+            volume: 0.1,
             loop: true,
         }
         this.music.play(musicConfig);
 
 
+       
          let ici=this;
          this.player.setMaxVelocity(600,600);
 
@@ -156,7 +157,7 @@ class Tiled extends Tableau{
             ici.saveCheckPoint(checkPoint.checkPointObject.name);
         }, null, this);
 
-    
+        
     
 
         //---------------- Peluches / items ----------------------------
@@ -348,6 +349,7 @@ class Tiled extends Tableau{
             this.optimizeDisplay();
         }
     }
+    
 
 
 

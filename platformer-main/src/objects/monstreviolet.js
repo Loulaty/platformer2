@@ -82,7 +82,6 @@ class monstreviolet extends ObjetEnnemi{
     }
 
     Tmortlol(){
-        this.disableBody(false, false);
        
     }   
 

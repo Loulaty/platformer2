@@ -6,6 +6,10 @@ class Tiled extends Tableau{
         this.load.tilemapTiledJSON('map', 'assets/tilemaps/tableauTiled.json');
         this.load.image('platformjump', 'assets/platformjump.png');
         this.load.image('sky-2', 'assets/sky-2.png');
+        this.load.image('sky0', 'assets/sky0.png');
+        this.load.image('sky0.5', 'assets/sky0.5.png');
+        this.load.image('sky1', 'assets/sky1.png');
+        this.load.image('sky1.5', 'assets/sky1.5.png');
         this.load.image('sky3', 'assets/sky3.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('win', 'assets/win.png');
@@ -45,7 +49,7 @@ class Tiled extends Tableau{
         this.lave = this.map.createLayer('lave', this.tileset, 0, 0);
     
 
-        this.physics.add.collider(this.player,this.solides);
+        this.physics.add.collider(this.player,this.solides,this.monstersContainer);
        
         this.solides.setCollisionByProperty({ collides: true });
         this.derriere.setCollisionByProperty({ collides: false }); 
@@ -157,7 +161,12 @@ class Tiled extends Tableau{
             ici.saveCheckPoint(checkPoint.checkPointObject.name);
         }, null, this);
 
-        
+        this.light = this.lights.addLight(230, 1200, 200, (0, 0, 0), 5000);
+        this.light.color.r = 11;
+        this.light.color.g = 9;
+        this.light.color.b = 1;
+
+    
     
 
         //---------------- Peluches / items ----------------------------
@@ -244,28 +253,68 @@ class Tiled extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            'sky'
+            'sky0'
         );
+
+        this.sky1=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'sky0.5'
+        );
+
+
         this.sky2=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'sky1'
+        );
+
+        this.sky3=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'sky1.5'
+        );
+
+        this.sky4=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
             'sky-2'
         );
-        this.sky3=this.add.tileSprite(
+
+        this.sky5=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
             'sky3'
         );
+
+
         this.sky.setOrigin(0,0);
-        this.sky2.setOrigin(0,0);
         this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
+
+        this.sky1.setOrigin(0,0);
+        this.sky1.setScrollFactor(0);
+
+        this.sky2.setOrigin(0,0);
         this.sky2.setScrollFactor(0);
+
         this.sky3.setOrigin(0,0);
         this.sky3.setScrollFactor(0);
+
+        this.sky4.setOrigin(0,0);
+        this.sky4.setScrollFactor(0);
+
+        this.sky5.setOrigin(0,0);
+        this.sky5.setScrollFactor(0);
 
 
         //on définit les z à la fin
@@ -283,7 +332,11 @@ class Tiled extends Tableau{
         this.star10.setDepth(z--);
         this.lave.setDepth(z--);
         this.derriere.setDepth(z--);
+        this.sky5.setDepth(z--);
+        this.sky4.setDepth(z--);
+        this.sky3.setDepth(z--);
         this.sky2.setDepth(z--);
+        this.sky1.setDepth(z--);
         this.sky.setDepth(z--);
 
         this.restoreCheckPoint();
@@ -298,10 +351,21 @@ class Tiled extends Tableau{
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.5;
         this.sky.tilePositionY=this.cameras.main.scrollY*0.5;
-        this.sky2.tilePositionX=this.cameras.main.scrollX*0.8+100;
+
+        this.sky1.tilePositionX=this.cameras.main.scrollX*0.6+30;
+        this.sky1.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.sky2.tilePositionX=this.cameras.main.scrollX*0.7+30;
         this.sky2.tilePositionY=this.cameras.main.scrollY*0.6;
-        this.sky3.tilePositionX=this.cameras.main.scrollX*0.8;
+
+        this.sky3.tilePositionX=this.cameras.main.scrollX*0.8+30;
         this.sky3.tilePositionY=this.cameras.main.scrollY*0.6;
+       
+        this.sky4.tilePositionX=this.cameras.main.scrollX*0.9+30;
+        this.sky4.tilePositionY=this.cameras.main.scrollY*0.5;
+
+        this.sky5.tilePositionX=this.cameras.main.scrollX*0.95+30;
+        this.sky5.tilePositionY=this.cameras.main.scrollY*0.5;
     }
 
     saveCheckPoint(checkPointName)

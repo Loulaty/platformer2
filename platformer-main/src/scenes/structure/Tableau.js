@@ -21,6 +21,7 @@ class Tableau extends Phaser.Scene{
         this.load.audio('mob2', 'assets/mob2.mp3');
         this.load.audio('mob', 'assets/mob.mp3');
         this.load.audio('plop', 'assets/plop.mp3');
+        this.load.audio('bup', 'assets/bup.mp3');
        
         this.load.spritesheet('player',
             'assets/player.png',
@@ -185,6 +186,7 @@ class Tableau extends Phaser.Scene{
 
     ramasserEtoile (player, star)
     {
+        this.sound.play('bup');
         star.disableBody(true, true);
         ui.shield();
         ui.doudou();   

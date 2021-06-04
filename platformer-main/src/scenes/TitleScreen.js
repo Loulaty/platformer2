@@ -9,11 +9,20 @@ class TitleScreen    extends Phaser.Scene {
     
         this.load.image('titlescreen', 'assets/titlescreen.png');
         this.load.image('button', 'assets/button.png');
+        this.load.audio('title', 'assets/title.mp3');
     }
   
     create()
     {
         this.touchePressed = false;
+
+        this.title = this.sound.add('title');
+        var musicConfig = {
+            volume: 1,
+            loop: true,
+        }
+        this.title.play(musicConfig);
+
 
        
   

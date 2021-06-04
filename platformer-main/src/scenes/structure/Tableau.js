@@ -290,6 +290,7 @@ class Tableau extends Phaser.Scene{
                  me.player.visible = true;
                 //  ui.resetshield();
                  ui.resetvie();
+                scene.music.stop(musicConfig);
                  
 
             })

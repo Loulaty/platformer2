@@ -17,8 +17,8 @@ let config = {
     },
     scene: [
 
-        //new Anime("ah"),
         new TitleScreen("boop"),
+        new Anime("ah"),
         new Ui(),
         new Tiled("Test"),
         new Perdu("lose"),

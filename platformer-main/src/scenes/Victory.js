@@ -23,9 +23,9 @@ class Victory    extends Phaser.Scene {
  
 
 
-            let lumiere3 = this.add.pointlight(game.config.width/2+230, game.config.height-250, 0, 300, 0.5);
+            let lumiere3 = this.add.pointlight(game.config.width/2+20, game.config.height-200, 0, 500, 0.5);
             lumiere3.attenuation = 0.03  ;
-            lumiere3.color.setTo(255, 255, 255);
+            lumiere3.color.setTo(200, 200, 255);
                     this.tweens.add(
                         {
                             targets:[lumiere3],

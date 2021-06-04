@@ -17,11 +17,12 @@ let config = {
     },
     scene: [
 
+        new Victory("uwu"),
         new TitleScreen("boop"),
         //new Anime("ah"),
         new Ui(),
         new Tiled("Test"),
-        new Victory("uwu"),
+        
         //new Niveau1("Lose"),
         
 

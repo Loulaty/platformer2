@@ -180,6 +180,18 @@ class Ui extends Phaser.Scene{
         
     }
 
+    resetshield()
+    {
+        this.ourson==0;
+        this.doudoubar.scaleX = (this.ourson / this.maxdoudou );
+
+    }
+
+    resetvie()
+    {
+        this.peur== 300;
+    }
+
     shielduse(points=1)
     {
         this.ourson-=points;
@@ -251,8 +263,9 @@ class Ui extends Phaser.Scene{
         this.nuage.visible=false;
         this.nuageours.visible=false;
 
-        
-      
-        
     }
+
+
+    
+
 }

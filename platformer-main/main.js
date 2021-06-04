@@ -16,10 +16,13 @@ let config = {
         }
     },
     scene: [
+
+        //new Anime("ah"),
         new TitleScreen("boop"),
         new Ui(),
         new Tiled("Test"),
-        new Niveau1("Lavander forest?"),
+        new Perdu("lose"),
+        //new Niveau1("Lose"),
         
 
         

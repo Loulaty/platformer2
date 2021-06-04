@@ -42,6 +42,7 @@ class Tableau extends Phaser.Scene{
 
 
         Tableau.current=this;
+        
         this.sys.scene.scale.lockOrientation("landscape")
         console.log("On est sur "+this.constructor.name+" / "+this.scene.key);
         /**
@@ -55,8 +56,8 @@ class Tableau extends Phaser.Scene{
          * Le joueur
          * @type {Player}
          */
-        this.player=new Player(this,250,1200);
-
+        this.player=new Player(this,200,1200);
+        
         this.blood=this.add.sprite(this.sys.canvas.width/2,this.sys.canvas.height/2,"blood")
         this.blood.displayWidth=64;
         this.blood.displayHeight=64;
@@ -74,7 +75,7 @@ class Tableau extends Phaser.Scene{
         this.player.move();
 
         if (this.bubble){
-            
+           
         if (this.stop==false){
             this.sound.play('bubble2');
             let me = this;
@@ -86,14 +87,7 @@ class Tableau extends Phaser.Scene{
 
             me.bubble=false;
             ui.usebulle();
-            ui.jaugebubulle();
-            
-            
-            
-           
-          
-           
-            
+            ui.jaugebubulle();      
         }
         }
 
@@ -107,7 +101,7 @@ class Tableau extends Phaser.Scene{
                 this.sound.play('bubble1');
             let me = this;
 
-            me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+20, this.Boing, "platformjump").setDepth(100000);
+            me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+65, this.Boing, "platformjump").setDepth(100000);
             me.rebond.visible=true;
             me.rebond=false;
             ui.usebulle();
@@ -291,8 +285,13 @@ class Tableau extends Phaser.Scene{
                 me.blood.visible = false;
                 me.player.anims.play('turn');
                 me.player.isDead = false;
-                me.scene.restart();
-                ui.peur = 300;
+                 me.player.x=200; 
+                 me.player.y=1200;
+                 me.player.visible = true;
+                //  ui.resetshield();
+                 ui.resetvie();
+                 
+
             })
         }
     }

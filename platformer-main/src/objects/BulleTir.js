@@ -32,14 +32,17 @@ class BulleTir extends Phaser.Physics.Arcade.Sprite
         function()
         {
           ici.destroy()
-        },2500
+        },1800
         );
         
 
 
 
 scene.monstersContainer.iterate(monstre2=>{
+
+
   scene.physics.add.overlap(this, monstre2, function(){monstre2.Tmortlol()}, null, scene);
+ 
 })
 
   }

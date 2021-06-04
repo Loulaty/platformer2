@@ -5,13 +5,23 @@ class TitleScreen    extends Phaser.Scene {
   
     preload ()
     {
+
+        this.load.video('anime', 'assets/anime.mp4', 'loadeddata', false, true);
         this.load.image('titlescreen', 'assets/titlescreen.png');
         this.load.image('button', 'assets/button.png');
     }
   
     create()
     {
+
+        this.anime=this.add.video(448, 224, 'anime');
+        this.anime.play(true);
+        this.anime.setLoop(true);
+
+        
         this.touchePressed = false;
+
+       
   
 
         this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');

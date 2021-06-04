@@ -18,7 +18,7 @@ class TitleScreen    extends Phaser.Scene {
         this.anime.play(true);
         this.anime.setLoop(true);
 
-        
+
         this.touchePressed = false;
 
        
@@ -42,29 +42,6 @@ class TitleScreen    extends Phaser.Scene {
  
 
         
-
-/*
-        let lanterne = this.add.pointlight(game.config.width/2-378, game.config.height/2+32, 0, 50, 0.5);
-        lanterne.attenuation = 0.05;
-        lanterne.color.setTo(255, 200, 0);
-        let lanterne5 = this.add.pointlight(game.config.width/2+242, game.config.height/2+38, 0, 30, 0.5);
-        lanterne5.attenuation = 0.05;
-        lanterne5.color.setTo(255, 200, 0);
-
-        let lanterne2 = this.add.pointlight(game.config.width/2-250, game.config.height/2+40, 0, 30, 0.5);
-        lanterne2.attenuation = 0.05;
-        lanterne2.color.setTo(255, 200, 0);
-        let lanterne6 = this.add.pointlight(game.config.width/2+370, game.config.height/2+31, 0, 50, 0.5);
-        lanterne6.attenuation = 0.05;
-        lanterne6.color.setTo(255, 200, 0);
-
-        let lanterne3 = this.add.pointlight(game.config.width/2-190, game.config.height/2+45, 0, 15, 0.5);
-        lanterne3.attenuation = 0.05;
-        lanterne3.color.setTo(255, 200, 0);
-        let lanterne4 = this.add.pointlight(game.config.width/2+182, game.config.height/2+45, 0, 15, 0.5);
-        lanterne4.attenuation = 0.05;
-        lanterne4.color.setTo(255, 200, 0);
-*/
 
 let lumiere = this.add.pointlight(game.config.width/2-8, game.config.height-350, 0, 300, 0.5);
 lumiere.attenuation = 0.04  ;

@@ -223,6 +223,7 @@ class Ui extends Phaser.Scene{
     {
           
             this.nuage.visible=true;
+            Tableau.current.cameras.main.shake(70,0.002);
             
         
     
@@ -233,6 +234,7 @@ class Ui extends Phaser.Scene{
     {
           
             this.nuageours.visible=true;
+            Tableau.current.cameras.main.shake(70,0.0015);
         
     
 

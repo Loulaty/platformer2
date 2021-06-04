@@ -317,6 +317,7 @@ class Tiled extends Tableau{
         {
             localStorage.setItem("checkPoint", checkPointName);
             console.log('saved');
+            this.sound.play('che');
         }
     } 
 

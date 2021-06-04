@@ -72,8 +72,8 @@ class Ui extends Phaser.Scene{
         this.maxdoudou = 100;
         this.ourson = 0;
 
-        this.maxbulle = 100;
-        this.jaugebulle = 100;
+        this.maxbulle = 120;
+        this.jaugebulle = 120;
 
 
 

@@ -16,12 +16,7 @@ class TitleScreen    extends Phaser.Scene {
     {
         this.touchePressed = false;
 
-        this.title = this.sound.add('title');
-        var musicConfig = {
-            volume: 1,
-            loop: true,
-        }
-        this.title.play(musicConfig);
+        
 
 
        
@@ -29,6 +24,9 @@ class TitleScreen    extends Phaser.Scene {
 
         this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');
         this.add.sprite(game.config.width/2, game.config.height/2, 'titlescreen');
+
+        this.title = this.sound.add('title', {volume: 0.2});
+        this.title.play();
 
         let startB1 = this.add.sprite(game.config.width/2-8, game.config.height -150, 'button');
         this.tweens.add({
@@ -109,10 +107,12 @@ lumiere2.color.setTo(255, 255, 255);
                 startB1.alpha = 0.5;
                 this.touchePressed = true;
                 this.cameras.main.fadeOut(1500, 0, 0, 0)
+                this.title = 0;
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
-                    this.game.scene.start(Anime);
-                    this.scene.start("ah");
+                    
+                    this.game.scene.start(Tiled);
+                    this.scene.start("Test");
                 })
             }
 

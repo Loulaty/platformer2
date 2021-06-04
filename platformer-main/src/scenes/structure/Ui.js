@@ -72,8 +72,8 @@ class Ui extends Phaser.Scene{
         this.maxdoudou = 100;
         this.ourson = 0;
 
-        this.maxbulle = 50;
-        this.jaugebulle = 50;
+        this.maxbulle = 80;
+        this.jaugebulle = 80;
 
 
 
@@ -166,6 +166,16 @@ class Ui extends Phaser.Scene{
         
     }
 
+    usebullee(points=2)
+    {
+        this.jaugebulle-=points;
+        //this._bulleText.setText('Bulle: ' + this.jaugebulle);
+        if (this.jaugebulle <= 0){
+            
+        }
+        
+    }
+
 
 
     perdu(points=1)
@@ -198,6 +208,7 @@ class Ui extends Phaser.Scene{
         
         //this._oursonText.setText('Ourson: ' + this.ourson);
     }
+
 
 
     shield(points=100)

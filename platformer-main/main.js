@@ -18,10 +18,10 @@ let config = {
     scene: [
 
         new TitleScreen("boop"),
-        new Anime("ah"),
+        //new Anime("ah"),
         new Ui(),
         new Tiled("Test"),
-        new Perdu("lose"),
+        new Victory("uwu"),
         //new Niveau1("Lose"),
         
 

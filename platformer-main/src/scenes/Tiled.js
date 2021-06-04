@@ -20,6 +20,8 @@ class Tiled extends Tableau{
        
         super.create();
 
+       
+
         this.music = this.sound.add('mother');
         var musicConfig = {
             volume: 0.1,

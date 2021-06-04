@@ -109,7 +109,7 @@ class Tableau extends Phaser.Scene{
             me.rebond=new TirPlatform(this,this.player.x*this.player.sens + 70,this.player.y+65, this.Boing, "platformjump").setDepth(100000);
             me.rebond.visible=true;
             me.rebond=false;
-            ui.usebulle();
+            ui.usebullee();
             ui.jaugebubulle();
             
             

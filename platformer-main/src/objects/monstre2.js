@@ -81,6 +81,7 @@ class monstre2 extends ObjetEnnemi{
 
     Tmortlol(){
         this.disableBody(true, true);
+        this.scene.sound.play('mob2');
        
     }   
 
@@ -112,6 +113,7 @@ class monstre2 extends ObjetEnnemi{
         if(this.x < this.scene.player.x-200 || this.x > this.scene.player.x+200) {
             this.setVelocityX(0);
             this.anims.play('stand', true); 
+           
             }
         }
     }

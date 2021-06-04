@@ -18,6 +18,9 @@ class Tableau extends Phaser.Scene{
         this.load.audio('jump', 'assets/jump.mp3');
         this.load.audio('bubble1', 'assets/bubble1.mp3');
         this.load.audio('bubble2', 'assets/bubble2.mp3');
+        this.load.audio('mob2', 'assets/mob2.mp3');
+        this.load.audio('mob', 'assets/mob.mp3');
+        this.load.audio('plop', 'assets/plop.mp3');
        
         this.load.spritesheet('player',
             'assets/player.png',

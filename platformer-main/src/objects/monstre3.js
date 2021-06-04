@@ -83,6 +83,7 @@ class monstre3 extends ObjetEnnemi{
 
     Tmortlol(){
         this.disableBody(true, true);
+        this.scene.sound.play('plop');
         Tableau.current.spidy = true;
         Tableau.current.spidyX = this.x-20;
         Tableau.current.spidyY= this.y-35;

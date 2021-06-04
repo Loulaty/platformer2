@@ -103,7 +103,7 @@ class Tiled extends Tableau{
         ici.checkPointsObjects = ici.map.getObjectLayer('checkPoints')['objects'];
         ici.checkPointsObjects.forEach(checkPointObject => 
         {
-            let point=this.checkPoints.create(checkPointObject.x,checkPointObject.y,'checkPoint').setDisplaySize(16,16).setBodySize(64,64)
+            let point=this.checkPoints.create(checkPointObject.x,checkPointObject.y).setDisplaySize(16,16).setBodySize(64,64)
             .setOrigin(14,12.4);
             point.checkPointObject=checkPointObject;
 
@@ -266,9 +266,9 @@ class Tiled extends Tableau{
         debug.setDepth(z--);
         this.sky3.setDepth(z--);
         this.blood.setDepth(z--);
-        this.checkpointsContainer.setDepth(z--);
         this.solides.setDepth(z--);
         this.monstersContainer.setDepth(z--);
+        //this.checkpointsContainer.setDepth(z--);
         this.player.setDepth(z--);
         this.star1.setDepth(z--);
         this.star3.setDepth(z--);

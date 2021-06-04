@@ -109,7 +109,6 @@ lumiere2.color.setTo(255, 255, 255);
                 this.touchePressed = true;
                 this.cameras.main.fadeOut(1500, 0, 0, 0)
                 this.title = 0;
-                this.title.stop();
                 this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, (cam, effect) =>
                 {
                     
